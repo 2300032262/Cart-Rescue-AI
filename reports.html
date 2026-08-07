@@ -1,0 +1,1753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reports | Cart Rescue AI</title>
+
+    <meta name="description"
+        content="Cart Rescue AI reports center for revenue recovery, abandoned carts, customer behaviour, AI predictions and business performance.">
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =====================================================
+         STYLESHEETS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+    <!-- =====================================================
+         CHART.JS
+    ====================================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <div class="logo">
+
+            <span class="logo-icon">
+                CR
+            </span>
+
+            <span>
+                Cart Rescue <strong>AI</strong>
+            </span>
+
+        </div>
+
+
+        <nav class="main-nav">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="dashboard.html">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="analytics.html">
+                        Analytics
+                    </a>
+                </li>
+
+                <li>
+                    <a href="ai-engine.html">
+                        AI Engine
+                    </a>
+                </li>
+
+                <li>
+                    <a href="reports.html" class="active">
+                        Reports
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <button
+            class="mobile-menu-btn"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false">
+
+            ☰
+
+        </button>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             REPORT HERO
+        ================================================== -->
+
+        <section class="page-hero reports-hero">
+
+            <div class="page-hero-content">
+
+                <span class="eyebrow">
+                    📋 BUSINESS INTELLIGENCE
+                </span>
+
+                <h1>
+
+                    Reports &
+                    <span>Insights</span>
+
+                </h1>
+
+                <p>
+
+                    Generate detailed reports covering revenue recovery,
+                    abandoned carts, customer behaviour, AI predictions
+                    and campaign performance.
+
+                </p>
+
+
+                <div class="hero-status">
+
+                    <span class="status-indicator"></span>
+
+                    <span>
+                        REPORT ENGINE ONLINE
+                    </span>
+
+                    <span class="status-divider">
+                        |
+                    </span>
+
+                    <span>
+                        Data synchronized
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             REPORT CONTROLS
+        ================================================== -->
+
+        <section class="reports-controls-section">
+
+            <div class="reports-toolbar">
+
+
+                <div class="toolbar-title">
+
+                    <span class="section-label">
+                        REPORT CENTER
+                    </span>
+
+                    <h2>
+                        Generate Business Report
+                    </h2>
+
+                </div>
+
+
+                <div class="toolbar-actions">
+
+
+                    <div class="filter-group">
+
+                        <label for="reportType">
+                            Report Type
+                        </label>
+
+                        <select id="reportType">
+
+                            <option value="executive">
+                                Executive Summary
+                            </option>
+
+                            <option value="recovery">
+                                Recovery Performance
+                            </option>
+
+                            <option value="abandonment">
+                                Cart Abandonment
+                            </option>
+
+                            <option value="customer">
+                                Customer Behaviour
+                            </option>
+
+                            <option value="ai">
+                                AI Performance
+                            </option>
+
+                            <option value="campaign">
+                                Campaign Performance
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <label for="reportPeriod">
+                            Period
+                        </label>
+
+                        <select id="reportPeriod">
+
+                            <option value="7">
+                                Last 7 Days
+                            </option>
+
+                            <option value="30" selected>
+                                Last 30 Days
+                            </option>
+
+                            <option value="90">
+                                Last 90 Days
+                            </option>
+
+                            <option value="365">
+                                Last 12 Months
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="btn"
+                        id="generateReport">
+
+                        ⚡ Generate Report
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             REPORT KPI CARDS
+        ================================================== -->
+
+        <section class="reports-kpi-section">
+
+            <div class="reports-kpi-grid">
+
+
+                <div class="report-kpi-card">
+
+                    <div class="report-kpi-icon">
+                        💰
+                    </div>
+
+                    <span>
+                        Revenue Recovered
+                    </span>
+
+                    <strong id="reportRevenue">
+                        ₹2.64Cr
+                    </strong>
+
+                    <small class="positive">
+                        ▲ 18.6% vs previous period
+                    </small>
+
+                </div>
+
+
+                <div class="report-kpi-card">
+
+                    <div class="report-kpi-icon">
+                        🛒
+                    </div>
+
+                    <span>
+                        Carts Recovered
+                    </span>
+
+                    <strong id="reportRecoveredCarts">
+                        18,742
+                    </strong>
+
+                    <small class="positive">
+                        ▲ 14.2% vs previous period
+                    </small>
+
+                </div>
+
+
+                <div class="report-kpi-card">
+
+                    <div class="report-kpi-icon">
+                        ⚠️
+                    </div>
+
+                    <span>
+                        Abandoned Carts
+                    </span>
+
+                    <strong id="reportAbandonedCarts">
+                        58,420
+                    </strong>
+
+                    <small class="negative">
+                        ▼ 6.8% vs previous period
+                    </small>
+
+                </div>
+
+
+                <div class="report-kpi-card">
+
+                    <div class="report-kpi-icon">
+                        🎯
+                    </div>
+
+                    <span>
+                        Recovery Rate
+                    </span>
+
+                    <strong id="reportRecoveryRate">
+                        32.15%
+                    </strong>
+
+                    <small class="positive">
+                        ▲ 4.8% improvement
+                    </small>
+
+                </div>
+
+
+                <div class="report-kpi-card">
+
+                    <div class="report-kpi-icon">
+                        CR
+                    </div>
+
+                    <span>
+                        AI Predictions
+                    </span>
+
+                    <strong id="reportPredictions">
+                        120,480
+                    </strong>
+
+                    <small class="positive">
+                        ▲ 14.6% processed
+                    </small>
+
+                </div>
+
+
+                <div class="report-kpi-card">
+
+                    <div class="report-kpi-icon">
+                        📈
+                    </div>
+
+                    <span>
+                        Conversion Rate
+                    </span>
+
+                    <strong id="reportConversion">
+                        7.84%
+                    </strong>
+
+                    <small class="positive">
+                        ▲ 3.7% improvement
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             REPORT PREVIEW
+        ================================================== -->
+
+        <section class="report-preview-section">
+
+            <div class="report-preview-header">
+
+
+                <div>
+
+                    <span class="section-label">
+                        REPORT PREVIEW
+                    </span>
+
+                    <h2 id="previewTitle">
+                        Executive Performance Summary
+                    </h2>
+
+                    <p id="previewSubtitle">
+                        Comprehensive overview of Cart Rescue AI
+                        business performance.
+                    </p>
+
+                </div>
+
+
+                <div class="preview-actions">
+
+                    <button
+                        type="button"
+                        class="btn-outline"
+                        id="printReport">
+
+                        🖨 Print
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn"
+                        id="downloadReport">
+
+                        ↓ Download Report
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =============================================
+                 EXECUTIVE SUMMARY
+            ============================================== -->
+
+            <div class="report-document" id="reportDocument">
+
+
+                <!-- Report Header -->
+
+                <div class="report-document-header">
+
+                    <div>
+
+                        <div class="report-brand">
+
+                            <span>
+                                CR
+                            </span>
+
+                            <strong>
+                                Cart Rescue AI
+                            </strong>
+
+                        </div>
+
+                        <p>
+                            Intelligent Cart Recovery Platform
+                        </p>
+
+                    </div>
+
+
+                    <div class="report-meta">
+
+                        <span>
+                            REPORT ID
+                        </span>
+
+                        <strong id="reportId">
+                            CRA-2026-00842
+                        </strong>
+
+                        <small id="reportGeneratedDate">
+                            Generated: Today
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Executive Summary -->
+
+                <div class="report-document-section">
+
+                    <div class="report-section-heading">
+
+                        <span>
+                            01
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Executive Summary
+                            </h3>
+
+                            <p>
+                                Overall business performance
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="report-text">
+
+                        Cart Rescue AI processed customer behaviour
+                        signals and identified high-risk shopping
+                        sessions during the selected reporting period.
+                        Intelligent recovery actions contributed to
+                        measurable revenue recovery and improved
+                        conversion performance.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- ==========================================
+                     PERFORMANCE SNAPSHOT
+                =========================================== -->
+
+                <div class="report-document-section">
+
+                    <div class="report-section-heading">
+
+                        <span>
+                            02
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Performance Snapshot
+                            </h3>
+
+                            <p>
+                                Key business indicators
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="report-snapshot-grid">
+
+
+                        <div>
+
+                            <span>
+                                Revenue Saved
+                            </span>
+
+                            <strong>
+                                ₹2.64Cr
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Recovery Rate
+                            </span>
+
+                            <strong>
+                                32.15%
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Orders Recovered
+                            </span>
+
+                            <strong>
+                                18,742
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                AI Accuracy
+                            </span>
+
+                            <strong>
+                                92.4%
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ==========================================
+                     REVENUE CHART
+                =========================================== -->
+
+                <div class="report-document-section">
+
+                    <div class="report-section-heading">
+
+                        <span>
+                            03
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Revenue Recovery Trend
+                            </h3>
+
+                            <p>
+                                Recovery revenue over time
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="report-chart-container">
+
+                        <canvas id="reportRevenueChart"></canvas>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ==========================================
+                     ABANDONMENT REASONS
+                =========================================== -->
+
+                <div class="report-document-section">
+
+                    <div class="report-section-heading">
+
+                        <span>
+                            04
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Abandonment Analysis
+                            </h3>
+
+                            <p>
+                                Primary reasons customers abandoned carts
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="report-analysis-table-container">
+
+                        <table class="report-analysis-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Reason
+                                    </th>
+
+                                    <th>
+                                        Carts
+                                    </th>
+
+                                    <th>
+                                        Percentage
+                                    </th>
+
+                                    <th>
+                                        Recovery Potential
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        Payment Failure
+                                    </td>
+
+                                    <td>
+                                        16,592
+                                    </td>
+
+                                    <td>
+                                        28.4%
+                                    </td>
+
+                                    <td>
+                                        <span class="potential high">
+                                            High
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Shipping Cost
+                                    </td>
+
+                                    <td>
+                                        12,674
+                                    </td>
+
+                                    <td>
+                                        21.7%
+                                    </td>
+
+                                    <td>
+                                        <span class="potential high">
+                                            High
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Price Concern
+                                    </td>
+
+                                    <td>
+                                        10,637
+                                    </td>
+
+                                    <td>
+                                        18.2%
+                                    </td>
+
+                                    <td>
+                                        <span class="potential medium">
+                                            Medium
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Checkout Friction
+                                    </td>
+
+                                    <td>
+                                        8,646
+                                    </td>
+
+                                    <td>
+                                        14.8%
+                                    </td>
+
+                                    <td>
+                                        <span class="potential medium">
+                                            Medium
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Product Comparison
+                                    </td>
+
+                                    <td>
+                                        6,196
+                                    </td>
+
+                                    <td>
+                                        10.6%
+                                    </td>
+
+                                    <td>
+                                        <span class="potential medium">
+                                            Medium
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Other
+                                    </td>
+
+                                    <td>
+                                        3,675
+                                    </td>
+
+                                    <td>
+                                        6.3%
+                                    </td>
+
+                                    <td>
+                                        <span class="potential low">
+                                            Low
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ==========================================
+                     AI PERFORMANCE
+                =========================================== -->
+
+                <div class="report-document-section">
+
+                    <div class="report-section-heading">
+
+                        <span>
+                            05
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                AI Performance
+                            </h3>
+
+                            <p>
+                                Prediction engine performance
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="ai-report-grid">
+
+
+                        <div>
+
+                            <span>
+                                Accuracy
+                            </span>
+
+                            <strong>
+                                92.4%
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Precision
+                            </span>
+
+                            <strong>
+                                90.8%
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Recall
+                            </span>
+
+                            <strong>
+                                89.7%
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Avg. Latency
+                            </span>
+
+                            <strong>
+                                42ms
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ==========================================
+                     AI INSIGHTS
+                =========================================== -->
+
+                <div class="report-document-section">
+
+                    <div class="report-section-heading">
+
+                        <span>
+                            06
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                AI-Generated Insights
+                            </h3>
+
+                            <p>
+                                Recommended business actions
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="report-insights">
+
+
+                        <div class="report-insight">
+
+                            <div>
+                                ⚠️
+                            </div>
+
+                            <p>
+
+                                Payment failures represent the
+                                largest identifiable recovery
+                                opportunity.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="report-insight">
+
+                            <div>
+                                🚚
+                            </div>
+
+                            <p>
+
+                                Shipping costs are a significant
+                                abandonment factor and should be
+                                addressed through targeted incentives.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="report-insight">
+
+                            <div>
+                                💡
+                            </div>
+
+                            <p>
+
+                                AI recommends avoiding unnecessary
+                                discounts when customer intent can
+                                be recovered through non-price actions.
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="report-insight">
+
+                            <div>
+                                📈
+                            </div>
+
+                            <p>
+
+                                Recovery revenue shows a positive
+                                trend compared with the previous
+                                reporting period.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ==========================================
+                     RECOMMENDATIONS
+                =========================================== -->
+
+                <div class="report-document-section">
+
+                    <div class="report-section-heading">
+
+                        <span>
+                            07
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Strategic Recommendations
+                            </h3>
+
+                            <p>
+                                Suggested next actions
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <ol class="recommendation-list">
+
+                        <li>
+
+                            <strong>
+                                Optimize payment recovery
+                            </strong>
+
+                            <span>
+                                Introduce intelligent payment retry
+                                flows for failed transactions.
+                            </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Reduce checkout friction
+                            </strong>
+
+                            <span>
+                                Simplify high-drop-off steps in the
+                                checkout journey.
+                            </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Improve shipping transparency
+                            </strong>
+
+                            <span>
+                                Display delivery costs earlier and
+                                test targeted shipping incentives.
+                            </span>
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Expand AI personalization
+                            </strong>
+
+                            <span>
+                                Use customer intent signals to select
+                                recovery actions dynamically.
+                            </span>
+
+                        </li>
+
+                    </ol>
+
+                </div>
+
+
+
+                <!-- ==========================================
+                     REPORT FOOTER
+                =========================================== -->
+
+                <div class="report-document-footer">
+
+                    <div>
+
+                        <strong>
+                            Cart Rescue AI
+                        </strong>
+
+                        <span>
+                            Intelligent Revenue Recovery Platform
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            AI Build 2026
+                        </span>
+
+                        <span>
+                            Confidential Business Report
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             REPORT HISTORY
+        ================================================== -->
+
+        <section class="report-history-section">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    REPORT HISTORY
+                </span>
+
+                <h2>
+
+                    Recently Generated
+                    <span>Reports</span>
+
+                </h2>
+
+                <p>
+                    Access previously generated business reports.
+                </p>
+
+            </div>
+
+
+            <div class="report-history-table-container">
+
+                <table class="report-history-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Report ID
+                            </th>
+
+                            <th>
+                                Report
+                            </th>
+
+                            <th>
+                                Period
+                            </th>
+
+                            <th>
+                                Generated
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="reportHistoryBody">
+
+
+                        <tr>
+
+                            <td>
+                                <strong>
+                                    CRA-2026-00842
+                                </strong>
+                            </td>
+
+                            <td>
+                                Executive Summary
+                            </td>
+
+                            <td>
+                                Jul 09 – Aug 07
+                            </td>
+
+                            <td>
+                                Today, 10:42 PM
+                            </td>
+
+                            <td>
+
+                                <span class="status-badge success">
+                                    Ready
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="table-action report-download"
+                                    type="button"
+                                    data-report="CRA-2026-00842">
+
+                                    Download
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <strong>
+                                    CRA-2026-00817
+                                </strong>
+                            </td>
+
+                            <td>
+                                Recovery Performance
+                            </td>
+
+                            <td>
+                                Jun 01 – Jun 30
+                            </td>
+
+                            <td>
+                                Jul 01, 09:15 AM
+                            </td>
+
+                            <td>
+
+                                <span class="status-badge success">
+                                    Ready
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="table-action report-download"
+                                    type="button"
+                                    data-report="CRA-2026-00817">
+
+                                    Download
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <strong>
+                                    CRA-2026-00796
+                                </strong>
+                            </td>
+
+                            <td>
+                                AI Performance
+                            </td>
+
+                            <td>
+                                Jun 01 – Jun 30
+                            </td>
+
+                            <td>
+                                Jul 01, 08:48 AM
+                            </td>
+
+                            <td>
+
+                                <span class="status-badge success">
+                                    Ready
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="table-action report-download"
+                                    type="button"
+                                    data-report="CRA-2026-00796">
+
+                                    Download
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <strong>
+                                    CRA-2026-00764
+                                </strong>
+                            </td>
+
+                            <td>
+                                Cart Abandonment
+                            </td>
+
+                            <td>
+                                May 01 – May 31
+                            </td>
+
+                            <td>
+                                Jun 01, 07:22 AM
+                            </td>
+
+                            <td>
+
+                                <span class="status-badge success">
+                                    Ready
+                                </span>
+
+                            </td>
+
+                            <td>
+
+                                <button
+                                    class="table-action report-download"
+                                    type="button"
+                                    data-report="CRA-2026-00764">
+
+                                    Download
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             AUTOMATED REPORTING
+        ================================================== -->
+
+        <section class="automated-reports-section">
+
+            <div class="automated-reports-card">
+
+
+                <div class="automated-report-content">
+
+                    <span class="section-label">
+                        AUTOMATION
+                    </span>
+
+                    <h2>
+
+                        Never Miss A
+                        <span>Business Update</span>
+
+                    </h2>
+
+                    <p>
+
+                        Configure automated reporting schedules to
+                        receive regular recovery and performance
+                        summaries.
+
+                    </p>
+
+
+                    <div class="automation-features">
+
+                        <span>
+                            ✓ Daily Reports
+                        </span>
+
+                        <span>
+                            ✓ Weekly Summaries
+                        </span>
+
+                        <span>
+                            ✓ Monthly Executive Reports
+                        </span>
+
+                        <span>
+                            ✓ AI Performance Alerts
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="btn"
+                        id="configureAutomation">
+
+                        ⚙ Configure Reporting
+
+                    </button>
+
+                </div>
+
+
+                <div class="automation-visual">
+
+                    <div class="automation-circle">
+
+                        <span>
+                            📊
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FINAL CTA
+        ================================================== -->
+
+        <section class="about-cta reports-cta">
+
+            <div class="cta-content">
+
+                <span class="section-label">
+                    DATA → INSIGHT → ACTION
+                </span>
+
+                <h2>
+
+                    Turn Every Report
+                    <span>Into A Decision</span>
+
+                </h2>
+
+                <p>
+
+                    Combine AI predictions, customer behaviour and
+                    revenue analytics to identify your next
+                    highest-value recovery opportunity.
+
+                </p>
+
+
+                <div class="cta-buttons">
+
+                    <a
+                        href="dashboard.html"
+                        class="btn">
+
+                        Open Dashboard
+
+                    </a>
+
+
+                    <a
+                        href="analytics.html"
+                        class="btn-outline">
+
+                        Explore Analytics
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-brand">
+
+                <div class="logo">
+
+                    <span class="logo-icon">
+                        CR
+                    </span>
+
+                    <span>
+                        Cart Rescue <strong>AI</strong>
+                    </span>
+
+                </div>
+
+                <p>
+
+                    AI-powered cart abandonment prediction,
+                    customer intelligence and revenue recovery.
+
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+
+                <div>
+
+                    <h4>
+                        Platform
+                    </h4>
+
+                    <a href="dashboard.html">
+                        Dashboard
+                    </a>
+
+                    <a href="analytics.html">
+                        Analytics
+                    </a>
+
+                    <a href="ai-engine.html">
+                        AI Engine
+                    </a>
+
+                    <a href="reports.html">
+                        Reports
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        Company
+                    </h4>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        System
+                    </h4>
+
+                    <span>
+                        AI Build 2026
+                    </span>
+
+                    <span>
+                        Report Engine Online
+                    </span>
+
+                    <span>
+                        Version 1.0.0
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Cart Rescue AI. All Rights Reserved.
+            </p>
+
+            <p>
+                Built with HTML, CSS, JavaScript & AI Analytics.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="js/main.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/reports.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    <script src="js/intro-3d.js"></script>
+
+
+</body>
+
+</html>

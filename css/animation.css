@@ -1,0 +1,2099 @@
+/* =========================================================
+   CART RESCUE AI
+   ANIMATION STYLESHEET
+   Version: 1.0
+
+   NOTE:
+   - No page-start/loading animation
+   - No full-screen intro animation
+   - Only UI/interaction animations
+========================================================= */
+
+
+/* =========================================================
+   01. GLOBAL TRANSITIONS
+========================================================= */
+
+a,
+button,
+input,
+textarea,
+select,
+.card,
+.feature-card,
+.stat-card,
+.glass-card,
+.ai-dashboard-card,
+.floating-card,
+.workflow-icon,
+.orbit-node,
+.social-links a {
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease,
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+/* =========================================================
+   02. SCROLL REVEAL
+========================================================= */
+
+.reveal {
+
+    opacity: 0;
+
+    transform:
+        translateY(35px);
+
+}
+
+
+.reveal.active {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        );
+
+}
+
+
+.reveal-left {
+
+    opacity: 0;
+
+    transform:
+        translateX(-45px);
+
+}
+
+
+.reveal-left.active {
+
+    opacity: 1;
+
+    transform:
+        translateX(0);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        );
+
+}
+
+
+.reveal-right {
+
+    opacity: 0;
+
+    transform:
+        translateX(45px);
+
+}
+
+
+.reveal-right.active {
+
+    opacity: 1;
+
+    transform:
+        translateX(0);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        );
+
+}
+
+
+.reveal-scale {
+
+    opacity: 0;
+
+    transform:
+        scale(0.92);
+
+}
+
+
+.reveal-scale.active {
+
+    opacity: 1;
+
+    transform:
+        scale(1);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        );
+
+}
+
+
+/* =========================================================
+   03. STAGGERED ANIMATION
+========================================================= */
+
+.stagger > * {
+
+    opacity: 0;
+
+    transform:
+        translateY(25px);
+
+}
+
+
+.stagger.active > * {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+.stagger.active > *:nth-child(1) {
+
+    transition-delay: 0.05s;
+
+}
+
+
+.stagger.active > *:nth-child(2) {
+
+    transition-delay: 0.10s;
+
+}
+
+
+.stagger.active > *:nth-child(3) {
+
+    transition-delay: 0.15s;
+
+}
+
+
+.stagger.active > *:nth-child(4) {
+
+    transition-delay: 0.20s;
+
+}
+
+
+.stagger.active > *:nth-child(5) {
+
+    transition-delay: 0.25s;
+
+}
+
+
+.stagger.active > *:nth-child(6) {
+
+    transition-delay: 0.30s;
+
+}
+
+
+.stagger.active > *:nth-child(7) {
+
+    transition-delay: 0.35s;
+
+}
+
+
+.stagger.active > *:nth-child(8) {
+
+    transition-delay: 0.40s;
+
+}
+
+
+.stagger.active > * > * {
+
+    transition:
+        opacity 0.65s ease,
+        transform 0.65s cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        );
+
+}
+
+
+/* =========================================================
+   04. FLOATING AI DASHBOARD
+========================================================= */
+
+.ai-dashboard-card {
+
+    animation:
+        dashboardFloat 6s ease-in-out infinite;
+
+}
+
+
+@keyframes dashboardFloat {
+
+    0% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-9px);
+
+    }
+
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   05. FLOATING CARDS
+========================================================= */
+
+.floating-card-one {
+
+    animation:
+        floatingOne 4.5s ease-in-out infinite;
+
+}
+
+
+.floating-card-two {
+
+    animation:
+        floatingTwo 5s ease-in-out infinite;
+
+}
+
+
+@keyframes floatingOne {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-13px)
+            rotate(1deg);
+
+    }
+
+}
+
+
+@keyframes floatingTwo {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(12px)
+            rotate(-1deg);
+
+    }
+
+}
+
+
+/* =========================================================
+   06. AI LIVE STATUS
+========================================================= */
+
+.live-indicator > span,
+.status-dot {
+
+    animation:
+        livePulse 1.8s ease-in-out infinite;
+
+}
+
+
+@keyframes livePulse {
+
+    0% {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+
+        box-shadow:
+            0 0 5px currentColor;
+
+    }
+
+    50% {
+
+        opacity: 0.55;
+
+        transform:
+            scale(0.72);
+
+        box-shadow:
+            0 0 18px currentColor;
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+
+        box-shadow:
+            0 0 5px currentColor;
+
+    }
+
+}
+
+
+/* =========================================================
+   07. AI GLOW
+========================================================= */
+
+.ai-dashboard-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 180px;
+
+    top: -100px;
+
+    left: -100px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(0,229,255,0.12);
+
+    filter:
+        blur(50px);
+
+    pointer-events: none;
+
+    animation:
+        aiGlowMove 7s ease-in-out infinite;
+
+}
+
+
+@keyframes aiGlowMove {
+
+    0% {
+
+        transform:
+            translate(
+                0,
+                0
+            );
+
+        opacity: 0.5;
+
+    }
+
+    50% {
+
+        transform:
+            translate(
+                350px,
+                270px
+            );
+
+        opacity: 0.15;
+
+    }
+
+    100% {
+
+        transform:
+            translate(
+                0,
+                0
+            );
+
+        opacity: 0.5;
+
+    }
+
+}
+
+
+/* =========================================================
+   08. AI RECOMMENDATION PULSE
+========================================================= */
+
+.ai-recommendation {
+
+    animation:
+        recommendationPulse 3.5s ease-in-out infinite;
+
+}
+
+
+@keyframes recommendationPulse {
+
+    0%,
+    100% {
+
+        box-shadow:
+            0 0 0
+            rgba(0,255,198,0);
+
+    }
+
+    50% {
+
+        box-shadow:
+            0 0 28px
+            rgba(0,255,198,0.08);
+
+    }
+
+}
+
+
+/* =========================================================
+   09. RISK CIRCLE
+========================================================= */
+
+.risk-circle {
+
+    animation:
+        riskPulse 3s ease-in-out infinite;
+
+}
+
+
+@keyframes riskPulse {
+
+    0%,
+    100% {
+
+        filter:
+            drop-shadow(
+                0 0 0
+                rgba(255,85,119,0)
+            );
+
+    }
+
+    50% {
+
+        filter:
+            drop-shadow(
+                0 0 18px
+                rgba(255,85,119,0.18)
+            );
+
+    }
+
+}
+
+
+/* =========================================================
+   10. FEATURE CARD HOVER
+========================================================= */
+
+.feature-card {
+
+    will-change:
+        transform;
+
+}
+
+
+.feature-card:hover {
+
+    transform:
+        translateY(-8px);
+
+}
+
+
+.feature-card:hover .feature-icon {
+
+    transform:
+        translateY(-3px)
+        scale(1.06);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0,229,255,0.10);
+
+}
+
+
+.feature-card:hover .feature-link i {
+
+    transform:
+        translateX(5px);
+
+}
+
+
+/* =========================================================
+   11. STAT CARD HOVER
+========================================================= */
+
+.stat-card {
+
+    will-change:
+        transform;
+
+}
+
+
+.stat-card:hover {
+
+    transform:
+        translateY(-7px);
+
+}
+
+
+.stat-card:hover .stat-icon {
+
+    transform:
+        rotate(-4deg)
+        scale(1.06);
+
+}
+
+
+/* =========================================================
+   12. BUTTON EFFECT
+========================================================= */
+
+.btn {
+
+    position: relative;
+
+    overflow: hidden;
+
+    isolation: isolate;
+
+}
+
+
+.btn::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -120%;
+
+    width: 80%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.25),
+            transparent
+        );
+
+    transform:
+        skewX(-20deg);
+
+    transition:
+        left 0.65s ease;
+
+    z-index: -1;
+
+}
+
+
+.btn:hover::before {
+
+    left: 140%;
+
+}
+
+
+.btn:active {
+
+    transform:
+        translateY(0)
+        scale(0.97);
+
+}
+
+
+/* =========================================================
+   13. NAVIGATION HOVER
+========================================================= */
+
+.main-nav a {
+
+    overflow: hidden;
+
+}
+
+
+.main-nav a::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 0;
+
+    width: 0;
+
+    height: 1px;
+
+    background:
+        var(--primary);
+
+    transform:
+        translateX(-50%);
+
+    transition:
+        width 0.3s ease;
+
+}
+
+
+.main-nav a:hover::before {
+
+    width: 65%;
+
+}
+
+
+/* =========================================================
+   14. ICON BUTTON HOVER
+========================================================= */
+
+.icon-button:hover,
+.theme-toggle:hover,
+.menu-toggle:hover {
+
+    transform:
+        translateY(-2px)
+        rotate(-2deg);
+
+}
+
+
+.icon-button:active,
+.theme-toggle:active,
+.menu-toggle:active {
+
+    transform:
+        scale(0.92);
+
+}
+
+
+/* =========================================================
+   15. WORKFLOW ICON
+========================================================= */
+
+.workflow-icon {
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+
+}
+
+
+.workflow-step:hover .workflow-icon {
+
+    transform:
+        translateY(-7px)
+        scale(1.05);
+
+    border-color:
+        rgba(0,229,255,0.45);
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,229,255,0.12);
+
+}
+
+
+/* =========================================================
+   16. ORBIT SYSTEM
+========================================================= */
+
+.orbit-card {
+
+    animation:
+        orbitBreathing 5s ease-in-out infinite;
+
+}
+
+
+@keyframes orbitBreathing {
+
+    0%,
+    100% {
+
+        box-shadow:
+            0 0 0
+            rgba(0,229,255,0);
+
+    }
+
+    50% {
+
+        box-shadow:
+            0 0 50px
+            rgba(0,229,255,0.06);
+
+    }
+
+}
+
+
+/* =========================================================
+   17. ORBIT NODES
+========================================================= */
+
+.orbit-node {
+
+    animation:
+        nodePulse 3s ease-in-out infinite;
+
+}
+
+
+.node-top {
+
+    animation-delay:
+        0s;
+
+}
+
+
+.node-right {
+
+    animation-delay:
+        0.7s;
+
+}
+
+
+.node-bottom {
+
+    animation-delay:
+        1.4s;
+
+}
+
+
+.node-left {
+
+    animation-delay:
+        2.1s;
+
+}
+
+
+@keyframes nodePulse {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+
+        box-shadow:
+            0 8px 25px
+            rgba(0,0,0,0.30);
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.08);
+
+        box-shadow:
+            0 0 25px
+            rgba(0,229,255,0.15);
+
+    }
+
+}
+
+
+/* Preserve positioning for orbit nodes */
+
+.node-top {
+
+    animation-name:
+        orbitTopPulse;
+
+}
+
+
+.node-right {
+
+    animation-name:
+        orbitRightPulse;
+
+}
+
+
+.node-bottom {
+
+    animation-name:
+        orbitBottomPulse;
+
+}
+
+
+.node-left {
+
+    animation-name:
+        orbitLeftPulse;
+
+}
+
+
+@keyframes orbitTopPulse {
+
+    0%,
+    100% {
+
+        transform:
+            translateX(-50%)
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            translateX(-50%)
+            scale(1.08);
+
+    }
+
+}
+
+
+@keyframes orbitRightPulse {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(-50%)
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-50%)
+            scale(1.08);
+
+    }
+
+}
+
+
+@keyframes orbitBottomPulse {
+
+    0%,
+    100% {
+
+        transform:
+            translateX(-50%)
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            translateX(-50%)
+            scale(1.08);
+
+    }
+
+}
+
+
+@keyframes orbitLeftPulse {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(-50%)
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-50%)
+            scale(1.08);
+
+    }
+
+}
+
+
+/* =========================================================
+   18. ORBIT CENTER
+========================================================= */
+
+.orbit-center {
+
+    animation:
+        centerGlow 3s ease-in-out infinite;
+
+}
+
+
+@keyframes centerGlow {
+
+    0%,
+    100% {
+
+        box-shadow:
+            0 0 35px
+            rgba(0,229,255,0.22);
+
+    }
+
+    50% {
+
+        box-shadow:
+            0 0 70px
+            rgba(0,229,255,0.40);
+
+    }
+
+}
+
+
+/* =========================================================
+   19. GRADIENT TEXT
+========================================================= */
+
+.gradient-text {
+
+    background-size:
+        200% 200%;
+
+    animation:
+        gradientMove 6s ease infinite;
+
+}
+
+
+@keyframes gradientMove {
+
+    0% {
+
+        background-position:
+            0% 50%;
+
+    }
+
+    50% {
+
+        background-position:
+            100% 50%;
+
+    }
+
+    100% {
+
+        background-position:
+            0% 50%;
+
+    }
+
+}
+
+
+/* =========================================================
+   20. BADGE GLOW
+========================================================= */
+
+.hero-badge {
+
+    animation:
+        badgeGlow 4s ease-in-out infinite;
+
+}
+
+
+@keyframes badgeGlow {
+
+    0%,
+    100% {
+
+        box-shadow:
+            0 0 0
+            rgba(0,229,255,0);
+
+    }
+
+    50% {
+
+        box-shadow:
+            0 0 25px
+            rgba(0,229,255,0.08);
+
+    }
+
+}
+
+
+/* =========================================================
+   21. LIVE DATA FLASH
+========================================================= */
+
+.live-update {
+
+    animation:
+        dataFlash 0.8s ease;
+
+}
+
+
+@keyframes dataFlash {
+
+    0% {
+
+        opacity: 0.3;
+
+        transform:
+            translateY(4px);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   22. NUMBER UPDATE
+========================================================= */
+
+.number-updated {
+
+    animation:
+        numberUpdate 0.5s ease;
+
+}
+
+
+@keyframes numberUpdate {
+
+    0% {
+
+        opacity: 0.5;
+
+        transform:
+            scale(0.96);
+
+    }
+
+    60% {
+
+        transform:
+            scale(1.04);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+/* =========================================================
+   23. SUCCESS PULSE
+========================================================= */
+
+.success-pulse {
+
+    animation:
+        successPulse 2.5s ease-in-out infinite;
+
+}
+
+
+@keyframes successPulse {
+
+    0%,
+    100% {
+
+        box-shadow:
+            0 0 0
+            rgba(0,214,143,0);
+
+    }
+
+    50% {
+
+        box-shadow:
+            0 0 25px
+            rgba(0,214,143,0.14);
+
+    }
+
+}
+
+
+/* =========================================================
+   24. WARNING PULSE
+========================================================= */
+
+.warning-pulse {
+
+    animation:
+        warningPulse 2.2s ease-in-out infinite;
+
+}
+
+
+@keyframes warningPulse {
+
+    0%,
+    100% {
+
+        box-shadow:
+            0 0 0
+            rgba(255,181,71,0);
+
+    }
+
+    50% {
+
+        box-shadow:
+            0 0 22px
+            rgba(255,181,71,0.13);
+
+    }
+
+}
+
+
+/* =========================================================
+   25. DANGER PULSE
+========================================================= */
+
+.danger-pulse {
+
+    animation:
+        dangerPulse 2s ease-in-out infinite;
+
+}
+
+
+@keyframes dangerPulse {
+
+    0%,
+    100% {
+
+        box-shadow:
+            0 0 0
+            rgba(255,85,119,0);
+
+    }
+
+    50% {
+
+        box-shadow:
+            0 0 24px
+            rgba(255,85,119,0.16);
+
+    }
+
+}
+
+
+/* =========================================================
+   26. TABLE ROW ANIMATION
+========================================================= */
+
+.ai-table tbody tr {
+
+    animation:
+        tableRowIn 0.45s ease both;
+
+}
+
+
+.ai-table tbody tr:nth-child(1) {
+
+    animation-delay:
+        0.05s;
+
+}
+
+
+.ai-table tbody tr:nth-child(2) {
+
+    animation-delay:
+        0.10s;
+
+}
+
+
+.ai-table tbody tr:nth-child(3) {
+
+    animation-delay:
+        0.15s;
+
+}
+
+
+.ai-table tbody tr:nth-child(4) {
+
+    animation-delay:
+        0.20s;
+
+}
+
+
+.ai-table tbody tr:nth-child(5) {
+
+    animation-delay:
+        0.25s;
+
+}
+
+
+@keyframes tableRowIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(8px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   27. ALERT ANIMATION
+========================================================= */
+
+.alert {
+
+    animation:
+        alertIn 0.5s ease both;
+
+}
+
+
+@keyframes alertIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateX(-12px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   28. FORM FOCUS
+========================================================= */
+
+input:focus,
+textarea:focus,
+select:focus {
+
+    animation:
+        inputFocus 0.35s ease;
+
+}
+
+
+@keyframes inputFocus {
+
+    0% {
+
+        box-shadow:
+            0 0 0 0
+            rgba(0,229,255,0);
+
+    }
+
+    100% {
+
+        box-shadow:
+            0 0 0 3px
+            rgba(0,229,255,0.06);
+
+    }
+
+}
+
+
+/* =========================================================
+   29. CTA GLOW
+========================================================= */
+
+.cta-glow {
+
+    animation:
+        ctaGlow 7s ease-in-out infinite;
+
+}
+
+
+@keyframes ctaGlow {
+
+    0%,
+    100% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.9);
+
+        opacity: 0.05;
+
+    }
+
+    50% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.15);
+
+        opacity: 0.10;
+
+    }
+
+}
+
+
+/* =========================================================
+   30. PLATFORM HOVER
+========================================================= */
+
+.platform-list span {
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+
+}
+
+
+.platform-list span:hover {
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+/* =========================================================
+   31. SOCIAL ICONS
+========================================================= */
+
+.social-links a:hover {
+
+    animation:
+        socialBounce 0.45s ease;
+
+}
+
+
+@keyframes socialBounce {
+
+    0% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    40% {
+
+        transform:
+            translateY(-6px);
+
+    }
+
+    70% {
+
+        transform:
+            translateY(-2px);
+
+    }
+
+    100% {
+
+        transform:
+            translateY(-3px);
+
+    }
+
+}
+
+
+/* =========================================================
+   32. PAGE HEADER
+========================================================= */
+
+.page-header h1 {
+
+    animation:
+        pageTitleIn 0.8s ease both;
+
+}
+
+
+.page-header p {
+
+    animation:
+        pageDescriptionIn 0.8s 0.15s ease both;
+
+}
+
+
+@keyframes pageTitleIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+@keyframes pageDescriptionIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   33. DASHBOARD KPI ANIMATION
+========================================================= */
+
+.kpi-card {
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+
+.kpi-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    border-color:
+        rgba(0,229,255,0.25);
+
+    box-shadow:
+        0 18px 45px
+        rgba(0,0,0,0.22);
+
+}
+
+
+/* =========================================================
+   34. GLASS CARD HOVER
+========================================================= */
+
+.glass-card:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,0.18);
+
+}
+
+
+/* =========================================================
+   35. MENU OPEN
+========================================================= */
+
+.menu-toggle.active {
+
+    transform:
+        rotate(90deg);
+
+}
+
+
+.mobile-menu {
+
+    opacity: 0;
+
+    transform:
+        translateY(-10px);
+
+    pointer-events: none;
+
+}
+
+
+.mobile-menu.active {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+    pointer-events: auto;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+/* =========================================================
+   36. LOADING SKELETON
+   Used only when a dashboard component is loading.
+   NOT a page-start animation.
+========================================================= */
+
+.skeleton {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        rgba(255,255,255,0.05);
+
+}
+
+
+.skeleton::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    transform:
+        translateX(-100%);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.07),
+            transparent
+        );
+
+    animation:
+        skeletonLoading 1.4s infinite;
+
+}
+
+
+@keyframes skeletonLoading {
+
+    100% {
+
+        transform:
+            translateX(100%);
+
+    }
+
+}
+
+
+/* =========================================================
+   37. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        scroll-behavior:
+            auto !important;
+
+        transition-duration:
+            0.01ms !important;
+
+    }
+
+}
+
+
+/* =========================================================
+   38. THREE.JS OPENING SEQUENCE
+========================================================= */
+
+.intro-3d {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    background:
+        radial-gradient(circle at 50% 45%, rgba(0, 229, 255, 0.12), transparent 25%),
+        #030711;
+    isolation: isolate;
+    opacity: 1;
+    transition: opacity 0.65s ease, visibility 0.65s ease;
+}
+
+.intro-3d.is-complete {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.intro-3d-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.intro-3d-topline {
+    position: absolute;
+    top: 28px;
+    left: 34px;
+    right: 34px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgba(214, 225, 245, 0.5);
+    font-family: var(--font-secondary);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+}
+
+.intro-3d-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: rgba(255, 255, 255, 0.76);
+}
+
+.intro-3d-brand b {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    color: #04101b;
+    background: linear-gradient(135deg, #00e5ff, #8b77ff);
+    font-size: 10px;
+    letter-spacing: 0;
+}
+
+.intro-3d-brand em {
+    color: #00e5ff;
+    font-style: normal;
+}
+
+.intro-3d::before,
+.intro-3d::after {
+    content: "";
+    position: absolute;
+    width: 24vw;
+    height: 24vw;
+    min-width: 190px;
+    min-height: 190px;
+    border: 1px solid rgba(0, 229, 255, 0.12);
+    border-radius: 50%;
+    transform: rotate(25deg) scaleX(1.7);
+    animation: introOrbit 6s linear infinite;
+}
+
+.intro-3d::after {
+    width: 38vw;
+    height: 38vw;
+    border-color: rgba(139, 119, 255, 0.12);
+    animation-direction: reverse;
+    animation-duration: 9s;
+}
+
+.intro-3d-copy {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 250px;
+    text-align: center;
+    pointer-events: none;
+}
+
+.intro-3d-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #00e5ff;
+    font-family: var(--font-secondary);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.intro-3d-kicker i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #00ffc6;
+    box-shadow: 0 0 15px #00ffc6;
+}
+
+.intro-3d-copy strong {
+    color: #ffffff;
+    font-size: clamp(24px, 4vw, 42px);
+    line-height: 1.05;
+    letter-spacing: -1px;
+}
+
+.intro-3d-copy strong em {
+    color: #00e5ff;
+    font-style: normal;
+}
+
+.intro-3d-copy > span:last-child {
+    color: rgba(214, 225, 245, 0.7);
+    font-family: var(--font-secondary);
+    font-size: 12px;
+}
+
+.intro-3d-meta {
+    position: absolute;
+    right: 34px;
+    bottom: 26px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 7px;
+    color: rgba(214, 225, 245, 0.48);
+    font-family: var(--font-secondary);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.intro-3d-meta span:first-child {
+    color: rgba(0, 255, 198, 0.8);
+}
+
+.intro-3d-meta i {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 6px;
+    border-radius: 50%;
+    background: #00ffc6;
+    box-shadow: 0 0 10px #00ffc6;
+}
+
+.intro-3d-progress {
+    position: absolute;
+    left: 34px;
+    right: 34px;
+    bottom: 28px;
+    height: 1px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.intro-3d-progress span {
+    display: block;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #00e5ff, #8b77ff);
+    box-shadow: 0 0 12px #00e5ff;
+    animation: introProgress 10s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.intro-3d-skip {
+    position: absolute;
+    right: 28px;
+    bottom: 52px;
+    z-index: 2;
+    padding: 9px 13px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.72);
+    background: rgba(255, 255, 255, 0.05);
+    font-family: var(--font-secondary);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.intro-3d-skip:hover {
+    color: #00e5ff;
+    border-color: rgba(0, 229, 255, 0.45);
+}
+
+@keyframes introOrbit {
+    from { transform: rotate(25deg) scaleX(1.7); }
+    to { transform: rotate(385deg) scaleX(1.7); }
+}
+
+@keyframes introProgress {
+    to { width: 100%; }
+}
+
+@media (max-width: 600px) {
+    .intro-3d-topline {
+        top: 18px;
+        left: 18px;
+        right: 18px;
+    }
+
+    .intro-3d-build {
+        display: none;
+    }
+
+    .intro-3d-copy {
+        margin-top: 205px;
+    }
+
+    .intro-3d-meta {
+        right: 18px;
+        bottom: 20px;
+        font-size: 8px;
+    }
+
+    .intro-3d-progress {
+        left: 18px;
+        right: 18px;
+        bottom: 18px;
+    }
+
+    .intro-3d-skip {
+        right: 16px;
+        bottom: 48px;
+    }
+}
+
+
+/* =========================================================
+   38. MOBILE ANIMATION OPTIMIZATION
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .ai-dashboard-card {
+
+        animation:
+            dashboardFloat 7s ease-in-out infinite;
+
+    }
+
+    .floating-card-one,
+    .floating-card-two {
+
+        animation-duration:
+            6s;
+
+    }
+
+    .ai-dashboard-card::after {
+
+        animation:
+            none;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .floating-card {
+
+        animation:
+            none;
+
+    }
+
+    .orbit-card {
+
+        animation:
+            none;
+
+    }
+
+}
+
+
+/* =========================================================
+   END OF ANIMATION.CSS
+========================================================= */

@@ -1,0 +1,1037 @@
+/* =========================================================
+   CART RESCUE AI
+   RESPONSIVE STYLESHEET
+   Version: 1.0
+========================================================= */
+
+
+/* =========================================================
+   01. GLOBAL RESPONSIVE RULES
+========================================================= */
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+canvas {
+    max-width: 100%;
+}
+
+table {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   02. LARGE DESKTOP
+   1440px+
+========================================================= */
+
+@media (min-width: 1440px) {
+
+    .container,
+    .section-container,
+    main {
+        max-width: 1380px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero {
+        min-height: 720px;
+    }
+
+    .hero-left h1 {
+        font-size: 64px;
+        line-height: 1.08;
+    }
+
+    .hero-left p {
+        max-width: 680px;
+        font-size: 18px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .workflow {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+}
+
+
+/* =========================================================
+   03. STANDARD DESKTOP
+   1200px - 1439px
+========================================================= */
+
+@media (max-width: 1439px) {
+
+    .hero {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .features,
+    .workflow,
+    .stats,
+    .cta {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+}
+
+
+/* =========================================================
+   04. LAPTOP
+   992px - 1199px
+========================================================= */
+
+@media (max-width: 1199px) {
+
+    /* ---------- NAVIGATION ---------- */
+
+    header {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        gap: 40px;
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    .hero-left {
+        width: 55%;
+    }
+
+    .hero-right {
+        width: 45%;
+    }
+
+    .hero-left h1 {
+        font-size: 48px;
+    }
+
+    .hero-left p {
+        font-size: 16px;
+    }
+
+
+    /* ---------- AI VISUAL ---------- */
+
+    .ai-circle {
+        width: 360px;
+        height: 360px;
+    }
+
+
+    /* ---------- STATS ---------- */
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+
+    /* ---------- FEATURES ---------- */
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* ---------- WORKFLOW ---------- */
+
+    .flow {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .step {
+        min-width: 180px;
+    }
+
+
+    /* ---------- DASHBOARD ---------- */
+
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-main {
+        grid-column: 1 / -1;
+    }
+
+
+    /* ---------- ANALYTICS ---------- */
+
+    .analytics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* ---------- REPORTS ---------- */
+
+    .reports-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   05. TABLET
+   768px - 991px
+========================================================= */
+
+@media (max-width: 991px) {
+
+    /* ---------- HEADER ---------- */
+
+    header {
+        min-height: 70px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    nav ul {
+        gap: 14px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        min-height: auto;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        gap: 50px;
+    }
+
+    .hero-left h1 {
+        font-size: 42px;
+    }
+
+    .hero-left p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+    }
+
+
+    /* ---------- AI CIRCLE ---------- */
+
+    .ai-circle {
+        width: 310px;
+        height: 310px;
+    }
+
+
+    /* ---------- SECTION HEADINGS ---------- */
+
+    .features h2,
+    .workflow h2 {
+        font-size: 34px;
+    }
+
+
+    /* ---------- STATS ---------- */
+
+    .stats {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+
+    /* ---------- FEATURE GRID ---------- */
+
+    .feature-grid {
+        gap: 18px;
+    }
+
+
+    /* ---------- WORKFLOW ---------- */
+
+    .workflow {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .flow {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .step {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    /* ---------- CTA ---------- */
+
+    .cta h2 {
+        font-size: 36px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+
+    /* ---------- DASHBOARD ---------- */
+
+    .dashboard-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+    }
+
+    .dashboard-content {
+        width: 100%;
+    }
+
+    .kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* ---------- CHARTS ---------- */
+
+    .chart-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ---------- AI ENGINE ---------- */
+
+    .ai-engine-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   06. MOBILE NAVIGATION
+   <= 767px
+========================================================= */
+
+@media (max-width: 767px) {
+
+    /* ---------- HEADER ---------- */
+
+    header {
+        position: relative;
+        min-height: 65px;
+        padding: 14px 5%;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .menu-toggle,
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    .mobile-menu,
+    .site-header .main-nav {
+        display: block;
+    }
+
+    .main-nav:not(.active) ul {
+        display: none;
+    }
+
+    .main-nav.active ul,
+    .site-header .main-nav.active ul {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 65px 5% 70px;
+    }
+
+    .hero-left,
+    .hero-right {
+        width: 100%;
+    }
+
+    .hero-left {
+        order: 1;
+    }
+
+    .hero-right {
+        order: 2;
+        margin-top: 25px;
+    }
+
+    .hero-left h1 {
+        font-size: 36px;
+        line-height: 1.15;
+    }
+
+    .hero-left p {
+        max-width: 620px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 15px;
+    }
+
+
+    /* ---------- BUTTONS ---------- */
+
+    .hero-buttons {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .btn,
+    .btn-outline {
+        min-height: 46px;
+    }
+
+
+    /* ---------- AI CIRCLE ---------- */
+
+    .ai-circle {
+        width: 280px;
+        height: 280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* ---------- STATS ---------- */
+
+    .stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        padding: 45px 5%;
+    }
+
+    .stats .card {
+        padding: 22px 14px;
+    }
+
+    .stats .card h2 {
+        font-size: 28px;
+    }
+
+    .stats .card p {
+        font-size: 12px;
+    }
+
+
+    /* ---------- FEATURES ---------- */
+
+    .features {
+        padding: 65px 5%;
+    }
+
+    .features h2,
+    .workflow h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .feature-card {
+        padding: 24px;
+    }
+
+
+    /* ---------- WORKFLOW ---------- */
+
+    .workflow {
+        padding: 65px 5%;
+    }
+
+    .flow {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .step {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* ---------- CTA ---------- */
+
+    .cta {
+        padding: 70px 5%;
+        text-align: center;
+    }
+
+    .cta h2 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .cta p {
+        font-size: 14px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+        padding: 45px 5%;
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================================
+   07. SMALL MOBILE
+   <= 575px
+========================================================= */
+
+@media (max-width: 575px) {
+
+    /* ---------- HEADER ---------- */
+
+    header {
+        padding: 13px 18px;
+    }
+
+    .logo {
+        font-size: 17px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        padding: 55px 18px 60px;
+    }
+
+    .hero-left h1 {
+        font-size: 31px;
+    }
+
+    .hero-left p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+
+    /* ---------- HERO BUTTONS ---------- */
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn,
+    .hero-buttons .btn-outline {
+        width: 100%;
+        justify-content: center;
+    }
+
+
+    /* ---------- AI CIRCLE ---------- */
+
+    .ai-circle {
+        width: 245px;
+        height: 245px;
+    }
+
+
+    /* ---------- STATS ---------- */
+
+    .stats {
+        grid-template-columns: 1fr;
+        padding: 40px 18px;
+    }
+
+    .stats .card {
+        width: 100%;
+    }
+
+
+    /* ---------- FEATURES ---------- */
+
+    .features {
+        padding: 55px 18px;
+    }
+
+    .features h2,
+    .workflow h2 {
+        font-size: 27px;
+    }
+
+    .feature {
+        padding: 22px;
+    }
+
+
+    /* ---------- WORKFLOW ---------- */
+
+    .workflow {
+        padding: 55px 18px;
+    }
+
+    .step {
+        padding: 18px;
+        font-size: 14px;
+    }
+
+
+    /* ---------- CTA ---------- */
+
+    .cta {
+        padding: 60px 18px;
+    }
+
+    .cta h2 {
+        font-size: 27px;
+    }
+
+    .cta .btn {
+        width: 100%;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+        padding: 40px 18px;
+    }
+
+    footer h3 {
+        font-size: 20px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+
+    /* ---------- DASHBOARD ---------- */
+
+    .kpi-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-main {
+        grid-column: auto;
+    }
+
+
+    /* ---------- ANALYTICS ---------- */
+
+    .analytics-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ---------- REPORTS ---------- */
+
+    .reports-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   08. VERY SMALL DEVICES
+   <= 400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .hero-left h1 {
+        font-size: 28px;
+    }
+
+    .hero-left p {
+        font-size: 13px;
+    }
+
+    .ai-circle {
+        width: 215px;
+        height: 215px;
+    }
+
+    .features h2,
+    .workflow h2 {
+        font-size: 25px;
+    }
+
+    .cta h2 {
+        font-size: 25px;
+    }
+
+}
+
+
+/* =========================================================
+   09. LANDSCAPE MOBILE
+========================================================= */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+    .hero {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .hero-left h1 {
+        font-size: 30px;
+    }
+
+    .ai-circle {
+        width: 220px;
+        height: 220px;
+    }
+
+}
+
+
+/* =========================================================
+   10. TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .feature-card:hover,
+    .stat-card:hover,
+    .kpi-card:hover,
+    .glass-card:hover {
+        transform: none;
+    }
+
+    .btn:hover {
+        transform: none;
+    }
+
+}
+
+
+/* =========================================================
+   11. ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
+
+
+/* =========================================================
+   13. APPLICATION PAGE MOBILE LAYOUT
+========================================================= */
+
+@media (max-width: 760px) {
+
+    body {
+        min-width: 0;
+    }
+
+    .site-header {
+        padding: 12px 14px;
+    }
+
+    .site-header .logo {
+        min-width: 0;
+    }
+
+    .site-header .main-nav {
+        position: absolute;
+        top: calc(100% + 1px);
+        left: 0;
+        width: 100%;
+        padding: 10px 14px 14px;
+        border-bottom: 1px solid var(--border);
+        background: var(--bg-secondary);
+        box-shadow: var(--shadow-medium);
+    }
+
+    .site-header .main-nav ul {
+        gap: 4px;
+    }
+
+    .site-header .main-nav a {
+        padding: 11px 12px;
+    }
+
+    .site-header .mobile-menu-btn {
+        display: inline-flex;
+        flex: 0 0 auto;
+    }
+
+    .page-hero {
+        min-height: 300px;
+        padding: 62px 14px 56px;
+    }
+
+    .page-hero h1 {
+        font-size: clamp(34px, 12vw, 52px);
+        letter-spacing: -1px;
+    }
+
+    .page-hero p {
+        font-size: 13px;
+    }
+
+    .about-introduction,
+    .about-features,
+    .problem-grid,
+    .feature-analysis-section,
+    .technology-section,
+    .roadmap-section,
+    .faq-section,
+    .ai-overview,
+    .ai-pipeline-section,
+    .ai-core,
+    .ai-performance-section,
+    .analytics-controls-section,
+    .analytics-kpi-section,
+    .analytics-main-section,
+    .analytics-ai-section,
+    .dashboard-header-section,
+    .dashboard-metrics-section,
+    .dashboard-monitor-section,
+    .dashboard-charts-section,
+    .dashboard-events-section,
+    .dashboard-ai-section,
+    .prediction-console,
+    .recommendations-section,
+    .reports-controls-section,
+    .reports-kpi-section,
+    .report-preview-section,
+    .report-history-section,
+    .automated-reports-section,
+    .contact-section,
+    .support-section {
+        width: min(calc(100% - 28px), var(--container));
+        padding: 52px 0;
+    }
+
+    .about-container,
+    .contact-grid,
+    .prediction-console-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .dashboard-header-section {
+        padding: 52px 14px 28px;
+    }
+
+    .dashboard-header-content {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    .dashboard-header-content h1 {
+        font-size: clamp(34px, 11vw, 48px);
+    }
+
+    .about-content,
+    .contact-information,
+    .contact-form-card,
+    .about-visual,
+    .contact-info-card,
+    .prediction-demo-card,
+    .prediction-input-card,
+    .prediction-result-card,
+    .automated-reports-card {
+        padding: 20px;
+    }
+
+    .about-feature-grid,
+    .problem-grid,
+    .technology-grid,
+    .support-grid,
+    .ai-performance-grid,
+    .analytics-chart-grid,
+    .dashboard-chart-grid,
+    .report-snapshot-grid,
+    .insights-grid,
+    .recommendation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ai-kpi-grid,
+    .analytics-kpi-grid,
+    .dashboard-metrics-grid,
+    .reports-kpi-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .analytics-chart-card.large,
+    .dashboard-chart-card.large {
+        grid-column: auto;
+    }
+
+    .analytics-toolbar,
+    .reports-toolbar,
+    .dashboard-header-content,
+    .dashboard-header-actions,
+    .monitor-controls,
+    .toolbar-actions,
+    .form-actions,
+    .cta-buttons,
+    .preview-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .toolbar-actions > *,
+    .dashboard-header-actions > *,
+    .form-actions > *,
+    .cta-buttons > *,
+    .preview-actions > * {
+        width: 100%;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px 16px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* =========================================================
+   12. PRINT
+========================================================= */
+
+@media print {
+
+    header,
+    nav,
+    .hero-buttons,
+    .cta,
+    footer,
+    .menu-toggle {
+        display: none !important;
+    }
+
+    body {
+        background: #fff;
+        color: #000;
+    }
+
+    .hero,
+    .features,
+    .workflow,
+    .stats {
+        padding: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   END OF RESPONSIVE.CSS
+========================================================= */

@@ -1,0 +1,671 @@
+```json
+{
+  "metadata": {
+    "project": "Cart Rescue AI",
+    "reportSystem": "AI Revenue Intelligence & Recovery Reports",
+    "version": "1.0.0",
+    "currency": "INR",
+    "timezone": "Asia/Kolkata",
+    "generatedAt": "2026-08-07T22:00:00",
+    "reportingPeriod": {
+      "start": "2026-07-09",
+      "end": "2026-08-07"
+    }
+  },
+
+  "executiveSummary": {
+    "headline": "AI-powered cart recovery is generating measurable revenue impact.",
+    "totalVisitors": 248650,
+    "totalCarts": 62480,
+    "abandonedCarts": 12020,
+    "completedOrders": 30140,
+    "recoveredOrders": 30140,
+    "recoveryRate": 32.15,
+    "recoveredRevenue": 26400000,
+    "potentialLostRevenue": 82216800,
+    "recoverableRevenue": 54811200,
+    "netRecoveredRevenue": 21940000,
+    "roi": 491.93,
+    "aiAccuracy": 92.4,
+    "conversionRate": 15.19,
+    "averageOrderValue": 7215,
+    "averageRecoveredOrderValue": 8740
+  },
+
+  "kpis": [
+    {
+      "id": "KPI-001",
+      "name": "Cart Abandonment Rate",
+      "value": 28.51,
+      "unit": "%",
+      "target": 25,
+      "previousValue": 30.24,
+      "change": -5.72,
+      "trend": "improving",
+      "status": "warning"
+    },
+    {
+      "id": "KPI-002",
+      "name": "Recovery Rate",
+      "value": 32.15,
+      "unit": "%",
+      "target": 35,
+      "previousValue": 28.4,
+      "change": 13.2,
+      "trend": "up",
+      "status": "progress"
+    },
+    {
+      "id": "KPI-003",
+      "name": "AI Prediction Accuracy",
+      "value": 92.4,
+      "unit": "%",
+      "target": 90,
+      "previousValue": 91.1,
+      "change": 1.43,
+      "trend": "up",
+      "status": "excellent"
+    },
+    {
+      "id": "KPI-004",
+      "name": "Recovered Revenue",
+      "value": 26400000,
+      "unit": "INR",
+      "target": 30000000,
+      "previousValue": 21800000,
+      "change": 21.1,
+      "trend": "up",
+      "status": "progress"
+    },
+    {
+      "id": "KPI-005",
+      "name": "Conversion Rate",
+      "value": 15.19,
+      "unit": "%",
+      "target": 18,
+      "previousValue": 14.72,
+      "change": 3.19,
+      "trend": "up",
+      "status": "progress"
+    },
+    {
+      "id": "KPI-006",
+      "name": "Average Order Value",
+      "value": 7215,
+      "unit": "INR",
+      "target": 7500,
+      "previousValue": 6980,
+      "change": 3.36,
+      "trend": "up",
+      "status": "progress"
+    }
+  ],
+
+  "reports": [
+    {
+      "id": "RPT-2026-001",
+      "name": "Executive Revenue Recovery Report",
+      "type": "executive",
+      "category": "Revenue",
+      "description": "High-level overview of cart abandonment, AI recovery performance and recovered revenue.",
+      "period": "2026-07-09 to 2026-08-07",
+      "status": "ready",
+      "priority": "high",
+      "generatedAt": "2026-08-07T21:45:00",
+      "format": [
+        "dashboard",
+        "pdf",
+        "csv"
+      ],
+      "metrics": {
+        "recoveredRevenue": 26400000,
+        "recoveryRate": 32.15,
+        "recoveredOrders": 30140,
+        "roi": 491.93
+      }
+    },
+
+    {
+      "id": "RPT-2026-002",
+      "name": "Cart Abandonment Analysis",
+      "type": "behavior",
+      "category": "Customer Behaviour",
+      "description": "Analysis of customer abandonment patterns and the primary reasons customers leave without purchasing.",
+      "period": "2026-07-09 to 2026-08-07",
+      "status": "ready",
+      "priority": "high",
+      "generatedAt": "2026-08-07T21:40:00",
+      "format": [
+        "dashboard",
+        "pdf",
+        "csv"
+      ],
+      "metrics": {
+        "abandonedCarts": 12020,
+        "abandonmentRate": 28.51,
+        "largestReason": "High Shipping Cost",
+        "largestReasonPercentage": 22.96
+      }
+    },
+
+    {
+      "id": "RPT-2026-003",
+      "name": "AI Prediction Performance",
+      "type": "ai",
+      "category": "Artificial Intelligence",
+      "description": "Performance report for the Cart Rescue predictive engine.",
+      "period": "2026-07-09 to 2026-08-07",
+      "status": "ready",
+      "priority": "high",
+      "generatedAt": "2026-08-07T21:35:00",
+      "format": [
+        "dashboard",
+        "pdf"
+      ],
+      "metrics": {
+        "predictions": 120480,
+        "accuracy": 92.4,
+        "precision": 90.8,
+        "recall": 89.7,
+        "f1Score": 90.2,
+        "averageLatency": 42
+      }
+    },
+
+    {
+      "id": "RPT-2026-004",
+      "name": "Customer Recovery Report",
+      "type": "customer",
+      "category": "Customer Intelligence",
+      "description": "Customer-level recovery analysis including risk scores, recommended actions and recovery outcomes.",
+      "period": "2026-07-09 to 2026-08-07",
+      "status": "ready",
+      "priority": "medium",
+      "generatedAt": "2026-08-07T21:30:00",
+      "format": [
+        "dashboard",
+        "csv"
+      ],
+      "metrics": {
+        "customersAnalyzed": 120480,
+        "highRiskCustomers": 28420,
+        "mediumRiskCustomers": 41780,
+        "lowRiskCustomers": 70280,
+        "recoveryProbability": 61.4
+      }
+    },
+
+    {
+      "id": "RPT-2026-005",
+      "name": "Recovery Channel Performance",
+      "type": "channel",
+      "category": "Marketing",
+      "description": "Comparison of On-site, WhatsApp, Email, SMS and Push recovery performance.",
+      "period": "2026-07-09 to 2026-08-07",
+      "status": "ready",
+      "priority": "medium",
+      "generatedAt": "2026-08-07T21:25:00",
+      "format": [
+        "dashboard",
+        "pdf",
+        "csv"
+      ],
+      "metrics": {
+        "bestChannel": "On-site",
+        "bestRecoveryRate": 36.53,
+        "totalInterventions": 100480,
+        "totalRecoveredOrders": 31780
+      }
+    },
+
+    {
+      "id": "RPT-2026-006",
+      "name": "Revenue & ROI Report",
+      "type": "financial",
+      "category": "Finance",
+      "description": "Financial impact of AI-powered cart recovery including recovery cost, net revenue and ROI.",
+      "period": "2026-07-09 to 2026-08-07",
+      "status": "ready",
+      "priority": "high",
+      "generatedAt": "2026-08-07T21:20:00",
+      "format": [
+        "dashboard",
+        "pdf",
+        "csv"
+      ],
+      "metrics": {
+        "grossRecoveredRevenue": 26400000,
+        "discountCost": 3840000,
+        "communicationCost": 620000,
+        "totalRecoveryCost": 4460000,
+        "netRecoveredRevenue": 21940000,
+        "roi": 491.93
+      }
+    }
+  ],
+
+  "abandonmentReport": {
+    "totalAbandonedCarts": 12020,
+    "totalAbandonedValue": 82216800,
+
+    "reasons": [
+      {
+        "reason": "High Shipping Cost",
+        "count": 2760,
+        "percentage": 22.96,
+        "lostRevenue": 19982400,
+        "recoveredRevenue": 6960000,
+        "recoveryRate": 34.8,
+        "recommendedAction": "Free Shipping"
+      },
+      {
+        "reason": "Payment Failure",
+        "count": 2180,
+        "percentage": 18.14,
+        "lostRevenue": 17701600,
+        "recoveredRevenue": 7360000,
+        "recoveryRate": 41.6,
+        "recommendedAction": "Alternate Payment"
+      },
+      {
+        "reason": "Price Concern",
+        "count": 1920,
+        "percentage": 15.97,
+        "lostRevenue": 12345600,
+        "recoveredRevenue": 3600000,
+        "recoveryRate": 29.2,
+        "recommendedAction": "Limited Discount"
+      },
+      {
+        "reason": "Checkout Complexity",
+        "count": 1680,
+        "percentage": 13.98,
+        "lostRevenue": 11608800,
+        "recoveredRevenue": 4460000,
+        "recoveryRate": 38.4,
+        "recommendedAction": "Resume Checkout"
+      },
+      {
+        "reason": "Delivery Concern",
+        "count": 1260,
+        "percentage": 10.48,
+        "lostRevenue": 9500400,
+        "recoveredRevenue": 3520000,
+        "recoveryRate": 35.9,
+        "recommendedAction": "Delivery Assurance"
+      },
+      {
+        "reason": "Product Comparison",
+        "count": 910,
+        "percentage": 7.57,
+        "lostRevenue": 5296200,
+        "recoveredRevenue": 1460000,
+        "recoveryRate": 27.4,
+        "recommendedAction": "Product Recommendation"
+      },
+      {
+        "reason": "Stock Concern",
+        "count": 740,
+        "percentage": 6.16,
+        "lostRevenue": 6186400,
+        "recoveredRevenue": 1960000,
+        "recoveryRate": 31.8,
+        "recommendedAction": "Stock Alert"
+      },
+      {
+        "reason": "Still Browsing",
+        "count": 570,
+        "percentage": 4.74,
+        "lostRevenue": 2439600,
+        "recoveredRevenue": 478000,
+        "recoveryRate": 19.6,
+        "recommendedAction": "Product Recommendation"
+      }
+    ]
+  },
+
+  "recoveryReport": {
+    "totalInterventions": 100480,
+    "successfulRecoveries": 31780,
+    "overallRecoveryRate": 31.63,
+
+    "channels": [
+      {
+        "channel": "On-site",
+        "interventions": 28420,
+        "recoveries": 10380,
+        "recoveryRate": 36.53,
+        "revenueRecovered": 8240000,
+        "cost": 180000,
+        "roi": 4477.78
+      },
+      {
+        "channel": "WhatsApp",
+        "interventions": 22480,
+        "recoveries": 7420,
+        "recoveryRate": 33.01,
+        "revenueRecovered": 6120000,
+        "cost": 680000,
+        "roi": 800
+      },
+      {
+        "channel": "Email",
+        "interventions": 19760,
+        "recoveries": 5680,
+        "recoveryRate": 28.74,
+        "revenueRecovered": 4720000,
+        "cost": 420000,
+        "roi": 1023.81
+      },
+      {
+        "channel": "SMS",
+        "interventions": 14620,
+        "recoveries": 4320,
+        "recoveryRate": 29.55,
+        "revenueRecovered": 3410000,
+        "cost": 520000,
+        "roi": 555.77
+      },
+      {
+        "channel": "Push",
+        "interventions": 15200,
+        "recoveries": 3980,
+        "recoveryRate": 26.18,
+        "revenueRecovered": 2910000,
+        "cost": 190000,
+        "roi": 1431.58
+      }
+    ]
+  },
+
+  "aiReport": {
+    "engine": "Cart Rescue Predictive Engine",
+    "modelVersion": "CRAI-1.0",
+
+    "predictions": 120480,
+
+    "performance": {
+      "accuracy": 92.4,
+      "precision": 90.8,
+      "recall": 89.7,
+      "f1Score": 90.2,
+      "falsePositiveRate": 7.6,
+      "falseNegativeRate": 10.3,
+      "averageLatencyMs": 42
+    },
+
+    "riskModels": [
+      {
+        "risk": "HIGH",
+        "customers": 28420,
+        "averageScore": 86.4,
+        "recoveryProbability": 78.6
+      },
+      {
+        "risk": "MEDIUM",
+        "customers": 41780,
+        "averageScore": 63.2,
+        "recoveryProbability": 54.3
+      },
+      {
+        "risk": "LOW",
+        "customers": 70280,
+        "averageScore": 31.8,
+        "recoveryProbability": 22.7
+      }
+    ],
+
+    "topSignals": [
+      {
+        "signal": "Payment Failure",
+        "importance": 0.94
+      },
+      {
+        "signal": "Cart Value",
+        "importance": 0.89
+      },
+      {
+        "signal": "Checkout Started",
+        "importance": 0.87
+      },
+      {
+        "signal": "Previous Abandonments",
+        "importance": 0.81
+      },
+      {
+        "signal": "Time On Site",
+        "importance": 0.76
+      },
+      {
+        "signal": "Shipping Cost",
+        "importance": 0.74
+      },
+      {
+        "signal": "Product Views",
+        "importance": 0.68
+      },
+      {
+        "signal": "Customer Type",
+        "importance": 0.64
+      }
+    ]
+  },
+
+  "segmentReport": {
+    "segments": [
+      {
+        "segment": "New Customers",
+        "customers": 42680,
+        "abandonedCarts": 4820,
+        "recoveries": 1240,
+        "recoveryRate": 25.73,
+        "averageCartValue": 4920,
+        "revenueRecovered": 6100000
+      },
+      {
+        "segment": "Returning Customers",
+        "customers": 69120,
+        "abandonedCarts": 5620,
+        "recoveries": 2140,
+        "recoveryRate": 38.08,
+        "averageCartValue": 6740,
+        "revenueRecovered": 12300000
+      },
+      {
+        "segment": "VIP Customers",
+        "customers": 8560,
+        "abandonedCarts": 1580,
+        "recoveries": 860,
+        "recoveryRate": 54.43,
+        "averageCartValue": 14280,
+        "revenueRecovered": 8900000
+      }
+    ]
+  },
+
+  "deviceReport": {
+    "devices": [
+      {
+        "device": "Mobile",
+        "sessions": 109820,
+        "cartAdds": 34860,
+        "checkoutStarted": 23140,
+        "orders": 15920,
+        "abandonments": 7220,
+        "conversionRate": 14.49,
+        "recoveryOpportunity": "High"
+      },
+      {
+        "device": "Desktop",
+        "sessions": 68340,
+        "cartAdds": 21480,
+        "checkoutStarted": 15260,
+        "orders": 11740,
+        "abandonments": 3540,
+        "conversionRate": 17.18,
+        "recoveryOpportunity": "Medium"
+      },
+      {
+        "device": "Tablet",
+        "sessions": 20260,
+        "cartAdds": 6140,
+        "checkoutStarted": 3760,
+        "orders": 2480,
+        "abandonments": 1280,
+        "conversionRate": 12.24,
+        "recoveryOpportunity": "High"
+      }
+    ]
+  },
+
+  "financialReport": {
+    "currency": "INR",
+
+    "revenue": {
+      "completedOrderRevenue": 217380600,
+      "recoveredRevenue": 26400000,
+      "totalRevenueImpact": 243780600
+    },
+
+    "costs": {
+      "discountCost": 3840000,
+      "communicationCost": 620000,
+      "technologyCost": 780000,
+      "operationalCost": 1220000,
+      "totalCost": 6460000
+    },
+
+    "profitImpact": {
+      "grossRecovery": 26400000,
+      "totalCost": 6460000,
+      "netRecoveryImpact": 19940000
+    },
+
+    "roi": {
+      "grossROI": 408.67,
+      "netROI": 308.67
+    }
+  },
+
+  "alerts": [
+    {
+      "id": "REPORT-ALERT-001",
+      "severity": "HIGH",
+      "category": "Payment",
+      "title": "Payment failures require attention",
+      "message": "Payment failure is one of the largest abandonment drivers. Alternate payment recommendations should be prioritized.",
+      "impact": "High",
+      "recommendedAction": "Increase alternate payment options."
+    },
+    {
+      "id": "REPORT-ALERT-002",
+      "severity": "HIGH",
+      "category": "Shipping",
+      "title": "Shipping cost is the leading abandonment reason",
+      "message": "High shipping costs account for 22.96% of abandoned carts.",
+      "impact": "High",
+      "recommendedAction": "Test free-shipping thresholds and transparent shipping estimates."
+    },
+    {
+      "id": "REPORT-ALERT-003",
+      "severity": "MEDIUM",
+      "category": "Mobile",
+      "title": "Mobile conversion opportunity",
+      "message": "Mobile sessions generate the highest volume but convert below desktop performance.",
+      "impact": "Medium",
+      "recommendedAction": "Optimize the mobile checkout experience."
+    },
+    {
+      "id": "REPORT-ALERT-004",
+      "severity": "LOW",
+      "category": "AI",
+      "title": "AI accuracy is above target",
+      "message": "The predictive engine currently reports 92.4% accuracy against a 90% target.",
+      "impact": "Positive",
+      "recommendedAction": "Continue monitoring model drift."
+    }
+  ],
+
+  "recommendations": [
+    {
+      "priority": 1,
+      "area": "Payment",
+      "recommendation": "Expand alternate payment methods and trigger payment-retry flows immediately after a failed transaction.",
+      "expectedImpact": "High",
+      "estimatedRevenueOpportunity": 7360000
+    },
+    {
+      "priority": 2,
+      "area": "Shipping",
+      "recommendation": "Experiment with free-shipping thresholds and show shipping costs earlier in the customer journey.",
+      "expectedImpact": "High",
+      "estimatedRevenueOpportunity": 6960000
+    },
+    {
+      "priority": 3,
+      "area": "Mobile Checkout",
+      "recommendation": "Reduce checkout steps and improve mobile payment performance.",
+      "expectedImpact": "High",
+      "estimatedRevenueOpportunity": 5200000
+    },
+    {
+      "priority": 4,
+      "area": "VIP Recovery",
+      "recommendation": "Use personalized recovery experiences for high-value VIP customers instead of generic discounts.",
+      "expectedImpact": "Medium",
+      "estimatedRevenueOpportunity": 4200000
+    },
+    {
+      "priority": 5,
+      "area": "AI Optimization",
+      "recommendation": "Continue model evaluation and retraining using newly recovered and abandoned cart outcomes.",
+      "expectedImpact": "Medium",
+      "estimatedRevenueOpportunity": 3100000
+    }
+  ],
+
+  "reportSchedule": {
+    "daily": {
+      "enabled": true,
+      "time": "23:00",
+      "reports": [
+        "Executive Revenue Recovery Report",
+        "Cart Abandonment Analysis"
+      ]
+    },
+    "weekly": {
+      "enabled": true,
+      "day": "Monday",
+      "time": "08:00",
+      "reports": [
+        "AI Prediction Performance",
+        "Recovery Channel Performance",
+        "Customer Recovery Report"
+      ]
+    },
+    "monthly": {
+      "enabled": true,
+      "day": 1,
+      "time": "09:00",
+      "reports": [
+        "Revenue & ROI Report",
+        "Executive Revenue Recovery Report"
+      ]
+    }
+  },
+
+  "exportOptions": {
+    "formats": [
+      "PDF",
+      "CSV",
+      "JSON"
+    ],
+    "includeCharts": true,
+    "includeAIInsights": true,
+    "includeRecommendations": true,
+    "includeCustomerBreakdown": true
+  },
+
+  "lastUpdated": "2026-08-07T22:00:00"
+}
+```

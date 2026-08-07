@@ -1,0 +1,813 @@
+```json
+{
+  "metadata": {
+    "project": "Cart Rescue AI",
+    "system": "AI Cart Abandonment Prediction Engine",
+    "version": "1.0.0",
+    "modelVersion": "CRAI-1.0",
+    "currency": "INR",
+    "timezone": "Asia/Kolkata",
+    "generatedAt": "2026-08-07T22:00:00",
+    "predictionWindow": "Next 30 minutes"
+  },
+
+  "model": {
+    "name": "Cart Rescue Predictive Engine",
+    "version": "CRAI-1.0",
+    "type": "Hybrid Behaviour Prediction Model",
+    "status": "active",
+    "accuracy": 92.4,
+    "precision": 90.8,
+    "recall": 89.7,
+    "f1Score": 90.2,
+    "averageLatencyMs": 42,
+    "predictionsProcessed": 120480,
+    "lastRetrained": "2026-08-01T03:00:00",
+    "nextRetraining": "2026-08-08T03:00:00",
+    "confidenceThreshold": 0.65
+  },
+
+  "riskLevels": {
+    "high": {
+      "minimumScore": 75,
+      "maximumScore": 100,
+      "recommendedAction": "Immediate Intervention"
+    },
+    "medium": {
+      "minimumScore": 45,
+      "maximumScore": 74,
+      "recommendedAction": "Personalized Engagement"
+    },
+    "low": {
+      "minimumScore": 0,
+      "maximumScore": 44,
+      "recommendedAction": "Passive Monitoring"
+    }
+  },
+
+  "summary": {
+    "totalPredictions": 120480,
+    "highRisk": 28420,
+    "mediumRisk": 41780,
+    "lowRisk": 70280,
+    "highRiskPercentage": 23.59,
+    "mediumRiskPercentage": 34.68,
+    "lowRiskPercentage": 58.35,
+    "averageRiskScore": 48.7,
+    "averageConfidence": 87.6,
+    "predictedAbandonments": 12020,
+    "predictedRecoveries": 3860,
+    "estimatedRecoverableRevenue": 54811200
+  },
+
+  "predictions": [
+    {
+      "predictionId": "PRED-10001",
+      "customerId": "CUS-1001",
+      "sessionId": "SES-78001",
+      "timestamp": "2026-08-07T21:42:12",
+      "riskScore": 94,
+      "riskLevel": "HIGH",
+      "confidence": 96.8,
+      "cartValue": 18490,
+      "itemsInCart": 4,
+      "timeOnSiteSeconds": 842,
+      "productViews": 18,
+      "addToCartEvents": 5,
+      "checkoutStarted": true,
+      "paymentAttempted": true,
+      "paymentFailed": true,
+      "previousAbandonments": 2,
+      "customerType": "Returning",
+      "predictedReason": "Payment Failure",
+      "recommendedAction": "Alternate Payment",
+      "recoveryProbability": 86.4,
+      "estimatedRecoverableValue": 15994,
+      "status": "intervention_required"
+    },
+
+    {
+      "predictionId": "PRED-10002",
+      "customerId": "CUS-1002",
+      "sessionId": "SES-78002",
+      "timestamp": "2026-08-07T21:43:05",
+      "riskScore": 88,
+      "riskLevel": "HIGH",
+      "confidence": 94.2,
+      "cartValue": 12990,
+      "itemsInCart": 3,
+      "timeOnSiteSeconds": 624,
+      "productViews": 12,
+      "addToCartEvents": 3,
+      "checkoutStarted": true,
+      "paymentAttempted": false,
+      "paymentFailed": false,
+      "previousAbandonments": 1,
+      "customerType": "Returning",
+      "predictedReason": "Checkout Complexity",
+      "recommendedAction": "Resume Checkout",
+      "recoveryProbability": 78.2,
+      "estimatedRecoverableValue": 10161,
+      "status": "intervention_required"
+    },
+
+    {
+      "predictionId": "PRED-10003",
+      "customerId": "CUS-1003",
+      "sessionId": "SES-78003",
+      "timestamp": "2026-08-07T21:44:18",
+      "riskScore": 82,
+      "riskLevel": "HIGH",
+      "confidence": 91.7,
+      "cartValue": 8490,
+      "itemsInCart": 2,
+      "timeOnSiteSeconds": 510,
+      "productViews": 9,
+      "addToCartEvents": 2,
+      "checkoutStarted": false,
+      "paymentAttempted": false,
+      "paymentFailed": false,
+      "previousAbandonments": 3,
+      "customerType": "New",
+      "predictedReason": "High Shipping Cost",
+      "recommendedAction": "Free Shipping",
+      "recoveryProbability": 71.5,
+      "estimatedRecoverableValue": 6070,
+      "status": "intervention_required"
+    },
+
+    {
+      "predictionId": "PRED-10004",
+      "customerId": "CUS-1004",
+      "sessionId": "SES-78004",
+      "timestamp": "2026-08-07T21:45:11",
+      "riskScore": 79,
+      "riskLevel": "HIGH",
+      "confidence": 90.4,
+      "cartValue": 22400,
+      "itemsInCart": 6,
+      "timeOnSiteSeconds": 934,
+      "productViews": 24,
+      "addToCartEvents": 7,
+      "checkoutStarted": true,
+      "paymentAttempted": false,
+      "paymentFailed": false,
+      "previousAbandonments": 1,
+      "customerType": "VIP",
+      "predictedReason": "Price Concern",
+      "recommendedAction": "Limited Discount",
+      "recoveryProbability": 74.8,
+      "estimatedRecoverableValue": 16755,
+      "status": "intervention_required"
+    },
+
+    {
+      "predictionId": "PRED-10005",
+      "customerId": "CUS-1005",
+      "sessionId": "SES-78005",
+      "timestamp": "2026-08-07T21:46:22",
+      "riskScore": 76,
+      "riskLevel": "HIGH",
+      "confidence": 88.9,
+      "cartValue": 6790,
+      "itemsInCart": 2,
+      "timeOnSiteSeconds": 440,
+      "productViews": 8,
+      "addToCartEvents": 2,
+      "checkoutStarted": true,
+      "paymentAttempted": false,
+      "paymentFailed": false,
+      "previousAbandonments": 0,
+      "customerType": "New",
+      "predictedReason": "Delivery Concern",
+      "recommendedAction": "Delivery Assurance",
+      "recoveryProbability": 69.3,
+      "estimatedRecoverableValue": 4705,
+      "status": "intervention_required"
+    },
+
+    {
+      "predictionId": "PRED-10006",
+      "customerId": "CUS-1006",
+      "sessionId": "SES-78006",
+      "timestamp": "2026-08-07T21:47:03",
+      "riskScore": 71,
+      "riskLevel": "MEDIUM",
+      "confidence": 86.1,
+      "cartValue": 11990,
+      "itemsInCart": 3,
+      "timeOnSiteSeconds": 390,
+      "productViews": 11,
+      "addToCartEvents": 3,
+      "checkoutStarted": true,
+      "paymentAttempted": false,
+      "paymentFailed": false,
+      "previousAbandonments": 1,
+      "customerType": "Returning",
+      "predictedReason": "Price Concern",
+      "recommendedAction": "Product Recommendation",
+      "recoveryProbability": 57.8,
+      "estimatedRecoverableValue": 6930,
+      "status": "engagement_recommended"
+    },
+
+    {
+      "predictionId": "PRED-10007",
+      "customerId": "CUS-1007",
+      "sessionId": "SES-78007",
+      "timestamp": "2026-08-07T21:48:19",
+      "riskScore": 68,
+      "riskLevel": "MEDIUM",
+      "confidence": 84.7,
+      "cartValue": 5490,
+      "itemsInCart": 2,
+      "timeOnSiteSeconds": 275,
+      "productViews": 7,
+      "addToCartEvents": 2,
+      "checkoutStarted": false,
+      "paymentAttempted": false,
+      "paymentFailed": false,
+      "previousAbandonments": 1,
+      "customerType": "New",
+      "predictedReason": "Product Comparison",
+      "recommendedAction": "Product Recommendation",
+      "recoveryProbability": 49.6,
+      "estimatedRecoverableValue": 2723,
+      "status": "engagement_recommended"
+    },
+
+    {
+      "predictionId": "PRED-10008",
+      "customerId": "CUS-1008",
+      "sessionId": "SES-78008",
+      "timestamp": "2026-08-07T21:49:41",
+      "riskScore": 63,
+      "riskLevel": "MEDIUM",
+      "confidence": 82.3,
+      "cartValue": 15990,
+      "itemsInCart": 4,
+      "timeOnSiteSeconds": 520,
+      "productViews": 14,
+      "addToCartEvents": 4,
+      "checkoutStarted": true,
+      "paymentAttempted": false,
+      "paymentFailed": false,
+      "previousAbandonments": 2,
+      "customerType": "Returning",
+      "predictedReason": "High Shipping Cost",
+      "recommendedAction": "Free Shipping",
+      "recoveryProbability": 61.2,
+      "estimatedRecoverableValue": 9786,
+      "status": "engagement_recommended"
+    },
+
+    {
+      "predictionId": "PRED-10009",
+      "customerId": "CUS-1009",
+      "sessionId": "SES-78009",
+      "timestamp": "2026-08-07T21:50:14",
+      "riskScore": 59,
+      "riskLevel": "MEDIUM",
+      "confidence": 80.5,
+      "cartValue": 4290,
+      "itemsInCart": 1,
+      "timeOnSiteSeconds": 190,
+      "productViews": 5,
+      "addToCartEvents": 1,
+      "checkoutStarted": false,
+      "paymentAttempted": false,
+      "paymentFailed": false,
+      "previousAbandonments": 0,
+      "customerType": "New",
+      "predictedReason": "Still Browsing",
+      "recommendedAction": "Product Recommendation",
+      "recoveryProbability": 38.5,
+      "estimatedRecoverableValue": 1652,
+      "status": "monitor"
+    },
+
+    {
+      "predictionId": "PRED-10010",
+      "customerId": "CUS-1010",
+      "sessionId": "SES-78010",
+      "timestamp": "2026-08-07T21:51:08",
+      "riskScore": 55,
+      "riskLevel": "MEDIUM",
+      "confidence": 78.8,
+      "cartValue": 8990,
+      "itemsInCart": 2,
+      "timeOnSiteSeconds": 340,
+      "productViews": 9,
+      "addToCartEvents": 2,
+      "checkoutStarted": true,
+      "paymentAttempted": false,
+      "paymentFailed": false,
+      "previousAbandonments": 0,
+      "customerType": "New",
+      "predictedReason": "Delivery Concern",
+      "recommendedAction": "Delivery Assurance",
+      "recoveryProbability": 44.2,
+      "estimatedRecoverableValue": 3974,
+      "status": "monitor"
+    },
+
+    {
+      "predictionId": "PRED-10011",
+      "customerId": "CUS-1011",
+      "sessionId": "SES-78011",
+      "timestamp": "2026-08-07T21:52:26",
+      "riskScore": 47,
+      "riskLevel": "MEDIUM",
+      "confidence": 75.2,
+      "cartValue": 7390,
+      "itemsInCart": 2,
+      "timeOnSiteSeconds": 240,
+      "productViews": 6,
+      "addToCartEvents": 2,
+      "checkoutStarted": false,
+      "paymentAttempted": false,
+      "paymentFailed": false,
+      "previousAbandonments": 0,
+      "customerType": "Returning",
+      "predictedReason": "Product Comparison",
+      "recommendedAction": "Product Recommendation",
+      "recoveryProbability": 34.8,
+      "estimatedRecoverableValue": 2572,
+      "status": "monitor"
+    },
+
+    {
+      "predictionId": "PRED-10012",
+      "customerId": "CUS-1012",
+      "sessionId": "SES-78012",
+      "timestamp": "2026-08-07T21:53:10",
+      "riskScore": 43,
+      "riskLevel": "LOW",
+      "confidence": 72.9,
+      "cartValue": 3490,
+      "itemsInCart": 1,
+      "timeOnSiteSeconds": 145,
+      "productViews": 4,
+      "addToCartEvents": 1,
+      "checkoutStarted": false,
+      "paymentAttempted": false,
+      "paymentFailed": false,
+      "previousAbandonments": 0,
+      "customerType": "New",
+      "predictedReason": "Still Browsing",
+      "recommendedAction": "Passive Monitoring",
+      "recoveryProbability": 22.4,
+      "estimatedRecoverableValue": 782,
+      "status": "low_priority"
+    },
+
+    {
+      "predictionId": "PRED-10013",
+      "customerId": "CUS-1013",
+      "sessionId": "SES-78013",
+      "timestamp": "2026-08-07T21:54:22",
+      "riskScore": 38,
+      "riskLevel": "LOW",
+      "confidence": 70.6,
+      "cartValue": 6290,
+      "itemsInCart": 2,
+      "timeOnSiteSeconds": 205,
+      "productViews": 7,
+      "addToCartEvents": 2,
+      "checkoutStarted": false,
+      "paymentAttempted": false,
+      "paymentFailed": false,
+      "previousAbandonments": 0,
+      "customerType": "Returning",
+      "predictedReason": "Still Browsing",
+      "recommendedAction": "Passive Monitoring",
+      "recoveryProbability": 27.1,
+      "estimatedRecoverableValue": 1705,
+      "status": "low_priority"
+    },
+
+    {
+      "predictionId": "PRED-10014",
+      "customerId": "CUS-1014",
+      "sessionId": "SES-78014",
+      "timestamp": "2026-08-07T21:55:09",
+      "riskScore": 32,
+      "riskLevel": "LOW",
+      "confidence": 68.3,
+      "cartValue": 10990,
+      "itemsInCart": 3,
+      "timeOnSiteSeconds": 310,
+      "productViews": 10,
+      "addToCartEvents": 3,
+      "checkoutStarted": false,
+      "paymentAttempted": false,
+      "paymentFailed": false,
+      "previousAbandonments": 0,
+      "customerType": "VIP",
+      "predictedReason": "Product Comparison",
+      "recommendedAction": "Personalized Recommendation",
+      "recoveryProbability": 31.5,
+      "estimatedRecoverableValue": 3462,
+      "status": "low_priority"
+    },
+
+    {
+      "predictionId": "PRED-10015",
+      "customerId": "CUS-1015",
+      "sessionId": "SES-78015",
+      "timestamp": "2026-08-07T21:56:34",
+      "riskScore": 27,
+      "riskLevel": "LOW",
+      "confidence": 65.7,
+      "cartValue": 2890,
+      "itemsInCart": 1,
+      "timeOnSiteSeconds": 120,
+      "productViews": 3,
+      "addToCartEvents": 1,
+      "checkoutStarted": false,
+      "paymentAttempted": false,
+      "paymentFailed": false,
+      "previousAbandonments": 0,
+      "customerType": "New",
+      "predictedReason": "Still Browsing",
+      "recommendedAction": "Passive Monitoring",
+      "recoveryProbability": 18.6,
+      "estimatedRecoverableValue": 538,
+      "status": "low_priority"
+    },
+
+    {
+      "predictionId": "PRED-10016",
+      "customerId": "CUS-1016",
+      "sessionId": "SES-78016",
+      "timestamp": "2026-08-07T21:57:16",
+      "riskScore": 91,
+      "riskLevel": "HIGH",
+      "confidence": 95.4,
+      "cartValue": 31500,
+      "itemsInCart": 7,
+      "timeOnSiteSeconds": 1050,
+      "productViews": 31,
+      "addToCartEvents": 8,
+      "checkoutStarted": true,
+      "paymentAttempted": true,
+      "paymentFailed": true,
+      "previousAbandonments": 4,
+      "customerType": "VIP",
+      "predictedReason": "Payment Failure",
+      "recommendedAction": "Payment Retry + Alternate Payment",
+      "recoveryProbability": 91.2,
+      "estimatedRecoverableValue": 28728,
+      "status": "urgent"
+    },
+
+    {
+      "predictionId": "PRED-10017",
+      "customerId": "CUS-1017",
+      "sessionId": "SES-78017",
+      "timestamp": "2026-08-07T21:58:03",
+      "riskScore": 84,
+      "riskLevel": "HIGH",
+      "confidence": 92.1,
+      "cartValue": 14990,
+      "itemsInCart": 3,
+      "timeOnSiteSeconds": 720,
+      "productViews": 16,
+      "addToCartEvents": 4,
+      "checkoutStarted": true,
+      "paymentAttempted": false,
+      "paymentFailed": false,
+      "previousAbandonments": 2,
+      "customerType": "Returning",
+      "predictedReason": "High Shipping Cost",
+      "recommendedAction": "Free Shipping",
+      "recoveryProbability": 79.4,
+      "estimatedRecoverableValue": 11902,
+      "status": "intervention_required"
+    },
+
+    {
+      "predictionId": "PRED-10018",
+      "customerId": "CUS-1018",
+      "sessionId": "SES-78018",
+      "timestamp": "2026-08-07T21:58:49",
+      "riskScore": 73,
+      "riskLevel": "MEDIUM",
+      "confidence": 87.2,
+      "cartValue": 9490,
+      "itemsInCart": 2,
+      "timeOnSiteSeconds": 470,
+      "productViews": 10,
+      "addToCartEvents": 2,
+      "checkoutStarted": true,
+      "paymentAttempted": false,
+      "paymentFailed": false,
+      "previousAbandonments": 1,
+      "customerType": "Returning",
+      "predictedReason": "Checkout Complexity",
+      "recommendedAction": "Resume Checkout",
+      "recoveryProbability": 66.1,
+      "estimatedRecoverableValue": 6273,
+      "status": "engagement_recommended"
+    },
+
+    {
+      "predictionId": "PRED-10019",
+      "customerId": "CUS-1019",
+      "sessionId": "SES-78019",
+      "timestamp": "2026-08-07T21:59:21",
+      "riskScore": 61,
+      "riskLevel": "MEDIUM",
+      "confidence": 81.4,
+      "cartValue": 5790,
+      "itemsInCart": 2,
+      "timeOnSiteSeconds": 360,
+      "productViews": 8,
+      "addToCartEvents": 2,
+      "checkoutStarted": false,
+      "paymentAttempted": false,
+      "paymentFailed": false,
+      "previousAbandonments": 1,
+      "customerType": "New",
+      "predictedReason": "Price Concern",
+      "recommendedAction": "Limited Discount",
+      "recoveryProbability": 46.8,
+      "estimatedRecoverableValue": 2709,
+      "status": "engagement_recommended"
+    },
+
+    {
+      "predictionId": "PRED-10020",
+      "customerId": "CUS-1020",
+      "sessionId": "SES-78020",
+      "timestamp": "2026-08-07T21:59:48",
+      "riskScore": 18,
+      "riskLevel": "LOW",
+      "confidence": 91.5,
+      "cartValue": 1890,
+      "itemsInCart": 1,
+      "timeOnSiteSeconds": 85,
+      "productViews": 2,
+      "addToCartEvents": 1,
+      "checkoutStarted": false,
+      "paymentAttempted": false,
+      "paymentFailed": false,
+      "previousAbandonments": 0,
+      "customerType": "New",
+      "predictedReason": "Low Intent",
+      "recommendedAction": "No Intervention",
+      "recoveryProbability": 11.2,
+      "estimatedRecoverableValue": 212,
+      "status": "no_action"
+    }
+  ],
+
+  "featureImportance": [
+    {
+      "feature": "Payment Failure",
+      "importance": 94,
+      "impact": "Very High",
+      "description": "Failed payment attempts strongly increase abandonment probability."
+    },
+    {
+      "feature": "Cart Value",
+      "importance": 89,
+      "impact": "Very High",
+      "description": "Higher-value carts require stronger recovery prioritization."
+    },
+    {
+      "feature": "Checkout Started",
+      "importance": 87,
+      "impact": "High",
+      "description": "Customers who start checkout demonstrate strong purchase intent."
+    },
+    {
+      "feature": "Previous Abandonments",
+      "importance": 81,
+      "impact": "High",
+      "description": "Repeated abandonment is a strong behavioural signal."
+    },
+    {
+      "feature": "Time On Site",
+      "importance": 76,
+      "impact": "Medium",
+      "description": "Long sessions can indicate purchase consideration or friction."
+    },
+    {
+      "feature": "Shipping Cost",
+      "importance": 74,
+      "impact": "Medium",
+      "description": "High shipping costs can significantly increase abandonment."
+    },
+    {
+      "feature": "Product Views",
+      "importance": 68,
+      "impact": "Medium",
+      "description": "Repeated product views can indicate comparison behaviour."
+    },
+    {
+      "feature": "Customer Type",
+      "importance": 64,
+      "impact": "Medium",
+      "description": "New, returning and VIP customers respond differently to interventions."
+    }
+  ],
+
+  "recommendedActions": [
+    {
+      "action": "Payment Retry",
+      "trigger": "Payment failure detected",
+      "priority": "CRITICAL",
+      "expectedRecoveryRate": 44.24,
+      "recommendedChannel": "On-site",
+      "message": "Your payment didn't go through. Try again or choose another payment method."
+    },
+    {
+      "action": "Alternate Payment",
+      "trigger": "Repeated payment failure",
+      "priority": "CRITICAL",
+      "expectedRecoveryRate": 46.95,
+      "recommendedChannel": "On-site",
+      "message": "Try another secure payment option to complete your order."
+    },
+    {
+      "action": "Free Shipping",
+      "trigger": "Shipping-cost risk detected",
+      "priority": "HIGH",
+      "expectedRecoveryRate": 36.19,
+      "recommendedChannel": "WhatsApp",
+      "message": "Good news! You may be eligible for free shipping on your cart."
+    },
+    {
+      "action": "Resume Checkout",
+      "trigger": "Checkout abandoned",
+      "priority": "HIGH",
+      "expectedRecoveryRate": 38.01,
+      "recommendedChannel": "Email",
+      "message": "Your cart is waiting. Continue checkout from where you left off."
+    },
+    {
+      "action": "Limited Discount",
+      "trigger": "Price sensitivity detected",
+      "priority": "MEDIUM",
+      "expectedRecoveryRate": 28.96,
+      "recommendedChannel": "Email",
+      "message": "A limited-time offer is available for your selected items."
+    },
+    {
+      "action": "Delivery Assurance",
+      "trigger": "Delivery concern detected",
+      "priority": "HIGH",
+      "expectedRecoveryRate": 42.31,
+      "recommendedChannel": "On-site",
+      "message": "Check your estimated delivery date before completing your order."
+    },
+    {
+      "action": "Product Recommendation",
+      "trigger": "Comparison behaviour detected",
+      "priority": "MEDIUM",
+      "expectedRecoveryRate": 28.14,
+      "recommendedChannel": "Push",
+      "message": "We found products that match what you're looking for."
+    },
+    {
+      "action": "Stock Alert",
+      "trigger": "Low-stock product detected",
+      "priority": "HIGH",
+      "expectedRecoveryRate": 28.57,
+      "recommendedChannel": "Push",
+      "message": "An item in your cart is running low in stock."
+    }
+  ],
+
+  "modelMonitoring": {
+    "currentAccuracy": 92.4,
+    "targetAccuracy": 90,
+    "accuracyStatus": "above_target",
+
+    "currentLatencyMs": 42,
+    "targetLatencyMs": 100,
+    "latencyStatus": "healthy",
+
+    "dataDriftScore": 0.08,
+    "dataDriftThreshold": 0.2,
+    "dataDriftStatus": "normal",
+
+    "modelDriftScore": 0.06,
+    "modelDriftThreshold": 0.15,
+    "modelDriftStatus": "normal",
+
+    "lastHealthCheck": "2026-08-07T21:55:00",
+    "systemHealth": "excellent"
+  },
+
+  "predictionTimeline": [
+    {
+      "time": "18:00",
+      "predictions": 4120,
+      "highRisk": 820,
+      "mediumRisk": 1420,
+      "lowRisk": 1880
+    },
+    {
+      "time": "19:00",
+      "predictions": 4860,
+      "highRisk": 960,
+      "mediumRisk": 1660,
+      "lowRisk": 2240
+    },
+    {
+      "time": "20:00",
+      "predictions": 5280,
+      "highRisk": 1080,
+      "mediumRisk": 1810,
+      "lowRisk": 2390
+    },
+    {
+      "time": "21:00",
+      "predictions": 5640,
+      "highRisk": 1260,
+      "mediumRisk": 1940,
+      "lowRisk": 2440
+    },
+    {
+      "time": "22:00",
+      "predictions": 4980,
+      "highRisk": 1040,
+      "mediumRisk": 1740,
+      "lowRisk": 2200
+    }
+  ],
+
+  "liveSystem": {
+    "status": "ONLINE",
+    "activeSessions": 1284,
+    "activePredictions": 86,
+    "highRiskLive": 24,
+    "mediumRiskLive": 37,
+    "lowRiskLive": 25,
+    "interventionsQueued": 18,
+    "interventionsRunning": 11,
+    "recoveriesToday": 842,
+    "revenueRecoveredToday": 2020000,
+    "lastPredictionAt": "2026-08-07T21:59:48"
+  },
+
+  "alerts": [
+    {
+      "id": "AI-ALERT-001",
+      "severity": "HIGH",
+      "type": "Payment",
+      "title": "Payment failure spike",
+      "message": "Payment-related abandonment is currently above the configured threshold.",
+      "metric": "paymentFailureRate",
+      "value": 18.14,
+      "threshold": 15,
+      "recommendedAction": "Activate alternate payment recommendations."
+    },
+    {
+      "id": "AI-ALERT-002",
+      "severity": "MEDIUM",
+      "type": "Shipping",
+      "title": "Shipping friction detected",
+      "message": "Shipping cost is currently the largest abandonment signal.",
+      "metric": "shippingAbandonment",
+      "value": 22.96,
+      "threshold": 20,
+      "recommendedAction": "Test free-shipping intervention."
+    },
+    {
+      "id": "AI-ALERT-003",
+      "severity": "LOW",
+      "type": "Model",
+      "title": "Model operating normally",
+      "message": "Prediction accuracy and latency are within healthy ranges.",
+      "metric": "accuracy",
+      "value": 92.4,
+      "threshold": 90,
+      "recommendedAction": "Continue monitoring."
+    }
+  ],
+
+  "simulation": {
+    "enabled": true,
+    "mode": "demo",
+    "refreshIntervalMs": 5000,
+    "randomizeRiskScore": true,
+    "randomizeConfidence": true,
+    "randomizeCartValue": true,
+    "simulateInterventions": true,
+    "simulateRecovery": true
+  },
+
+  "api": {
+    "predictionEndpoint": "/api/v1/predictions",
+    "riskEndpoint": "/api/v1/predictions/risk",
+    "recommendationEndpoint": "/api/v1/predictions/recommendation",
+    "healthEndpoint": "/api/v1/model/health",
+    "simulationEndpoint": "/api/v1/simulation/prediction"
+  },
+
+  "lastUpdated": "2026-08-07T22:00:00"
+}
+```

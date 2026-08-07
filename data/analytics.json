@@ -1,0 +1,1074 @@
+```json
+{
+  "metadata": {
+    "project": "Cart Rescue AI",
+    "version": "1.0.0",
+    "generatedAt": "2026-08-07T22:00:00",
+    "currency": "INR",
+    "timezone": "Asia/Kolkata",
+    "dataPeriod": "2026-07-09 to 2026-08-07"
+  },
+
+  "overview": {
+    "totalVisitors": 248650,
+    "totalSessions": 198420,
+    "productViews": 584720,
+    "addToCartEvents": 62480,
+    "checkoutStarted": 42160,
+    "completedOrders": 30140,
+    "abandonedCarts": 12020,
+
+    "cartAbandonmentRate": 28.51,
+    "checkoutCompletionRate": 71.49,
+    "conversionRate": 15.19,
+
+    "averageCartValue": 6840,
+    "averageOrderValue": 7215,
+
+    "totalCartValue": 427411200,
+    "potentialLostRevenue": 82216800,
+    "recoveredRevenue": 26400000,
+
+    "recoveryRate": 32.15,
+
+    "aiPredictions": 120480,
+    "highRiskCustomers": 28420,
+    "mediumRiskCustomers": 41780,
+    "lowRiskCustomers": 70280,
+
+    "aiAccuracy": 92.4,
+    "aiPrecision": 90.8,
+    "aiRecall": 89.7,
+    "aiF1Score": 90.2
+  },
+
+  "daily": [
+    {
+      "date": "2026-07-09",
+      "visitors": 7420,
+      "sessions": 5960,
+      "productViews": 17420,
+      "addToCart": 1880,
+      "checkoutStarted": 1260,
+      "completedOrders": 902,
+      "abandonedCarts": 358,
+      "cartValue": 12180000,
+      "recoveredRevenue": 720000,
+      "recoveryRate": 31.24,
+      "conversionRate": 15.13
+    },
+    {
+      "date": "2026-07-10",
+      "visitors": 7680,
+      "sessions": 6140,
+      "productViews": 18120,
+      "addToCart": 1940,
+      "checkoutStarted": 1320,
+      "completedOrders": 938,
+      "abandonedCarts": 382,
+      "cartValue": 12840000,
+      "recoveredRevenue": 760000,
+      "recoveryRate": 30.82,
+      "conversionRate": 15.28
+    },
+    {
+      "date": "2026-07-11",
+      "visitors": 8010,
+      "sessions": 6380,
+      "productViews": 19280,
+      "addToCart": 2050,
+      "checkoutStarted": 1380,
+      "completedOrders": 980,
+      "abandonedCarts": 400,
+      "cartValue": 13420000,
+      "recoveredRevenue": 810000,
+      "recoveryRate": 31.45,
+      "conversionRate": 15.36
+    },
+    {
+      "date": "2026-07-12",
+      "visitors": 8260,
+      "sessions": 6610,
+      "productViews": 19860,
+      "addToCart": 2120,
+      "checkoutStarted": 1440,
+      "completedOrders": 1018,
+      "abandonedCarts": 422,
+      "cartValue": 13980000,
+      "recoveredRevenue": 860000,
+      "recoveryRate": 31.76,
+      "conversionRate": 15.40
+    },
+    {
+      "date": "2026-07-13",
+      "visitors": 7890,
+      "sessions": 6310,
+      "productViews": 18760,
+      "addToCart": 1980,
+      "checkoutStarted": 1340,
+      "completedOrders": 952,
+      "abandonedCarts": 388,
+      "cartValue": 13120000,
+      "recoveredRevenue": 790000,
+      "recoveryRate": 31.18,
+      "conversionRate": 15.09
+    },
+    {
+      "date": "2026-07-14",
+      "visitors": 8420,
+      "sessions": 6740,
+      "productViews": 20140,
+      "addToCart": 2160,
+      "checkoutStarted": 1480,
+      "completedOrders": 1050,
+      "abandonedCarts": 430,
+      "cartValue": 14360000,
+      "recoveredRevenue": 880000,
+      "recoveryRate": 32.14,
+      "conversionRate": 15.58
+    },
+    {
+      "date": "2026-07-15",
+      "visitors": 8640,
+      "sessions": 6910,
+      "productViews": 20780,
+      "addToCart": 2210,
+      "checkoutStarted": 1510,
+      "completedOrders": 1082,
+      "abandonedCarts": 428,
+      "cartValue": 14820000,
+      "recoveredRevenue": 910000,
+      "recoveryRate": 32.52,
+      "conversionRate": 15.66
+    },
+    {
+      "date": "2026-07-16",
+      "visitors": 8780,
+      "sessions": 7020,
+      "productViews": 21340,
+      "addToCart": 2290,
+      "checkoutStarted": 1570,
+      "completedOrders": 1128,
+      "abandonedCarts": 442,
+      "cartValue": 15260000,
+      "recoveredRevenue": 940000,
+      "recoveryRate": 32.71,
+      "conversionRate": 16.07
+    },
+    {
+      "date": "2026-07-17",
+      "visitors": 8210,
+      "sessions": 6570,
+      "productViews": 19840,
+      "addToCart": 2080,
+      "checkoutStarted": 1410,
+      "completedOrders": 1010,
+      "abandonedCarts": 400,
+      "cartValue": 13740000,
+      "recoveredRevenue": 820000,
+      "recoveryRate": 32.11,
+      "conversionRate": 15.37
+    },
+    {
+      "date": "2026-07-18",
+      "visitors": 8950,
+      "sessions": 7160,
+      "productViews": 21840,
+      "addToCart": 2350,
+      "checkoutStarted": 1620,
+      "completedOrders": 1165,
+      "abandonedCarts": 455,
+      "cartValue": 15880000,
+      "recoveredRevenue": 980000,
+      "recoveryRate": 33.04,
+      "conversionRate": 16.27
+    },
+    {
+      "date": "2026-07-19",
+      "visitors": 9140,
+      "sessions": 7310,
+      "productViews": 22420,
+      "addToCart": 2410,
+      "checkoutStarted": 1660,
+      "completedOrders": 1198,
+      "abandonedCarts": 462,
+      "cartValue": 16420000,
+      "recoveredRevenue": 1010000,
+      "recoveryRate": 33.18,
+      "conversionRate": 16.39
+    },
+    {
+      "date": "2026-07-20",
+      "visitors": 9360,
+      "sessions": 7490,
+      "productViews": 23180,
+      "addToCart": 2490,
+      "checkoutStarted": 1710,
+      "completedOrders": 1235,
+      "abandonedCarts": 475,
+      "cartValue": 16980000,
+      "recoveredRevenue": 1040000,
+      "recoveryRate": 33.41,
+      "conversionRate": 16.49
+    },
+    {
+      "date": "2026-07-21",
+      "visitors": 9520,
+      "sessions": 7610,
+      "productViews": 23760,
+      "addToCart": 2550,
+      "checkoutStarted": 1760,
+      "completedOrders": 1270,
+      "abandonedCarts": 490,
+      "cartValue": 17540000,
+      "recoveredRevenue": 1080000,
+      "recoveryRate": 33.72,
+      "conversionRate": 16.69
+    },
+    {
+      "date": "2026-07-22",
+      "visitors": 9210,
+      "sessions": 7370,
+      "productViews": 22980,
+      "addToCart": 2470,
+      "checkoutStarted": 1700,
+      "completedOrders": 1228,
+      "abandonedCarts": 472,
+      "cartValue": 17120000,
+      "recoveredRevenue": 1050000,
+      "recoveryRate": 33.53,
+      "conversionRate": 16.65
+    },
+    {
+      "date": "2026-07-23",
+      "visitors": 9680,
+      "sessions": 7740,
+      "productViews": 24120,
+      "addToCart": 2610,
+      "checkoutStarted": 1810,
+      "completedOrders": 1310,
+      "abandonedCarts": 500,
+      "cartValue": 18160000,
+      "recoveredRevenue": 1120000,
+      "recoveryRate": 33.88,
+      "conversionRate": 16.93
+    },
+    {
+      "date": "2026-07-24",
+      "visitors": 9820,
+      "sessions": 7860,
+      "productViews": 24540,
+      "addToCart": 2670,
+      "checkoutStarted": 1850,
+      "completedOrders": 1340,
+      "abandonedCarts": 510,
+      "cartValue": 18720000,
+      "recoveredRevenue": 1160000,
+      "recoveryRate": 34.18,
+      "conversionRate": 17.05
+    },
+    {
+      "date": "2026-07-25",
+      "visitors": 10120,
+      "sessions": 8090,
+      "productViews": 25380,
+      "addToCart": 2760,
+      "checkoutStarted": 1920,
+      "completedOrders": 1398,
+      "abandonedCarts": 522,
+      "cartValue": 19480000,
+      "recoveredRevenue": 1210000,
+      "recoveryRate": 34.42,
+      "conversionRate": 17.28
+    },
+    {
+      "date": "2026-07-26",
+      "visitors": 10540,
+      "sessions": 8430,
+      "productViews": 26420,
+      "addToCart": 2890,
+      "checkoutStarted": 2010,
+      "completedOrders": 1460,
+      "abandonedCarts": 550,
+      "cartValue": 20360000,
+      "recoveredRevenue": 1270000,
+      "recoveryRate": 34.65,
+      "conversionRate": 17.32
+    },
+    {
+      "date": "2026-07-27",
+      "visitors": 10820,
+      "sessions": 8660,
+      "productViews": 27240,
+      "addToCart": 2970,
+      "checkoutStarted": 2070,
+      "completedOrders": 1508,
+      "abandonedCarts": 562,
+      "cartValue": 21140000,
+      "recoveredRevenue": 1320000,
+      "recoveryRate": 34.84,
+      "conversionRate": 17.41
+    },
+    {
+      "date": "2026-07-28",
+      "visitors": 11140,
+      "sessions": 8910,
+      "productViews": 28120,
+      "addToCart": 3060,
+      "checkoutStarted": 2140,
+      "completedOrders": 1562,
+      "abandonedCarts": 578,
+      "cartValue": 21980000,
+      "recoveredRevenue": 1380000,
+      "recoveryRate": 35.12,
+      "conversionRate": 17.53
+    },
+    {
+      "date": "2026-07-29",
+      "visitors": 11420,
+      "sessions": 9130,
+      "productViews": 28980,
+      "addToCart": 3150,
+      "checkoutStarted": 2210,
+      "completedOrders": 1615,
+      "abandonedCarts": 595,
+      "cartValue": 22760000,
+      "recoveredRevenue": 1440000,
+      "recoveryRate": 35.29,
+      "conversionRate": 17.69
+    },
+    {
+      "date": "2026-07-30",
+      "visitors": 11760,
+      "sessions": 9410,
+      "productViews": 29840,
+      "addToCart": 3240,
+      "checkoutStarted": 2280,
+      "completedOrders": 1670,
+      "abandonedCarts": 610,
+      "cartValue": 23620000,
+      "recoveredRevenue": 1500000,
+      "recoveryRate": 35.53,
+      "conversionRate": 17.75
+    },
+    {
+      "date": "2026-07-31",
+      "visitors": 12040,
+      "sessions": 9630,
+      "productViews": 30620,
+      "addToCart": 3330,
+      "checkoutStarted": 2350,
+      "completedOrders": 1728,
+      "abandonedCarts": 622,
+      "cartValue": 24480000,
+      "recoveredRevenue": 1560000,
+      "recoveryRate": 35.68,
+      "conversionRate": 17.94
+    },
+    {
+      "date": "2026-08-01",
+      "visitors": 12380,
+      "sessions": 9900,
+      "productViews": 31540,
+      "addToCart": 3420,
+      "checkoutStarted": 2420,
+      "completedOrders": 1785,
+      "abandonedCarts": 635,
+      "cartValue": 25360000,
+      "recoveredRevenue": 1620000,
+      "recoveryRate": 35.84,
+      "conversionRate": 18.03
+    },
+    {
+      "date": "2026-08-02",
+      "visitors": 12640,
+      "sessions": 10110,
+      "productViews": 32380,
+      "addToCart": 3510,
+      "checkoutStarted": 2490,
+      "completedOrders": 1840,
+      "abandonedCarts": 650,
+      "cartValue": 26240000,
+      "recoveredRevenue": 1680000,
+      "recoveryRate": 36.04,
+      "conversionRate": 18.20
+    },
+    {
+      "date": "2026-08-03",
+      "visitors": 12980,
+      "sessions": 10380,
+      "productViews": 33240,
+      "addToCart": 3610,
+      "checkoutStarted": 2570,
+      "completedOrders": 1902,
+      "abandonedCarts": 668,
+      "cartValue": 27180000,
+      "recoveredRevenue": 1740000,
+      "recoveryRate": 36.28,
+      "conversionRate": 18.32
+    },
+    {
+      "date": "2026-08-04",
+      "visitors": 13320,
+      "sessions": 10650,
+      "productViews": 34120,
+      "addToCart": 3710,
+      "checkoutStarted": 2640,
+      "completedOrders": 1960,
+      "abandonedCarts": 680,
+      "cartValue": 28160000,
+      "recoveredRevenue": 1810000,
+      "recoveryRate": 36.48,
+      "conversionRate": 18.40
+    },
+    {
+      "date": "2026-08-05",
+      "visitors": 13680,
+      "sessions": 10940,
+      "productViews": 35040,
+      "addToCart": 3820,
+      "checkoutStarted": 2720,
+      "completedOrders": 2024,
+      "abandonedCarts": 696,
+      "cartValue": 29140000,
+      "recoveredRevenue": 1880000,
+      "recoveryRate": 36.73,
+      "conversionRate": 18.50
+    },
+    {
+      "date": "2026-08-06",
+      "visitors": 14020,
+      "sessions": 11210,
+      "productViews": 35980,
+      "addToCart": 3930,
+      "checkoutStarted": 2800,
+      "completedOrders": 2088,
+      "abandonedCarts": 712,
+      "cartValue": 30120000,
+      "recoveredRevenue": 1950000,
+      "recoveryRate": 36.94,
+      "conversionRate": 18.63
+    },
+    {
+      "date": "2026-08-07",
+      "visitors": 14380,
+      "sessions": 11500,
+      "productViews": 36920,
+      "addToCart": 4050,
+      "checkoutStarted": 2890,
+      "completedOrders": 2150,
+      "abandonedCarts": 740,
+      "cartValue": 31200000,
+      "recoveredRevenue": 2020000,
+      "recoveryRate": 37.18,
+      "conversionRate": 18.70
+    }
+  ],
+
+  "funnel": {
+    "visitors": 248650,
+    "productViewers": 184720,
+    "addToCart": 62480,
+    "checkoutStarted": 42160,
+    "paymentAttempted": 36520,
+    "completedOrders": 30140,
+
+    "conversionRates": {
+      "visitorToProductView": 74.29,
+      "productViewToCart": 33.84,
+      "cartToCheckout": 67.48,
+      "checkoutToPayment": 86.63,
+      "paymentToOrder": 82.53,
+      "visitorToOrder": 12.12
+    }
+  },
+
+  "cartAbandonment": {
+    "totalAbandoned": 12020,
+
+    "byReason": [
+      {
+        "reason": "High Shipping Cost",
+        "count": 2760,
+        "percentage": 22.96,
+        "averageCartValue": 7240,
+        "recoveryRate": 34.8
+      },
+      {
+        "reason": "Payment Failure",
+        "count": 2180,
+        "percentage": 18.14,
+        "averageCartValue": 8120,
+        "recoveryRate": 41.6
+      },
+      {
+        "reason": "Price Concern",
+        "count": 1920,
+        "percentage": 15.97,
+        "averageCartValue": 6430,
+        "recoveryRate": 29.2
+      },
+      {
+        "reason": "Checkout Complexity",
+        "count": 1680,
+        "percentage": 13.98,
+        "averageCartValue": 6910,
+        "recoveryRate": 38.4
+      },
+      {
+        "reason": "Delivery Concern",
+        "count": 1260,
+        "percentage": 10.48,
+        "averageCartValue": 7540,
+        "recoveryRate": 35.9
+      },
+      {
+        "reason": "Product Comparison",
+        "count": 910,
+        "percentage": 7.57,
+        "averageCartValue": 5820,
+        "recoveryRate": 27.4
+      },
+      {
+        "reason": "Stock Concern",
+        "count": 740,
+        "percentage": 6.16,
+        "averageCartValue": 8360,
+        "recoveryRate": 31.8
+      },
+      {
+        "reason": "Still Browsing",
+        "count": 570,
+        "percentage": 4.74,
+        "averageCartValue": 4280,
+        "recoveryRate": 19.6
+      }
+    ]
+  },
+
+  "riskDistribution": {
+    "high": {
+      "customers": 28420,
+      "percentage": 23.59,
+      "averageRiskScore": 86.4,
+      "recoveryProbability": 78.6
+    },
+    "medium": {
+      "customers": 41780,
+      "percentage": 34.68,
+      "averageRiskScore": 63.2,
+      "recoveryProbability": 54.3
+    },
+    "low": {
+      "customers": 70280,
+      "percentage": 58.35,
+      "averageRiskScore": 31.8,
+      "recoveryProbability": 22.7
+    }
+  },
+
+  "channelPerformance": [
+    {
+      "channel": "On-site",
+      "interventions": 28420,
+      "messagesSent": 28420,
+      "recoveredOrders": 10380,
+      "recoveryRate": 36.53,
+      "revenueRecovered": 8240000,
+      "averageRevenuePerRecovery": 7938
+    },
+    {
+      "channel": "WhatsApp",
+      "interventions": 22480,
+      "messagesSent": 22480,
+      "recoveredOrders": 7420,
+      "recoveryRate": 33.01,
+      "revenueRecovered": 6120000,
+      "averageRevenuePerRecovery": 8248
+    },
+    {
+      "channel": "Email",
+      "interventions": 19760,
+      "messagesSent": 19760,
+      "recoveredOrders": 5680,
+      "recoveryRate": 28.74,
+      "revenueRecovered": 4720000,
+      "averageRevenuePerRecovery": 8310
+    },
+    {
+      "channel": "SMS",
+      "interventions": 14620,
+      "messagesSent": 14620,
+      "recoveredOrders": 4320,
+      "recoveryRate": 29.55,
+      "revenueRecovered": 3410000,
+      "averageRevenuePerRecovery": 7894
+    },
+    {
+      "channel": "Push",
+      "interventions": 15200,
+      "messagesSent": 15200,
+      "recoveredOrders": 3980,
+      "recoveryRate": 26.18,
+      "revenueRecovered": 2910000,
+      "averageRevenuePerRecovery": 7312
+    }
+  ],
+
+  "devicePerformance": [
+    {
+      "device": "Mobile",
+      "sessions": 109820,
+      "cartAdds": 34860,
+      "checkouts": 23140,
+      "orders": 15920,
+      "abandonments": 7220,
+      "conversionRate": 14.49
+    },
+    {
+      "device": "Desktop",
+      "sessions": 68340,
+      "cartAdds": 21480,
+      "checkouts": 15260,
+      "orders": 11740,
+      "abandonments": 3540,
+      "conversionRate": 17.18
+    },
+    {
+      "device": "Tablet",
+      "sessions": 20260,
+      "cartAdds": 6140,
+      "checkouts": 3760,
+      "orders": 2480,
+      "abandonments": 1280,
+      "conversionRate": 12.24
+    }
+  ],
+
+  "customerSegments": [
+    {
+      "segment": "New Customers",
+      "customers": 42680,
+      "carts": 12840,
+      "abandonments": 4820,
+      "recovered": 1240,
+      "recoveryRate": 25.73,
+      "averageCartValue": 4920,
+      "revenueRecovered": 6100000
+    },
+    {
+      "segment": "Returning Customers",
+      "customers": 69120,
+      "carts": 31240,
+      "abandonments": 5620,
+      "recovered": 2140,
+      "recoveryRate": 38.08,
+      "averageCartValue": 6740,
+      "revenueRecovered": 12300000
+    },
+    {
+      "segment": "VIP Customers",
+      "customers": 8560,
+      "carts": 8400,
+      "abandonments": 1580,
+      "recovered": 860,
+      "recoveryRate": 54.43,
+      "averageCartValue": 14280,
+      "revenueRecovered": 8900000
+    }
+  ],
+
+  "interventions": [
+    {
+      "action": "Payment Retry",
+      "attempts": 6420,
+      "successfulRecoveries": 2840,
+      "successRate": 44.24,
+      "revenueRecovered": 4120000
+    },
+    {
+      "action": "Alternate Payment",
+      "attempts": 5240,
+      "successfulRecoveries": 2460,
+      "successRate": 46.95,
+      "revenueRecovered": 3860000
+    },
+    {
+      "action": "Free Shipping",
+      "attempts": 8620,
+      "successfulRecoveries": 3120,
+      "successRate": 36.19,
+      "revenueRecovered": 4240000
+    },
+    {
+      "action": "Resume Checkout",
+      "attempts": 7840,
+      "successfulRecoveries": 2980,
+      "successRate": 38.01,
+      "revenueRecovered": 3920000
+    },
+    {
+      "action": "Limited Discount",
+      "attempts": 6940,
+      "successfulRecoveries": 2010,
+      "successRate": 28.96,
+      "revenueRecovered": 2740000
+    },
+    {
+      "action": "Product Recommendation",
+      "attempts": 5260,
+      "successfulRecoveries": 1480,
+      "successRate": 28.14,
+      "revenueRecovered": 1920000
+    },
+    {
+      "action": "Delivery Assurance",
+      "attempts": 4680,
+      "successfulRecoveries": 1980,
+      "successRate": 42.31,
+      "revenueRecovered": 2780000
+    },
+    {
+      "action": "Stock Alert",
+      "attempts": 3920,
+      "successfulRecoveries": 1120,
+      "successRate": 28.57,
+      "revenueRecovered": 1620000
+    }
+  ],
+
+  "revenue": {
+    "totalCartValue": 427411200,
+    "completedOrderRevenue": 217380600,
+    "abandonedCartValue": 82216800,
+    "recoverableRevenue": 54811200,
+    "recoveredRevenue": 26400000,
+
+    "revenueRecoveryPercentage": 32.11,
+
+    "averageRecoveredOrderValue": 8740,
+
+    "discountCost": 3840000,
+
+    "communicationCost": 620000,
+
+    "totalRecoveryCost": 4460000,
+
+    "netRecoveredRevenue": 21940000,
+
+    "roi": 491.93
+  },
+
+  "aiPerformance": {
+    "model": "Cart Rescue Predictive Engine",
+    "version": "CRAI-1.0",
+
+    "predictions": 120480,
+
+    "accuracy": 92.4,
+    "precision": 90.8,
+    "recall": 89.7,
+    "f1Score": 90.2,
+
+    "falsePositiveRate": 7.6,
+    "falseNegativeRate": 10.3,
+
+    "averagePredictionLatency": 42,
+
+    "predictionLatencyUnit": "ms",
+
+    "confidenceDistribution": {
+      "veryHigh": 28400,
+      "high": 41620,
+      "medium": 35240,
+      "low": 15220
+    }
+  },
+
+  "hourlyActivity": [
+    {
+      "hour": "00:00",
+      "sessions": 2140,
+      "carts": 520,
+      "abandonments": 180,
+      "recoveries": 42
+    },
+    {
+      "hour": "01:00",
+      "sessions": 1680,
+      "carts": 390,
+      "abandonments": 142,
+      "recoveries": 32
+    },
+    {
+      "hour": "02:00",
+      "sessions": 1240,
+      "carts": 280,
+      "abandonments": 106,
+      "recoveries": 24
+    },
+    {
+      "hour": "03:00",
+      "sessions": 980,
+      "carts": 210,
+      "abandonments": 82,
+      "recoveries": 18
+    },
+    {
+      "hour": "04:00",
+      "sessions": 920,
+      "carts": 198,
+      "abandonments": 76,
+      "recoveries": 17
+    },
+    {
+      "hour": "05:00",
+      "sessions": 1160,
+      "carts": 244,
+      "abandonments": 91,
+      "recoveries": 20
+    },
+    {
+      "hour": "06:00",
+      "sessions": 1820,
+      "carts": 412,
+      "abandonments": 148,
+      "recoveries": 35
+    },
+    {
+      "hour": "07:00",
+      "sessions": 2840,
+      "carts": 650,
+      "abandonments": 218,
+      "recoveries": 58
+    },
+    {
+      "hour": "08:00",
+      "sessions": 4860,
+      "carts": 1120,
+      "abandonments": 342,
+      "recoveries": 94
+    },
+    {
+      "hour": "09:00",
+      "sessions": 7280,
+      "carts": 1680,
+      "abandonments": 486,
+      "recoveries": 148
+    },
+    {
+      "hour": "10:00",
+      "sessions": 9340,
+      "carts": 2140,
+      "abandonments": 612,
+      "recoveries": 194
+    },
+    {
+      "hour": "11:00",
+      "sessions": 10240,
+      "carts": 2380,
+      "abandonments": 674,
+      "recoveries": 224
+    },
+    {
+      "hour": "12:00",
+      "sessions": 11280,
+      "carts": 2620,
+      "abandonments": 728,
+      "recoveries": 246
+    },
+    {
+      "hour": "13:00",
+      "sessions": 10860,
+      "carts": 2480,
+      "abandonments": 702,
+      "recoveries": 238
+    },
+    {
+      "hour": "14:00",
+      "sessions": 11420,
+      "carts": 2680,
+      "abandonments": 746,
+      "recoveries": 254
+    },
+    {
+      "hour": "15:00",
+      "sessions": 11860,
+      "carts": 2760,
+      "abandonments": 772,
+      "recoveries": 268
+    },
+    {
+      "hour": "16:00",
+      "sessions": 12240,
+      "carts": 2840,
+      "abandonments": 798,
+      "recoveries": 282
+    },
+    {
+      "hour": "17:00",
+      "sessions": 12620,
+      "carts": 2920,
+      "abandonments": 824,
+      "recoveries": 296
+    },
+    {
+      "hour": "18:00",
+      "sessions": 13180,
+      "carts": 3060,
+      "abandonments": 850,
+      "recoveries": 318
+    },
+    {
+      "hour": "19:00",
+      "sessions": 13820,
+      "carts": 3240,
+      "abandonments": 892,
+      "recoveries": 342
+    },
+    {
+      "hour": "20:00",
+      "sessions": 14240,
+      "carts": 3380,
+      "abandonments": 924,
+      "recoveries": 364
+    },
+    {
+      "hour": "21:00",
+      "sessions": 13680,
+      "carts": 3220,
+      "abandonments": 886,
+      "recoveries": 348
+    },
+    {
+      "hour": "22:00",
+      "sessions": 10280,
+      "carts": 2380,
+      "abandonments": 682,
+      "recoveries": 248
+    },
+    {
+      "hour": "23:00",
+      "sessions": 6340,
+      "carts": 1480,
+      "abandonments": 442,
+      "recoveries": 156
+    }
+  ],
+
+  "geography": [
+    {
+      "state": "Telangana",
+      "customers": 28640,
+      "orders": 7240,
+      "abandonedCarts": 2840,
+      "recoveredRevenue": 6420000
+    },
+    {
+      "state": "Andhra Pradesh",
+      "customers": 24820,
+      "orders": 6380,
+      "abandonedCarts": 2410,
+      "recoveredRevenue": 5840000
+    },
+    {
+      "state": "Karnataka",
+      "customers": 22640,
+      "orders": 5820,
+      "abandonedCarts": 2180,
+      "recoveredRevenue": 5280000
+    },
+    {
+      "state": "Tamil Nadu",
+      "customers": 20180,
+      "orders": 5140,
+      "abandonedCarts": 1960,
+      "recoveredRevenue": 4720000
+    },
+    {
+      "state": "Maharashtra",
+      "customers": 18420,
+      "orders": 4660,
+      "abandonedCarts": 1840,
+      "recoveredRevenue": 4360000
+    },
+    {
+      "state": "Delhi",
+      "customers": 12640,
+      "orders": 3240,
+      "abandonedCarts": 1260,
+      "recoveredRevenue": 2980000
+    }
+  ],
+
+  "weeklyComparison": {
+    "previousPeriod": {
+      "visitors": 222840,
+      "orders": 26380,
+      "abandonedCarts": 11540,
+      "recoveredRevenue": 21800000,
+      "recoveryRate": 28.4,
+      "conversionRate": 14.72
+    },
+
+    "currentPeriod": {
+      "visitors": 248650,
+      "orders": 30140,
+      "abandonedCarts": 12020,
+      "recoveredRevenue": 26400000,
+      "recoveryRate": 32.15,
+      "conversionRate": 15.19
+    },
+
+    "change": {
+      "visitors": 11.58,
+      "orders": 14.25,
+      "abandonedCarts": 4.16,
+      "recoveredRevenue": 21.10,
+      "recoveryRate": 13.20,
+      "conversionRate": 3.19
+    }
+  },
+
+  "alerts": [
+    {
+      "id": "ALT-001",
+      "severity": "HIGH",
+      "type": "Payment",
+      "message": "Payment failure recovery rate is below the expected target in selected mobile sessions.",
+      "metric": "paymentFailureRecovery",
+      "value": 41.6,
+      "threshold": 45
+    },
+    {
+      "id": "ALT-002",
+      "severity": "MEDIUM",
+      "type": "Shipping",
+      "message": "High shipping cost remains the largest cart abandonment reason.",
+      "metric": "shippingAbandonment",
+      "value": 22.96,
+      "threshold": 20
+    },
+    {
+      "id": "ALT-003",
+      "severity": "LOW",
+      "type": "AI",
+      "message": "AI prediction accuracy is above the configured target.",
+      "metric": "aiAccuracy",
+      "value": 92.4,
+      "threshold": 90
+    }
+  ],
+
+  "targets": {
+    "predictionAccuracy": 90,
+    "recoveryRate": 35,
+    "conversionRate": 18,
+    "cartAbandonmentRate": 25,
+    "monthlyRecoveredRevenue": 30000000,
+    "averageOrderValue": 7500
+  },
+
+  "lastUpdated": "2026-08-07T22:00:00"
+}
+```

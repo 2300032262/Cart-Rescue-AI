@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Analytics | Cart Rescue AI</title>
+
+    <meta name="description"
+        content="Advanced e-commerce analytics for cart abandonment, recovery rate, revenue, customer behaviour and AI performance.">
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =====================================================
+         STYLESHEETS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+    <!-- =====================================================
+         CHART.JS
+    ====================================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <div class="logo">
+
+            <span class="logo-icon">
+                CR
+            </span>
+
+            <span>
+                Cart Rescue <strong>AI</strong>
+            </span>
+
+        </div>
+
+
+        <nav class="main-nav">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="dashboard.html">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="analytics.html" class="active">
+                        Analytics
+                    </a>
+                </li>
+
+                <li>
+                    <a href="ai-engine.html">
+                        AI Engine
+                    </a>
+                </li>
+
+                <li>
+                    <a href="reports.html">
+                        Reports
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <button
+            class="mobile-menu-btn"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false">
+
+            ☰
+
+        </button>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             PAGE HERO
+        ================================================== -->
+
+        <section class="page-hero analytics-hero">
+
+            <div class="page-hero-content">
+
+                <span class="eyebrow">
+                    📊 BUSINESS INTELLIGENCE CENTER
+                </span>
+
+                <h1>
+
+                    Advanced
+                    <span>Analytics</span>
+
+                </h1>
+
+                <p>
+
+                    Understand cart abandonment, customer behaviour,
+                    recovery performance and revenue impact through
+                    intelligent data visualization.
+
+                </p>
+
+
+                <div class="hero-status">
+
+                    <span class="status-indicator"></span>
+
+                    <span>
+                        ANALYTICS LIVE
+                    </span>
+
+                    <span class="status-divider">
+                        |
+                    </span>
+
+                    <span>
+                        Last updated: Just now
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ANALYTICS CONTROLS
+        ================================================== -->
+
+        <section class="analytics-controls-section">
+
+            <div class="analytics-toolbar">
+
+                <div class="toolbar-title">
+
+                    <span class="section-label">
+                        ANALYTICS CONTROL
+                    </span>
+
+                    <h2>
+                        Business Performance
+                    </h2>
+
+                </div>
+
+
+                <div class="toolbar-actions">
+
+                    <div class="filter-group">
+
+                        <label for="analyticsPeriod">
+                            Period
+                        </label>
+
+                        <select id="analyticsPeriod">
+
+                            <option value="7">
+                                Last 7 Days
+                            </option>
+
+                            <option value="30" selected>
+                                Last 30 Days
+                            </option>
+
+                            <option value="90">
+                                Last 90 Days
+                            </option>
+
+                            <option value="365">
+                                Last 12 Months
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="btn-outline"
+                        id="refreshAnalytics">
+
+                        ↻ Refresh
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn"
+                        id="exportAnalytics">
+
+                        ↓ Export
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             KPI CARDS
+        ================================================== -->
+
+        <section class="analytics-kpi-section">
+
+            <div class="analytics-kpi-grid">
+
+
+                <!-- Revenue -->
+
+                <div class="analytics-kpi-card">
+
+                    <div class="kpi-card-top">
+
+                        <div class="kpi-icon">
+                            💰
+                        </div>
+
+                        <span class="kpi-trend positive">
+                            ▲ 18.6%
+                        </span>
+
+                    </div>
+
+                    <span>
+                        Revenue Recovered
+                    </span>
+
+                    <strong id="revenueRecovered">
+                        ₹2.64Cr
+                    </strong>
+
+                    <small>
+                        vs previous period
+                    </small>
+
+                </div>
+
+
+                <!-- Recovery Rate -->
+
+                <div class="analytics-kpi-card">
+
+                    <div class="kpi-card-top">
+
+                        <div class="kpi-icon">
+                            🎯
+                        </div>
+
+                        <span class="kpi-trend positive">
+                            ▲ 4.8%
+                        </span>
+
+                    </div>
+
+                    <span>
+                        Recovery Rate
+                    </span>
+
+                    <strong id="recoveryRate">
+                        32.15%
+                    </strong>
+
+                    <small>
+                        carts recovered
+                    </small>
+
+                </div>
+
+
+                <!-- Abandonment -->
+
+                <div class="analytics-kpi-card">
+
+                    <div class="kpi-card-top">
+
+                        <div class="kpi-icon">
+                            🛒
+                        </div>
+
+                        <span class="kpi-trend negative">
+                            ▼ 6.2%
+                        </span>
+
+                    </div>
+
+                    <span>
+                        Abandonment Rate
+                    </span>
+
+                    <strong id="abandonmentRate">
+                        68.42%
+                    </strong>
+
+                    <small>
+                        overall cart rate
+                    </small>
+
+                </div>
+
+
+                <!-- Average Order -->
+
+                <div class="analytics-kpi-card">
+
+                    <div class="kpi-card-top">
+
+                        <div class="kpi-icon">
+                            🧾
+                        </div>
+
+                        <span class="kpi-trend positive">
+                            ▲ 8.4%
+                        </span>
+
+                    </div>
+
+                    <span>
+                        Average Order Value
+                    </span>
+
+                    <strong id="averageOrderValue">
+                        ₹8,420
+                    </strong>
+
+                    <small>
+                        recovered orders
+                    </small>
+
+                </div>
+
+
+                <!-- AI Decisions -->
+
+                <div class="analytics-kpi-card">
+
+                    <div class="kpi-card-top">
+
+                        <div class="kpi-icon">
+                            🧠
+                        </div>
+
+                        <span class="kpi-trend positive">
+                            ▲ 14.6%
+                        </span>
+
+                    </div>
+
+                    <span>
+                        AI Decisions
+                    </span>
+
+                    <strong id="aiDecisions">
+                        120,480
+                    </strong>
+
+                    <small>
+                        predictions processed
+                    </small>
+
+                </div>
+
+
+                <!-- Conversion -->
+
+                <div class="analytics-kpi-card">
+
+                    <div class="kpi-card-top">
+
+                        <div class="kpi-icon">
+                            📈
+                        </div>
+
+                        <span class="kpi-trend positive">
+                            ▲ 3.7%
+                        </span>
+
+                    </div>
+
+                    <span>
+                        Conversion Rate
+                    </span>
+
+                    <strong id="conversionRate">
+                        7.84%
+                    </strong>
+
+                    <small>
+                        overall conversion
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             MAIN ANALYTICS
+        ================================================== -->
+
+        <section class="analytics-main-section">
+
+            <div class="analytics-chart-grid">
+
+
+                <!-- =========================================
+                     REVENUE TREND
+                ========================================== -->
+
+                <div class="analytics-chart-card large">
+
+                    <div class="chart-card-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                REVENUE
+                            </span>
+
+                            <h3>
+                                Recovery Revenue Trend
+                            </h3>
+
+                        </div>
+
+
+                        <div class="chart-legend">
+
+                            <span>
+                                <i class="legend-dot revenue"></i>
+                                Recovered
+                            </span>
+
+                            <span>
+                                <i class="legend-dot lost"></i>
+                                Lost Opportunity
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="analytics-chart-container">
+
+                        <canvas id="revenueTrendChart"></canvas>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     RECOVERY RATE
+                ========================================== -->
+
+                <div class="analytics-chart-card">
+
+                    <div class="chart-card-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                PERFORMANCE
+                            </span>
+
+                            <h3>
+                                Recovery Rate
+                            </h3>
+
+                        </div>
+
+                        <span class="chart-value">
+                            32.15%
+                        </span>
+
+                    </div>
+
+
+                    <div class="analytics-chart-container medium">
+
+                        <canvas id="recoveryRateChart"></canvas>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     ABANDONMENT REASONS
+                ========================================== -->
+
+                <div class="analytics-chart-card">
+
+                    <div class="chart-card-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                CUSTOMER INTENT
+                            </span>
+
+                            <h3>
+                                Abandonment Reasons
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="analytics-chart-container medium">
+
+                        <canvas id="abandonmentReasonsChart"></canvas>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     DEVICE ANALYTICS
+                ========================================== -->
+
+                <div class="analytics-chart-card">
+
+                    <div class="chart-card-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                DEVICE
+                            </span>
+
+                            <h3>
+                                Device Performance
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="analytics-chart-container medium">
+
+                        <canvas id="devicePerformanceChart"></canvas>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     CHANNEL PERFORMANCE
+                ========================================== -->
+
+                <div class="analytics-chart-card large">
+
+                    <div class="chart-card-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                RECOVERY CHANNELS
+                            </span>
+
+                            <h3>
+                                Channel Performance
+                            </h3>
+
+                        </div>
+
+                        <span class="chart-value">
+                            Multi-channel
+                        </span>
+
+                    </div>
+
+
+                    <div class="analytics-chart-container">
+
+                        <canvas id="channelPerformanceChart"></canvas>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     CUSTOMER SEGMENTS
+                ========================================== -->
+
+                <div class="analytics-chart-card">
+
+                    <div class="chart-card-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                CUSTOMERS
+                            </span>
+
+                            <h3>
+                                Customer Segments
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="analytics-chart-container medium">
+
+                        <canvas id="customerSegmentChart"></canvas>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ABANDONMENT INTELLIGENCE
+        ================================================== -->
+
+        <section class="abandonment-intelligence-section">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    ABANDONMENT INTELLIGENCE
+                </span>
+
+                <h2>
+
+                    Why Customers
+                    <span>Leave</span>
+
+                </h2>
+
+                <p>
+
+                    Identify the major behavioural and transactional
+                    factors contributing to cart abandonment.
+
+                </p>
+
+            </div>
+
+
+            <div class="reason-analysis-grid">
+
+
+                <!-- Payment -->
+
+                <div class="reason-analysis-card">
+
+                    <div class="reason-header">
+
+                        <div class="reason-icon">
+                            💳
+                        </div>
+
+                        <span>
+                            28.4%
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Payment Failure
+                    </h3>
+
+                    <p>
+                        Customers encountered failed or interrupted
+                        payment processing.
+                    </p>
+
+                    <div class="reason-progress">
+
+                        <div
+                            style="width:84%;">
+
+                        </div>
+
+                    </div>
+
+                    <small>
+                        High recovery potential
+                    </small>
+
+                </div>
+
+
+                <!-- Shipping -->
+
+                <div class="reason-analysis-card">
+
+                    <div class="reason-header">
+
+                        <div class="reason-icon">
+                            🚚
+                        </div>
+
+                        <span>
+                            21.7%
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Shipping Cost
+                    </h3>
+
+                    <p>
+                        Delivery charges influenced customers
+                        during final checkout.
+                    </p>
+
+                    <div class="reason-progress">
+
+                        <div
+                            style="width:72%;">
+
+                        </div>
+
+                    </div>
+
+                    <small>
+                        Medium-high recovery potential
+                    </small>
+
+                </div>
+
+
+                <!-- Price -->
+
+                <div class="reason-analysis-card">
+
+                    <div class="reason-header">
+
+                        <div class="reason-icon">
+                            💰
+                        </div>
+
+                        <span>
+                            18.2%
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Price Concern
+                    </h3>
+
+                    <p>
+                        Customers compared prices or hesitated
+                        before purchasing.
+                    </p>
+
+                    <div class="reason-progress">
+
+                        <div
+                            style="width:68%;">
+
+                        </div>
+
+                    </div>
+
+                    <small>
+                        Personalization recommended
+                    </small>
+
+                </div>
+
+
+                <!-- Checkout -->
+
+                <div class="reason-analysis-card">
+
+                    <div class="reason-header">
+
+                        <div class="reason-icon">
+                            🧩
+                        </div>
+
+                        <span>
+                            14.8%
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Checkout Friction
+                    </h3>
+
+                    <p>
+                        Customers experienced unnecessary friction
+                        during the checkout journey.
+                    </p>
+
+                    <div class="reason-progress">
+
+                        <div
+                            style="width:61%;">
+
+                        </div>
+
+                    </div>
+
+                    <small>
+                        UX optimization opportunity
+                    </small>
+
+                </div>
+
+
+                <!-- Comparison -->
+
+                <div class="reason-analysis-card">
+
+                    <div class="reason-header">
+
+                        <div class="reason-icon">
+                            🔎
+                        </div>
+
+                        <span>
+                            10.6%
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Product Comparison
+                    </h3>
+
+                    <p>
+                        Customers explored alternatives before
+                        making their final purchase decision.
+                    </p>
+
+                    <div class="reason-progress">
+
+                        <div
+                            style="width:48%;">
+
+                        </div>
+
+                    </div>
+
+                    <small>
+                        Recommendation opportunity
+                    </small>
+
+                </div>
+
+
+                <!-- Other -->
+
+                <div class="reason-analysis-card">
+
+                    <div class="reason-header">
+
+                        <div class="reason-icon">
+                            ⋯
+                        </div>
+
+                        <span>
+                            6.3%
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Other Factors
+                    </h3>
+
+                    <p>
+                        Behavioural signals that do not fall into
+                        the primary categories.
+                    </p>
+
+                    <div class="reason-progress">
+
+                        <div
+                            style="width:30%;">
+
+                        </div>
+
+                    </div>
+
+                    <small>
+                        Requires additional analysis
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RECOVERY FUNNEL
+        ================================================== -->
+
+        <section class="recovery-funnel-section">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    CUSTOMER JOURNEY
+                </span>
+
+                <h2>
+
+                    Cart Recovery
+                    <span>Funnel</span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="funnel-container">
+
+
+                <div class="funnel-step">
+
+                    <div class="funnel-label">
+
+                        <span>
+                            Website Visitors
+                        </span>
+
+                        <strong>
+                            1,250,000
+                        </strong>
+
+                    </div>
+
+                    <div class="funnel-bar">
+
+                        <div
+                            class="funnel-fill"
+                            style="width:100%;">
+
+                        </div>
+
+                    </div>
+
+                    <small>
+                        100%
+                    </small>
+
+                </div>
+
+
+                <div class="funnel-step">
+
+                    <div class="funnel-label">
+
+                        <span>
+                            Products Viewed
+                        </span>
+
+                        <strong>
+                            684,200
+                        </strong>
+
+                    </div>
+
+                    <div class="funnel-bar">
+
+                        <div
+                            class="funnel-fill"
+                            style="width:82%;">
+
+                        </div>
+
+                    </div>
+
+                    <small>
+                        82%
+                    </small>
+
+                </div>
+
+
+                <div class="funnel-step">
+
+                    <div class="funnel-label">
+
+                        <span>
+                            Added To Cart
+                        </span>
+
+                        <strong>
+                            284,600
+                        </strong>
+
+                    </div>
+
+                    <div class="funnel-bar">
+
+                        <div
+                            class="funnel-fill"
+                            style="width:58%;">
+
+                        </div>
+
+                    </div>
+
+                    <small>
+                        58%
+                    </small>
+
+                </div>
+
+
+                <div class="funnel-step">
+
+                    <div class="funnel-label">
+
+                        <span>
+                            Checkout Started
+                        </span>
+
+                        <strong>
+                            176,400
+                        </strong>
+
+                    </div>
+
+                    <div class="funnel-bar">
+
+                        <div
+                            class="funnel-fill"
+                            style="width:42%;">
+
+                        </div>
+
+                    </div>
+
+                    <small>
+                        42%
+                    </small>
+
+                </div>
+
+
+                <div class="funnel-step">
+
+                    <div class="funnel-label">
+
+                        <span>
+                            Abandoned
+                        </span>
+
+                        <strong>
+                            120,480
+                        </strong>
+
+                    </div>
+
+                    <div class="funnel-bar">
+
+                        <div
+                            class="funnel-fill warning"
+                            style="width:31%;">
+
+                        </div>
+
+                    </div>
+
+                    <small>
+                        31%
+                    </small>
+
+                </div>
+
+
+                <div class="funnel-step">
+
+                    <div class="funnel-label">
+
+                        <span>
+                            Recovered
+                        </span>
+
+                        <strong>
+                            38,740
+                        </strong>
+
+                    </div>
+
+                    <div class="funnel-bar">
+
+                        <div
+                            class="funnel-fill success"
+                            style="width:18%;">
+
+                        </div>
+
+                    </div>
+
+                    <small>
+                        18%
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             AI PERFORMANCE
+        ================================================== -->
+
+        <section class="analytics-ai-section">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    AI PERFORMANCE
+                </span>
+
+                <h2>
+
+                    Prediction
+                    <span>Intelligence</span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="ai-performance-grid">
+
+
+                <div class="ai-performance-card">
+
+                    <div class="performance-icon">
+                        🎯
+                    </div>
+
+                    <span>
+                        Accuracy
+                    </span>
+
+                    <strong>
+                        92.4%
+                    </strong>
+
+                    <p>
+                        Current prediction accuracy
+                    </p>
+
+                </div>
+
+
+                <div class="ai-performance-card">
+
+                    <div class="performance-icon">
+                        🔍
+                    </div>
+
+                    <span>
+                        Precision
+                    </span>
+
+                    <strong>
+                        90.8%
+                    </strong>
+
+                    <p>
+                        High-risk prediction precision
+                    </p>
+
+                </div>
+
+
+                <div class="ai-performance-card">
+
+                    <div class="performance-icon">
+                        📡
+                    </div>
+
+                    <span>
+                        Recall
+                    </span>
+
+                    <strong>
+                        89.7%
+                    </strong>
+
+                    <p>
+                        Risk detection coverage
+                    </p>
+
+                </div>
+
+
+                <div class="ai-performance-card">
+
+                    <div class="performance-icon">
+                        ⚡
+                    </div>
+
+                    <span>
+                        Latency
+                    </span>
+
+                    <strong>
+                        42ms
+                    </strong>
+
+                    <p>
+                        Average prediction response
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             INSIGHTS
+        ================================================== -->
+
+        <section class="insights-section">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    AI-GENERATED INSIGHTS
+                </span>
+
+                <h2>
+
+                    What The
+                    <span>Data Says</span>
+
+                </h2>
+
+            </div>
+
+
+            <div class="insights-grid">
+
+
+                <article class="insight-card important">
+
+                    <div class="insight-icon">
+                        ⚠️
+                    </div>
+
+                    <div>
+
+                        <span>
+                            HIGH PRIORITY
+                        </span>
+
+                        <h3>
+                            Payment failures are the largest recovery opportunity.
+                        </h3>
+
+                        <p>
+                            Payment-related abandonment represents the highest
+                            identified reason and should receive immediate
+                            recovery attention.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="insight-card">
+
+                    <div class="insight-icon">
+                        📈
+                    </div>
+
+                    <div>
+
+                        <span>
+                            POSITIVE TREND
+                        </span>
+
+                        <h3>
+                            Recovery revenue continues to increase.
+                        </h3>
+
+                        <p>
+                            Recovered revenue is trending upward compared
+                            with the previous reporting period.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="insight-card">
+
+                    <div class="insight-icon">
+                        📱
+                    </div>
+
+                    <div>
+
+                        <span>
+                            OPPORTUNITY
+                        </span>
+
+                        <h3>
+                            Mobile checkout requires additional attention.
+                        </h3>
+
+                        <p>
+                            Mobile behaviour indicates an opportunity to
+                            improve checkout experience and reduce friction.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="insight-card">
+
+                    <div class="insight-icon">
+                        💡
+                    </div>
+
+                    <div>
+
+                        <span>
+                            AI RECOMMENDATION
+                        </span>
+
+                        <h3>
+                            Reduce unnecessary discounts.
+                        </h3>
+
+                        <p>
+                            Customers with payment or checkout issues may be
+                            recoverable without price incentives.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CTA
+        ================================================== -->
+
+        <section class="about-cta analytics-cta">
+
+            <div class="cta-content">
+
+                <span class="section-label">
+                    TURN DATA INTO ACTION
+                </span>
+
+                <h2>
+
+                    Find Lost Revenue
+                    <span>Before It Is Lost</span>
+
+                </h2>
+
+                <p>
+
+                    Use Cart Rescue AI analytics to understand customer
+                    behaviour, identify recovery opportunities and improve
+                    e-commerce performance.
+
+                </p>
+
+
+                <div class="cta-buttons">
+
+                    <a
+                        href="ai-engine.html"
+                        class="btn">
+
+                        Open AI Engine
+
+                    </a>
+
+
+                    <a
+                        href="reports.html"
+                        class="btn-outline">
+
+                        View Reports
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-brand">
+
+                <div class="logo">
+
+                    <span class="logo-icon">
+                        CR
+                    </span>
+
+                    <span>
+                        Cart Rescue <strong>AI</strong>
+                    </span>
+
+                </div>
+
+                <p>
+
+                    AI-powered cart abandonment prediction,
+                    customer intelligence and revenue recovery.
+
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+
+                <div>
+
+                    <h4>
+                        Platform
+                    </h4>
+
+                    <a href="dashboard.html">
+                        Dashboard
+                    </a>
+
+                    <a href="analytics.html">
+                        Analytics
+                    </a>
+
+                    <a href="ai-engine.html">
+                        AI Engine
+                    </a>
+
+                    <a href="reports.html">
+                        Reports
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        Company
+                    </h4>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        Project
+                    </h4>
+
+                    <span>
+                        AI Build 2026
+                    </span>
+
+                    <span>
+                        Hackathon Prototype
+                    </span>
+
+                    <span>
+                        Version 1.0.0
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Cart Rescue AI. All Rights Reserved.
+            </p>
+
+            <p>
+                Built with HTML, CSS, JavaScript & AI Analytics.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="js/main.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/analytics.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    <script src="js/intro-3d.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1938 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ================================
+         BASIC META
+    ================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Cart Rescue AI - Intelligent AI-powered shopping cart recovery platform that predicts abandonment and helps businesses recover lost revenue.">
+
+    <meta name="keywords"
+          content="AI, Cart Recovery, Cart Abandonment, E-commerce, Machine Learning, Predictive Analytics">
+
+    <meta name="author"
+          content="Cart Rescue AI">
+
+    <meta name="theme-color"
+          content="#050816">
+
+
+    <!-- ================================
+         PAGE TITLE
+    ================================= -->
+
+    <title>
+        Cart Rescue AI | Intelligent Cart Recovery Platform
+    </title>
+
+
+    <!-- ================================
+         FONTS
+    ================================= -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <!-- ================================
+         ICONS
+    ================================= -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- ================================
+         PROJECT CSS
+    ================================= -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <link rel="stylesheet"
+          href="css/animation.css">
+
+    <link rel="stylesheet"
+          href="css/responsive.css">
+
+
+    <!-- ================================
+         CHART.JS
+    ================================= -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         BACKGROUND EFFECTS
+    ====================================================== -->
+
+    <div class="background">
+
+        <div class="gradient-orb orb-one"></div>
+
+        <div class="gradient-orb orb-two"></div>
+
+        <div class="gradient-orb orb-three"></div>
+
+    </div>
+
+
+    <canvas id="particles"></canvas>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="navbar"
+            id="navbar">
+
+        <div class="container navbar-container">
+
+
+            <!-- LOGO -->
+
+            <a href="index.html"
+               class="logo">
+
+                <span class="logo-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </span>
+
+                <span class="logo-text">
+
+                    Cart Rescue
+                    <strong>AI</strong>
+
+                </span>
+
+            </a>
+
+
+            <!-- DESKTOP NAVIGATION -->
+
+            <nav class="main-nav"
+                 id="mainNav">
+
+                <ul>
+
+                    <li>
+                        <a href="index.html"
+                           class="active">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="dashboard.html">
+                            Dashboard
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="analytics.html">
+                            Analytics
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="ai-engine.html">
+                            AI Engine
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="reports.html">
+                            Reports
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <!-- NAV ACTIONS -->
+
+            <div class="nav-actions">
+
+                <button class="theme-toggle"
+                        id="themeToggle"
+                        aria-label="Toggle theme">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+
+                <a href="dashboard.html"
+                   class="nav-button">
+
+                    Launch Dashboard
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <!-- MOBILE MENU -->
+
+                <button class="menu-toggle"
+                        id="menuToggle"
+                        aria-label="Open menu">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO SECTION
+    ====================================================== -->
+
+    <main>
+
+
+        <section class="hero-section">
+
+            <div class="container hero-container">
+
+
+                <!-- HERO CONTENT -->
+
+                <div class="hero-content">
+
+
+                    <div class="hero-badge">
+
+                        <span class="status-dot"></span>
+
+                        AI-Powered Cart Recovery
+
+                        <i class="fa-solid fa-sparkles"></i>
+
+                    </div>
+
+
+                    <h1>
+
+                        Turn
+
+                        <span class="gradient-text">
+                            Abandoned Carts
+                        </span>
+
+                        Into
+
+                        <span class="gradient-text">
+                            Revenue
+                        </span>
+
+                    </h1>
+
+
+                    <p class="hero-description">
+
+                        Cart Rescue AI predicts when customers are
+                        likely to abandon their carts, understands
+                        why they leave, and recommends the best
+                        recovery action in real time.
+
+                    </p>
+
+
+                    <!-- HERO BUTTONS -->
+
+                    <div class="hero-actions">
+
+                        <a href="dashboard.html"
+                           class="btn btn-primary">
+
+                            <i class="fa-solid fa-rocket"></i>
+
+                            Launch AI Dashboard
+
+                        </a>
+
+
+                        <a href="#how-it-works"
+                           class="btn btn-secondary">
+
+                            <i class="fa-solid fa-play"></i>
+
+                            See How It Works
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- TRUST -->
+
+                    <div class="hero-trust">
+
+                        <div class="trust-avatars">
+
+                            <span>AI</span>
+                            <span>ML</span>
+                            <span>+</span>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Intelligent Recovery
+                            </strong>
+
+                            <p>
+                                Powered by predictive analytics
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     HERO AI VISUAL
+                ================================================== -->
+
+                <div class="hero-visual">
+
+
+                    <div class="ai-dashboard-card">
+
+
+                        <!-- CARD HEADER -->
+
+                        <div class="ai-card-header">
+
+                            <div>
+
+                                <span class="live-indicator">
+                                    <span></span>
+                                    LIVE
+                                </span>
+
+                                <h3>
+                                    AI Prediction Engine
+                                </h3>
+
+                            </div>
+
+                            <button class="icon-button">
+
+                                <i class="fa-solid fa-ellipsis"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <!-- RISK SCORE -->
+
+                        <div class="risk-section">
+
+                            <div class="risk-circle">
+
+                                <div class="risk-inner">
+
+                                    <strong>
+                                        89%
+                                    </strong>
+
+                                    <span>
+                                        Risk
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="risk-details">
+
+                                <span class="risk-label">
+                                    HIGH RISK
+                                </span>
+
+                                <h4>
+                                    Cart abandonment detected
+                                </h4>
+
+                                <p>
+                                    AI confidence:
+                                    <strong>96.4%</strong>
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- CUSTOMER SIGNALS -->
+
+                        <div class="signal-list">
+
+
+                            <div class="signal-item">
+
+                                <span class="signal-icon">
+                                    <i class="fa-solid fa-clock"></i>
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Checkout idle
+                                    </strong>
+
+                                    <small>
+                                        4 minutes
+                                    </small>
+
+                                </div>
+
+                                <span class="signal-warning">
+                                    High
+                                </span>
+
+                            </div>
+
+
+                            <div class="signal-item">
+
+                                <span class="signal-icon">
+                                    <i class="fa-solid fa-credit-card"></i>
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Payment attempts
+                                    </strong>
+
+                                    <small>
+                                        2 failed
+                                    </small>
+
+                                </div>
+
+                                <span class="signal-warning">
+                                    High
+                                </span>
+
+                            </div>
+
+
+                            <div class="signal-item">
+
+                                <span class="signal-icon">
+                                    <i class="fa-solid fa-truck"></i>
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        Shipping cost
+                                    </strong>
+
+                                    <small>
+                                        ₹249 added
+                                    </small>
+
+                                </div>
+
+                                <span class="signal-medium">
+                                    Medium
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- AI RECOMMENDATION -->
+
+                        <div class="ai-recommendation">
+
+                            <div class="recommendation-icon">
+
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    AI RECOMMENDATION
+                                </span>
+
+                                <strong>
+                                    Offer Free Shipping
+                                </strong>
+
+                                <small>
+                                    Estimated recovery probability: 83%
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FLOATING CARD -->
+
+                    <div class="floating-card floating-card-one">
+
+                        <div class="floating-icon success">
+
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                +27.4%
+                            </strong>
+
+                            <span>
+                                Recovery Rate
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-card floating-card-two">
+
+                        <div class="floating-icon ai">
+
+                            <i class="fa-solid fa-brain"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                92.8%
+                            </strong>
+
+                            <span>
+                                AI Accuracy
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             TRUSTED / PLATFORM STRIP
+        ====================================================== -->
+
+        <section class="platform-strip">
+
+            <div class="container">
+
+                <p>
+                    BUILT FOR MODERN E-COMMERCE
+                </p>
+
+                <div class="platform-list">
+
+                    <span>
+                        <i class="fa-solid fa-store"></i>
+                        Shopify
+                    </span>
+
+                    <span>
+                        <i class="fa-brands fa-wordpress"></i>
+                        WooCommerce
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        BigCommerce
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-shop"></i>
+                        Magento
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-code"></i>
+                        Custom API
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             STATS SECTION
+        ====================================================== -->
+
+        <section class="stats-section">
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <span class="section-label">
+                        PERFORMANCE
+                    </span>
+
+                    <h2>
+                        The numbers behind
+                        <span class="gradient-text">
+                            smarter recovery
+                        </span>
+                    </h2>
+
+                    <p>
+                        Transform customer behavior data into
+                        measurable business results.
+                    </p>
+
+                </div>
+
+
+                <div class="stats-grid">
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+
+                            <i class="fa-solid fa-bullseye"></i>
+
+                        </div>
+
+                        <h3>
+                            <span class="counter"
+                                  data-target="92.8">
+                                0
+                            </span>%
+                        </h3>
+
+                        <p>
+                            AI Prediction Accuracy
+                        </p>
+
+                        <span class="stat-growth">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            8.4% this quarter
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+
+                            <i class="fa-solid fa-cart-arrow-down"></i>
+
+                        </div>
+
+                        <h3>
+
+                            <span class="counter"
+                                  data-target="18">
+                                0
+                            </span>K+
+
+                        </h3>
+
+                        <p>
+                            Recovered Orders
+                        </p>
+
+                        <span class="stat-growth">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            18.7% this month
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                        </div>
+
+                        <h3>
+
+                            ₹
+
+                            <span class="counter"
+                                    data-target="2.6"
+                                    data-decimals="1">
+                                0
+                            </span>Cr
+
+                        </h3>
+
+                        <p>
+                            Revenue Recovered
+                        </p>
+
+                        <span class="stat-growth">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            24.2% this month
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+
+                            <i class="fa-solid fa-bolt"></i>
+
+                        </div>
+
+                        <h3>
+
+                            <span class="counter"
+                                  data-target="120">
+                                0
+                            </span>K+
+
+                        </h3>
+
+                        <p>
+                            AI Decisions
+                        </p>
+
+                        <span class="stat-growth">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            Real-time processing
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             FEATURES
+        ====================================================== -->
+
+        <section class="features-section">
+
+            <div class="container">
+
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        AI CAPABILITIES
+                    </span>
+
+                    <h2>
+
+                        Everything you need to
+                        <span class="gradient-text">
+                            rescue revenue
+                        </span>
+
+                    </h2>
+
+                    <p>
+
+                        One intelligent platform for predicting,
+                        understanding and recovering abandoned carts.
+
+                    </p>
+
+                </div>
+
+
+                <div class="feature-grid">
+
+
+                    <article class="feature-card featured">
+
+                        <div class="feature-number">
+                            01
+                        </div>
+
+                        <div class="feature-icon">
+
+                            <i class="fa-solid fa-crosshairs"></i>
+
+                        </div>
+
+                        <h3>
+                            Predict Abandonment
+                        </h3>
+
+                        <p>
+
+                            AI analyzes customer behavior,
+                            session activity and transaction
+                            signals to calculate abandonment risk
+                            before the customer leaves.
+
+                        </p>
+
+                        <a href="ai-engine.html"
+                           class="feature-link">
+
+                            Explore AI Engine
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </article>
+
+
+                    <article class="feature-card">
+
+                        <div class="feature-number">
+                            02
+                        </div>
+
+                        <div class="feature-icon">
+
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+
+                        </div>
+
+                        <h3>
+                            Understand Why
+                        </h3>
+
+                        <p>
+
+                            Identify payment failures,
+                            shipping costs, price hesitation,
+                            checkout friction and other
+                            abandonment signals.
+
+                        </p>
+
+                        <a href="analytics.html"
+                           class="feature-link">
+
+                            View Analytics
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </article>
+
+
+                    <article class="feature-card">
+
+                        <div class="feature-number">
+                            03
+                        </div>
+
+                        <div class="feature-icon">
+
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                        </div>
+
+                        <h3>
+                            Smart Recommendations
+                        </h3>
+
+                        <p>
+
+                            AI chooses the recovery action
+                            with the highest predicted conversion
+                            probability.
+
+                        </p>
+
+                        <a href="ai-engine.html"
+                           class="feature-link">
+
+                            See Recommendations
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </article>
+
+
+                    <article class="feature-card">
+
+                        <div class="feature-number">
+                            04
+                        </div>
+
+                        <div class="feature-icon">
+
+                            <i class="fa-solid fa-chart-pie"></i>
+
+                        </div>
+
+                        <h3>
+                            Advanced Analytics
+                        </h3>
+
+                        <p>
+
+                            Track recovery rates, revenue,
+                            customer segments, campaigns
+                            and AI performance.
+
+                        </p>
+
+                        <a href="analytics.html"
+                           class="feature-link">
+
+                            Explore Analytics
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </article>
+
+
+                    <article class="feature-card">
+
+                        <div class="feature-number">
+                            05
+                        </div>
+
+                        <div class="feature-icon">
+
+                            <i class="fa-solid fa-bell"></i>
+
+                        </div>
+
+                        <h3>
+                            Multi-Channel Recovery
+                        </h3>
+
+                        <p>
+
+                            Reach customers through email,
+                            SMS, WhatsApp and push notifications
+                            at the right moment.
+
+                        </p>
+
+                        <a href="dashboard.html"
+                           class="feature-link">
+
+                            View Dashboard
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </article>
+
+
+                    <article class="feature-card">
+
+                        <div class="feature-number">
+                            06
+                        </div>
+
+                        <div class="feature-icon">
+
+                            <i class="fa-solid fa-file-chart-column"></i>
+
+                        </div>
+
+                        <h3>
+                            Executive Reports
+                        </h3>
+
+                        <p>
+
+                            Give decision-makers a clear view
+                            of revenue recovery, ROI, trends
+                            and business performance.
+
+                        </p>
+
+                        <a href="reports.html"
+                           class="feature-link">
+
+                            View Reports
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             HOW IT WORKS
+        ====================================================== -->
+
+        <section class="workflow-section"
+                 id="how-it-works">
+
+            <div class="container">
+
+
+                <div class="section-heading centered">
+
+                    <span class="section-label">
+                        HOW IT WORKS
+                    </span>
+
+                    <h2>
+
+                        From abandoned cart
+                        to recovered order
+
+                    </h2>
+
+                    <p>
+
+                        Cart Rescue AI turns real-time behavioral
+                        signals into intelligent recovery actions.
+
+                    </p>
+
+                </div>
+
+
+                <div class="workflow-container">
+
+
+                    <div class="workflow-line"></div>
+
+
+                    <div class="workflow-step">
+
+                        <div class="workflow-icon">
+
+                            <span>01</span>
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+                        <h3>
+                            Customer Shops
+                        </h3>
+
+                        <p>
+                            Customer browses products
+                            and adds items to the cart.
+                        </p>
+
+                    </div>
+
+
+                    <div class="workflow-step">
+
+                        <div class="workflow-icon">
+
+                            <span>02</span>
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                        </div>
+
+                        <h3>
+                            AI Observes
+                        </h3>
+
+                        <p>
+                            Behavioral signals are analyzed
+                            in real time.
+                        </p>
+
+                    </div>
+
+
+                    <div class="workflow-step">
+
+                        <div class="workflow-icon">
+
+                            <span>03</span>
+
+                            <i class="fa-solid fa-brain"></i>
+
+                        </div>
+
+                        <h3>
+                            Risk Prediction
+                        </h3>
+
+                        <p>
+                            AI calculates the probability
+                            of cart abandonment.
+                        </p>
+
+                    </div>
+
+
+                    <div class="workflow-step">
+
+                        <div class="workflow-icon">
+
+                            <span>04</span>
+
+                            <i class="fa-solid fa-lightbulb"></i>
+
+                        </div>
+
+                        <h3>
+                            AI Recommends
+                        </h3>
+
+                        <p>
+                            The decision engine selects
+                            the best recovery action.
+                        </p>
+
+                    </div>
+
+
+                    <div class="workflow-step">
+
+                        <div class="workflow-icon success">
+
+                            <span>05</span>
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                        </div>
+
+                        <h3>
+                            Sale Recovered
+                        </h3>
+
+                        <p>
+                            Customer completes checkout
+                            and revenue is recovered.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             LIVE DASHBOARD PREVIEW
+        ====================================================== -->
+
+        <section class="preview-section">
+
+            <div class="container">
+
+
+                <div class="section-heading centered">
+
+                    <span class="section-label">
+                        LIVE INTELLIGENCE
+                    </span>
+
+                    <h2>
+
+                        Your entire recovery operation
+                        <span class="gradient-text">
+                            in one view
+                        </span>
+
+                    </h2>
+
+                    <p>
+
+                        Monitor your AI-powered recovery engine
+                        with a real-time business dashboard.
+
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-preview">
+
+
+                    <div class="preview-header">
+
+                        <div>
+
+                            <span class="live-indicator">
+                                <span></span>
+                                LIVE DATA
+                            </span>
+
+                            <h3>
+                                Recovery Overview
+                            </h3>
+
+                        </div>
+
+                        <a href="dashboard.html"
+                           class="small-button">
+
+                            Open Dashboard
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="preview-kpis">
+
+
+                        <div class="preview-kpi">
+
+                            <span>
+                                Active Carts
+                            </span>
+
+                            <strong>
+                                1,284
+                            </strong>
+
+                            <small class="positive">
+                                +12.8%
+                            </small>
+
+                        </div>
+
+
+                        <div class="preview-kpi">
+
+                            <span>
+                                High Risk
+                            </span>
+
+                            <strong>
+                                327
+                            </strong>
+
+                            <small class="negative">
+                                +4.2%
+                            </small>
+
+                        </div>
+
+
+                        <div class="preview-kpi">
+
+                            <span>
+                                Recovered Today
+                            </span>
+
+                            <strong>
+                                482
+                            </strong>
+
+                            <small class="positive">
+                                +18.7%
+                            </small>
+
+                        </div>
+
+
+                        <div class="preview-kpi">
+
+                            <span>
+                                Revenue Saved
+                            </span>
+
+                            <strong>
+                                ₹18.6L
+                            </strong>
+
+                            <small class="positive">
+                                +24.2%
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="preview-chart">
+
+                        <div class="chart-header">
+
+                            <div>
+
+                                <h4>
+                                    Recovery Performance
+                                </h4>
+
+                                <span>
+                                    Last 7 days
+                                </span>
+
+                            </div>
+
+                            <span class="chart-value">
+                                ₹42.8L
+                            </span>
+
+                        </div>
+
+                        <canvas id="homeRecoveryChart"></canvas>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             WHY CART RESCUE AI
+        ====================================================== -->
+
+        <section class="why-section">
+
+            <div class="container">
+
+
+                <div class="why-grid">
+
+
+                    <div class="why-content">
+
+                        <span class="section-label">
+                            WHY CART RESCUE AI
+                        </span>
+
+                        <h2>
+
+                            Stop guessing.
+
+                            <span class="gradient-text">
+                                Start recovering.
+                            </span>
+
+                        </h2>
+
+                        <p>
+
+                            Traditional cart recovery systems send
+                            the same message to every customer.
+                            Cart Rescue AI understands that every
+                            customer is different.
+
+                        </p>
+
+
+                        <div class="benefit-list">
+
+
+                            <div class="benefit">
+
+                                <div class="benefit-icon">
+
+                                    <i class="fa-solid fa-brain"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h4>
+                                        AI-Driven Decisions
+                                    </h4>
+
+                                    <p>
+                                        Make recovery decisions
+                                        using behavioral intelligence.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="benefit">
+
+                                <div class="benefit-icon">
+
+                                    <i class="fa-solid fa-bolt"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h4>
+                                        Real-Time Response
+                                    </h4>
+
+                                    <p>
+                                        Detect risk and respond
+                                        while the customer is active.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="benefit">
+
+                                <div class="benefit-icon">
+
+                                    <i class="fa-solid fa-chart-column"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h4>
+                                        Measurable ROI
+                                    </h4>
+
+                                    <p>
+                                        Track every recovery action
+                                        and its business impact.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="why-visual">
+
+                        <div class="orbit-card">
+
+                            <div class="orbit-center">
+
+                                <i class="fa-solid fa-brain"></i>
+
+                                <span>
+                                    AI
+                                </span>
+
+                            </div>
+
+                            <div class="orbit-node node-top">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+
+                            <div class="orbit-node node-right">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+
+                            <div class="orbit-node node-bottom">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div class="orbit-node node-left">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CTA
+        ====================================================== -->
+
+        <section class="cta-section">
+
+            <div class="container">
+
+                <div class="cta-card">
+
+                    <div class="cta-glow"></div>
+
+                    <div class="cta-content">
+
+                        <span class="section-label">
+                            START RECOVERING
+                        </span>
+
+                        <h2>
+
+                            Every abandoned cart
+                            is an opportunity.
+
+                        </h2>
+
+                        <p>
+
+                            Give your business an AI-powered
+                            advantage and turn lost shopping
+                            sessions into completed purchases.
+
+                        </p>
+
+
+                        <div class="cta-actions">
+
+                            <a href="dashboard.html"
+                               class="btn btn-primary">
+
+                                <i class="fa-solid fa-rocket"></i>
+
+                                Launch Dashboard
+
+                            </a>
+
+                            <a href="contact.html"
+                               class="btn btn-secondary">
+
+                                Talk to Our Team
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+
+            <div class="footer-main">
+
+
+                <!-- BRAND -->
+
+                <div class="footer-brand">
+
+                    <a href="index.html"
+                       class="logo">
+
+                        <span class="logo-icon">
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </span>
+
+                        <span class="logo-text">
+
+                            Cart Rescue
+                            <strong>AI</strong>
+
+                        </span>
+
+                    </a>
+
+
+                    <p>
+
+                        Intelligent AI-powered cart recovery
+                        for modern e-commerce businesses.
+
+                    </p>
+
+
+                    <div class="social-links">
+
+                        <a href="#"
+                           aria-label="LinkedIn">
+
+                            <i class="fa-brands fa-linkedin-in"></i>
+
+                        </a>
+
+                        <a href="#"
+                           aria-label="GitHub">
+
+                            <i class="fa-brands fa-github"></i>
+
+                        </a>
+
+                        <a href="#"
+                           aria-label="X">
+
+                            <i class="fa-brands fa-x-twitter"></i>
+
+                        </a>
+
+                        <a href="#"
+                           aria-label="YouTube">
+
+                            <i class="fa-brands fa-youtube"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT -->
+
+                <div class="footer-column">
+
+                    <h4>
+                        Product
+                    </h4>
+
+                    <a href="dashboard.html">
+                        Dashboard
+                    </a>
+
+                    <a href="analytics.html">
+                        Analytics
+                    </a>
+
+                    <a href="ai-engine.html">
+                        AI Engine
+                    </a>
+
+                    <a href="reports.html">
+                        Reports
+                    </a>
+
+                </div>
+
+
+                <!-- COMPANY -->
+
+                <div class="footer-column">
+
+                    <h4>
+                        Company
+                    </h4>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                    <a href="#">
+                        Careers
+                    </a>
+
+                    <a href="#">
+                        Documentation
+                    </a>
+
+                </div>
+
+
+                <!-- CONTACT -->
+
+                <div class="footer-column">
+
+                    <h4>
+                        Contact
+                    </h4>
+
+                    <a href="mailto:support@cartrescue.ai">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        support@cartrescue.ai
+
+                    </a>
+
+                    <a href="#">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        India
+
+                    </a>
+
+                    <a href="contact.html">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                        Talk to our team
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+
+                    © <span id="currentYear"></span>
+                    Cart Rescue AI.
+                    All Rights Reserved.
+
+                </p>
+
+                <div>
+
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#">
+                        Terms of Service
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         HOME PAGE CHART
+    ====================================================== -->
+
+    <script>
+
+        const homeChart =
+            document.getElementById("homeRecoveryChart");
+
+        if (homeChart) {
+
+            new Chart(
+                homeChart,
+                {
+
+                    type: "line",
+
+                    data: {
+
+                        labels: [
+                            "Mon",
+                            "Tue",
+                            "Wed",
+                            "Thu",
+                            "Fri",
+                            "Sat",
+                            "Sun"
+                        ],
+
+                        datasets: [
+
+                            {
+
+                                label: "Recovered Revenue",
+
+                                data: [
+                                    42,
+                                    51,
+                                    47,
+                                    63,
+                                    58,
+                                    72,
+                                    81
+                                ],
+
+                                borderColor:
+                                    "#00E5FF",
+
+                                backgroundColor:
+                                    "rgba(0,229,255,0.10)",
+
+                                fill: true,
+
+                                tension: 0.45,
+
+                                pointRadius: 4,
+
+                                pointHoverRadius: 7
+
+                            }
+
+                        ]
+
+                    },
+
+                    options: {
+
+                        responsive: true,
+
+                        maintainAspectRatio: false,
+
+                        plugins: {
+
+                            legend: {
+                                display: false
+                            }
+
+                        },
+
+                        scales: {
+
+                            x: {
+
+                                grid: {
+                                    display: false
+                                }
+
+                            },
+
+                            y: {
+
+                                grid: {
+                                    color:
+                                        "rgba(255,255,255,0.06)"
+                                },
+
+                                ticks: {
+
+                                    callback:
+                                        function(value) {
+
+                                            return "₹" + value + "L";
+
+                                        }
+
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                }
+            );
+
+        }
+
+    </script>
+
+
+
+    <!-- =====================================================
+         PROJECT JAVASCRIPT
+    ====================================================== -->
+
+    <script src="js/main.js"></script>
+
+    <script src="js/particles.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    <script src="js/intro-3d.js"></script>
+
+</body>
+
+</html>

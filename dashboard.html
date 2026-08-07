@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Cart Rescue AI</title>
+
+    <meta name="description"
+        content="Cart Rescue AI intelligent e-commerce dashboard for real-time cart abandonment monitoring, AI risk prediction, recovery and revenue analytics.">
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+    <!-- =====================================================
+         CHART.JS
+    ====================================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <div class="logo">
+
+            <span class="logo-icon">
+                CR
+            </span>
+
+            <span>
+                Cart Rescue <strong>AI</strong>
+            </span>
+
+        </div>
+
+
+        <nav class="main-nav">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="dashboard.html" class="active">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li>
+                    <a href="analytics.html">
+                        Analytics
+                    </a>
+                </li>
+
+                <li>
+                    <a href="ai-engine.html">
+                        AI Engine
+                    </a>
+                </li>
+
+                <li>
+                    <a href="reports.html">
+                        Reports
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <button
+            class="mobile-menu-btn"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false">
+
+            ☰
+
+        </button>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN DASHBOARD
+    ====================================================== -->
+
+    <main class="dashboard-page">
+
+
+        <!-- =================================================
+             DASHBOARD HEADER
+        ================================================== -->
+
+        <section class="dashboard-header-section">
+
+            <div class="dashboard-header-content">
+
+                <div>
+
+                    <span class="section-label">
+                        AI CONTROL CENTER
+                    </span>
+
+                    <h1>
+
+                        Cart Rescue
+                        <span>Dashboard</span>
+
+                    </h1>
+
+                    <p>
+
+                        Monitor customer behaviour, detect
+                        abandonment risk and recover lost revenue
+                        in real time.
+
+                    </p>
+
+                </div>
+
+
+                <div class="dashboard-header-actions">
+
+                    <div class="live-status">
+
+                        <span class="status-indicator"></span>
+
+                        <span>
+                            SYSTEM ONLINE
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="btn-outline"
+                        id="refreshDashboard"
+                        type="button">
+
+                        ↻ Refresh
+
+                    </button>
+
+
+                    <button
+                        class="btn"
+                        id="simulateActivity"
+                        type="button">
+
+                        ⚡ Simulate Live Data
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             LIVE METRICS
+        ================================================== -->
+
+        <section class="dashboard-metrics-section">
+
+            <div class="dashboard-metrics-grid">
+
+
+                <!-- Active Sessions -->
+
+                <div class="dashboard-metric-card">
+
+                    <div class="metric-card-header">
+
+                        <div class="metric-icon">
+                            👥
+                        </div>
+
+                        <span class="metric-live">
+                            LIVE
+                        </span>
+
+                    </div>
+
+                    <span>
+                        Active Sessions
+                    </span>
+
+                    <strong id="activeSessions">
+                        4,286
+                    </strong>
+
+                    <div class="metric-footer">
+
+                        <span class="positive">
+                            ▲ 12.4%
+                        </span>
+
+                        <span>
+                            vs last hour
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- At Risk -->
+
+                <div class="dashboard-metric-card risk">
+
+                    <div class="metric-card-header">
+
+                        <div class="metric-icon">
+                            ⚠️
+                        </div>
+
+                        <span class="metric-live warning">
+                            HIGH
+                        </span>
+
+                    </div>
+
+                    <span>
+                        High-Risk Carts
+                    </span>
+
+                    <strong id="highRiskCarts">
+                        1,248
+                    </strong>
+
+                    <div class="metric-footer">
+
+                        <span class="negative">
+                            ▲ 8.7%
+                        </span>
+
+                        <span>
+                            requires action
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Recovered -->
+
+                <div class="dashboard-metric-card success">
+
+                    <div class="metric-card-header">
+
+                        <div class="metric-icon">
+                            🛒
+                        </div>
+
+                        <span class="metric-live success">
+                            RECOVERED
+                        </span>
+
+                    </div>
+
+                    <span>
+                        Recovered Today
+                    </span>
+
+                    <strong id="recoveredToday">
+                        486
+                    </strong>
+
+                    <div class="metric-footer">
+
+                        <span class="positive">
+                            ▲ 16.2%
+                        </span>
+
+                        <span>
+                            successful orders
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Revenue -->
+
+                <div class="dashboard-metric-card revenue">
+
+                    <div class="metric-card-header">
+
+                        <div class="metric-icon">
+                            💰
+                        </div>
+
+                        <span class="metric-live success">
+                            SAVED
+                        </span>
+
+                    </div>
+
+                    <span>
+                        Revenue Saved
+                    </span>
+
+                    <strong id="revenueSaved">
+                        ₹18.72L
+                    </strong>
+
+                    <div class="metric-footer">
+
+                        <span class="positive">
+                            ▲ 21.4%
+                        </span>
+
+                        <span>
+                            today
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             REAL-TIME MONITOR
+        ================================================== -->
+
+        <section class="dashboard-monitor-section">
+
+            <div class="dashboard-section-header">
+
+                <div>
+
+                    <span class="section-label">
+                        REAL-TIME MONITOR
+                    </span>
+
+                    <h2>
+                        Customer Risk Activity
+                    </h2>
+
+                </div>
+
+
+                <div class="monitor-controls">
+
+                    <span class="monitor-time">
+                        Updated:
+                        <strong id="lastUpdated">
+                            Just now
+                        </strong>
+                    </span>
+
+                    <select id="riskFilter">
+
+                        <option value="all">
+                            All Customers
+                        </option>
+
+                        <option value="critical">
+                            Critical Risk
+                        </option>
+
+                        <option value="high">
+                            High Risk
+                        </option>
+
+                        <option value="medium">
+                            Medium Risk
+                        </option>
+
+                        <option value="low">
+                            Low Risk
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RISK TABLE
+            ================================================== -->
+
+            <div class="dashboard-table-container">
+
+                <table class="risk-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Customer
+                            </th>
+
+                            <th>
+                                Cart Value
+                            </th>
+
+                            <th>
+                                Risk Score
+                            </th>
+
+                            <th>
+                                Reason
+                            </th>
+
+                            <th>
+                                Recommended Action
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="riskTableBody">
+
+
+                        <!-- Customer 1 -->
+
+                        <tr data-risk="critical">
+
+                            <td>
+
+                                <div class="customer-cell">
+
+                                    <div class="customer-avatar">
+                                        RK
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Rahul Kumar
+                                        </strong>
+
+                                        <span>
+                                            #CR-10482
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                ₹12,840
+                            </td>
+
+
+                            <td>
+
+                                <div class="risk-score critical">
+
+                                    <strong>
+                                        94%
+                                    </strong>
+
+                                    <div class="risk-mini-bar">
+
+                                        <span
+                                            style="width:94%;">
+
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Payment Failure
+                            </td>
+
+
+                            <td>
+                                Retry Payment
+                            </td>
+
+
+                            <td>
+
+                                <span class="status-badge critical">
+                                    Critical
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <button
+                                    class="table-action"
+                                    data-customer="Rahul Kumar"
+                                    type="button">
+
+                                    Rescue
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Customer 2 -->
+
+                        <tr data-risk="high">
+
+                            <td>
+
+                                <div class="customer-cell">
+
+                                    <div class="customer-avatar">
+                                        AS
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Ananya Sharma
+                                        </strong>
+
+                                        <span>
+                                            #CR-10479
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                ₹8,450
+                            </td>
+
+
+                            <td>
+
+                                <div class="risk-score high">
+
+                                    <strong>
+                                        86%
+                                    </strong>
+
+                                    <div class="risk-mini-bar">
+
+                                        <span
+                                            style="width:86%;">
+
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Shipping Cost
+                            </td>
+
+
+                            <td>
+                                Free Shipping
+                            </td>
+
+
+                            <td>
+
+                                <span class="status-badge high">
+                                    High
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <button
+                                    class="table-action"
+                                    data-customer="Ananya Sharma"
+                                    type="button">
+
+                                    Rescue
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Customer 3 -->
+
+                        <tr data-risk="high">
+
+                            <td>
+
+                                <div class="customer-cell">
+
+                                    <div class="customer-avatar">
+                                        VP
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Vikram Prasad
+                                        </strong>
+
+                                        <span>
+                                            #CR-10475
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                ₹24,600
+                            </td>
+
+
+                            <td>
+
+                                <div class="risk-score high">
+
+                                    <strong>
+                                        82%
+                                    </strong>
+
+                                    <div class="risk-mini-bar">
+
+                                        <span
+                                            style="width:82%;">
+
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Price Concern
+                            </td>
+
+
+                            <td>
+                                Personalized Offer
+                            </td>
+
+
+                            <td>
+
+                                <span class="status-badge high">
+                                    High
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <button
+                                    class="table-action"
+                                    data-customer="Vikram Prasad"
+                                    type="button">
+
+                                    Rescue
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Customer 4 -->
+
+                        <tr data-risk="medium">
+
+                            <td>
+
+                                <div class="customer-cell">
+
+                                    <div class="customer-avatar">
+                                        PS
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Priya Singh
+                                        </strong>
+
+                                        <span>
+                                            #CR-10470
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                ₹6,290
+                            </td>
+
+
+                            <td>
+
+                                <div class="risk-score medium">
+
+                                    <strong>
+                                        68%
+                                    </strong>
+
+                                    <div class="risk-mini-bar">
+
+                                        <span
+                                            style="width:68%;">
+
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Checkout Friction
+                            </td>
+
+
+                            <td>
+                                Simplify Checkout
+                            </td>
+
+
+                            <td>
+
+                                <span class="status-badge medium">
+                                    Medium
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <button
+                                    class="table-action"
+                                    data-customer="Priya Singh"
+                                    type="button">
+
+                                    Rescue
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Customer 5 -->
+
+                        <tr data-risk="medium">
+
+                            <td>
+
+                                <div class="customer-cell">
+
+                                    <div class="customer-avatar">
+                                        AK
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Arjun Kumar
+                                        </strong>
+
+                                        <span>
+                                            #CR-10465
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                ₹4,780
+                            </td>
+
+
+                            <td>
+
+                                <div class="risk-score medium">
+
+                                    <strong>
+                                        61%
+                                    </strong>
+
+                                    <div class="risk-mini-bar">
+
+                                        <span
+                                            style="width:61%;">
+
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Product Comparison
+                            </td>
+
+
+                            <td>
+                                Product Recommendation
+                            </td>
+
+
+                            <td>
+
+                                <span class="status-badge medium">
+                                    Medium
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <button
+                                    class="table-action"
+                                    data-customer="Arjun Kumar"
+                                    type="button">
+
+                                    Rescue
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Customer 6 -->
+
+                        <tr data-risk="low">
+
+                            <td>
+
+                                <div class="customer-cell">
+
+                                    <div class="customer-avatar">
+                                        NM
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Neha Mehta
+                                        </strong>
+
+                                        <span>
+                                            #CR-10461
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                ₹3,240
+                            </td>
+
+
+                            <td>
+
+                                <div class="risk-score low">
+
+                                    <strong>
+                                        28%
+                                    </strong>
+
+                                    <div class="risk-mini-bar">
+
+                                        <span
+                                            style="width:28%;">
+
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Browsing
+                            </td>
+
+
+                            <td>
+                                No Action
+                            </td>
+
+
+                            <td>
+
+                                <span class="status-badge low">
+                                    Low
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <button
+                                    class="table-action secondary"
+                                    data-customer="Neha Mehta"
+                                    type="button">
+
+                                    View
+
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CHART AREA
+        ================================================== -->
+
+        <section class="dashboard-charts-section">
+
+            <div class="dashboard-chart-grid">
+
+
+                <!-- =========================================
+                     CART ACTIVITY
+                ========================================== -->
+
+                <div class="dashboard-chart-card large">
+
+                    <div class="chart-card-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                LIVE ACTIVITY
+                            </span>
+
+                            <h3>
+                                Cart Activity
+                            </h3>
+
+                        </div>
+
+                        <span class="chart-live-indicator">
+
+                            <span></span>
+                            LIVE
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="dashboard-chart-container">
+
+                        <canvas id="cartActivityChart"></canvas>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     RISK DISTRIBUTION
+                ========================================== -->
+
+                <div class="dashboard-chart-card">
+
+                    <div class="chart-card-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                RISK ANALYSIS
+                            </span>
+
+                            <h3>
+                                Risk Distribution
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-chart-container">
+
+                        <canvas id="riskDistributionChart"></canvas>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     RECOVERY PERFORMANCE
+                ========================================== -->
+
+                <div class="dashboard-chart-card">
+
+                    <div class="chart-card-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                RECOVERY
+                            </span>
+
+                            <h3>
+                                Recovery Performance
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-chart-container">
+
+                        <canvas id="recoveryPerformanceChart"></canvas>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             AI RECOMMENDATION CENTER
+        ================================================== -->
+
+        <section class="dashboard-ai-section">
+
+            <div class="dashboard-section-header">
+
+                <div>
+
+                    <span class="section-label">
+                        AI RECOMMENDATION ENGINE
+                    </span>
+
+                    <h2>
+                        Recommended Actions
+                    </h2>
+
+                </div>
+
+
+                <a
+                    href="ai-engine.html"
+                    class="btn-outline">
+
+                    Open AI Engine →
+
+                </a>
+
+            </div>
+
+
+            <div class="recommendation-grid">
+
+
+                <!-- Recommendation 1 -->
+
+                <article class="recommendation-card urgent">
+
+                    <div class="recommendation-top">
+
+                        <div class="recommendation-icon">
+                            🚨
+                        </div>
+
+                        <span>
+                            URGENT
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Recover 18 high-value carts
+                    </h3>
+
+                    <p>
+
+                        Customers with carts above ₹10,000
+                        are showing high abandonment probability.
+
+                    </p>
+
+                    <div class="recommendation-value">
+
+                        <span>
+                            Potential Revenue
+                        </span>
+
+                        <strong>
+                            ₹3.84L
+                        </strong>
+
+                    </div>
+
+                    <button
+                        class="btn recommendation-action"
+                        type="button">
+
+                        Start Recovery
+
+                    </button>
+
+                </article>
+
+
+
+                <!-- Recommendation 2 -->
+
+                <article class="recommendation-card">
+
+                    <div class="recommendation-top">
+
+                        <div class="recommendation-icon">
+                            💳
+                        </div>
+
+                        <span>
+                            PAYMENT
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Retry failed payments
+                    </h3>
+
+                    <p>
+
+                        126 customers encountered payment
+                        failures during checkout.
+
+                    </p>
+
+                    <div class="recommendation-value">
+
+                        <span>
+                            Potential Revenue
+                        </span>
+
+                        <strong>
+                            ₹8.42L
+                        </strong>
+
+                    </div>
+
+                    <button
+                        class="btn recommendation-action"
+                        type="button">
+
+                        Retry Campaign
+
+                    </button>
+
+                </article>
+
+
+
+                <!-- Recommendation 3 -->
+
+                <article class="recommendation-card">
+
+                    <div class="recommendation-top">
+
+                        <div class="recommendation-icon">
+                            🚚
+                        </div>
+
+                        <span>
+                            SHIPPING
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Offer shipping incentive
+                    </h3>
+
+                    <p>
+
+                        Customers are abandoning after
+                        viewing delivery costs.
+
+                    </p>
+
+                    <div class="recommendation-value">
+
+                        <span>
+                            Potential Revenue
+                        </span>
+
+                        <strong>
+                            ₹5.26L
+                        </strong>
+
+                    </div>
+
+                    <button
+                        class="btn recommendation-action"
+                        type="button">
+
+                        Apply Strategy
+
+                    </button>
+
+                </article>
+
+
+
+                <!-- Recommendation 4 -->
+
+                <article class="recommendation-card">
+
+                    <div class="recommendation-top">
+
+                        <div class="recommendation-icon">
+                            🧠
+                        </div>
+
+                        <span>
+                            AI
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Personalize recommendations
+                    </h3>
+
+                    <p>
+
+                        AI identified customers comparing
+                        similar products.
+
+                    </p>
+
+                    <div class="recommendation-value">
+
+                        <span>
+                            Expected Lift
+                        </span>
+
+                        <strong>
+                            +12.8%
+                        </strong>
+
+                    </div>
+
+                    <button
+                        class="btn recommendation-action"
+                        type="button">
+
+                        Activate AI
+
+                    </button>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RECENT RECOVERY EVENTS
+        ================================================== -->
+
+        <section class="dashboard-events-section">
+
+            <div class="dashboard-section-header">
+
+                <div>
+
+                    <span class="section-label">
+                        RECENT EVENTS
+                    </span>
+
+                    <h2>
+                        Recovery Activity
+                    </h2>
+
+                </div>
+
+
+                <a
+                    href="reports.html"
+                    class="btn-outline">
+
+                    View Full Reports →
+
+                </a>
+
+            </div>
+
+
+            <div class="events-container">
+
+
+                <div class="event-item">
+
+                    <div class="event-icon success">
+                        ✓
+                    </div>
+
+                    <div class="event-content">
+
+                        <strong>
+                            Cart successfully recovered
+                        </strong>
+
+                        <span>
+                            Customer #CR-10482 completed payment.
+                        </span>
+
+                    </div>
+
+                    <div class="event-value">
+
+                        +₹12,840
+
+                    </div>
+
+                    <time>
+                        2 min ago
+                    </time>
+
+                </div>
+
+
+                <div class="event-item">
+
+                    <div class="event-icon">
+                        📩
+                    </div>
+
+                    <div class="event-content">
+
+                        <strong>
+                            Recovery message sent
+                        </strong>
+
+                        <span>
+                            WhatsApp recovery campaign triggered.
+                        </span>
+
+                    </div>
+
+                    <div class="event-value">
+                        1 customer
+                    </div>
+
+                    <time>
+                        5 min ago
+                    </time>
+
+                </div>
+
+
+                <div class="event-item">
+
+                    <div class="event-icon warning">
+                        ⚠
+                    </div>
+
+                    <div class="event-content">
+
+                        <strong>
+                            High-risk customer detected
+                        </strong>
+
+                        <span>
+                            Cart value exceeds ₹20,000.
+                        </span>
+
+                    </div>
+
+                    <div class="event-value">
+                        ₹24,600
+                    </div>
+
+                    <time>
+                        8 min ago
+                    </time>
+
+                </div>
+
+
+                <div class="event-item">
+
+                    <div class="event-icon success">
+                        ✓
+                    </div>
+
+                    <div class="event-content">
+
+                        <strong>
+                            Payment retry successful
+                        </strong>
+
+                        <span>
+                            Customer completed a previously failed payment.
+                        </span>
+
+                    </div>
+
+                    <div class="event-value">
+                        +₹7,420
+                    </div>
+
+                    <time>
+                        11 min ago
+                    </time>
+
+                </div>
+
+
+                <div class="event-item">
+
+                    <div class="event-icon">
+                        CR
+                    </div>
+
+                    <div class="event-content">
+
+                        <strong>
+                            AI recommendation generated
+                        </strong>
+
+                        <span>
+                            Personalized recovery strategy created.
+                        </span>
+
+                    </div>
+
+                    <div class="event-value">
+                        94% confidence
+                    </div>
+
+                    <time>
+                        14 min ago
+                    </time>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             DASHBOARD CTA
+        ================================================== -->
+
+        <section class="dashboard-cta">
+
+            <div>
+
+                <span class="section-label">
+                    INTELLIGENT RECOVERY
+                </span>
+
+                <h2>
+
+                    Don't Just Track
+                    <span>Lost Carts.</span>
+
+                    Rescue Them.
+
+                </h2>
+
+                <p>
+
+                    Let Cart Rescue AI identify the highest-value
+                    opportunities and recommend the best recovery
+                    action automatically.
+
+                </p>
+
+            </div>
+
+
+            <div class="cta-buttons">
+
+                <a
+                    href="ai-engine.html"
+                    class="btn">
+
+                    Launch AI Engine
+
+                </a>
+
+
+                <a
+                    href="analytics.html"
+                    class="btn-outline">
+
+                    View Analytics
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-brand">
+
+                <div class="logo">
+
+                    <span class="logo-icon">
+                        🤖
+                    </span>
+
+                    <span>
+                        Cart Rescue <strong>AI</strong>
+                    </span>
+
+                </div>
+
+                <p>
+
+                    AI-powered cart abandonment prediction,
+                    customer intelligence and revenue recovery.
+
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+
+                <div>
+
+                    <h4>
+                        Platform
+                    </h4>
+
+                    <a href="dashboard.html">
+                        Dashboard
+                    </a>
+
+                    <a href="analytics.html">
+                        Analytics
+                    </a>
+
+                    <a href="ai-engine.html">
+                        AI Engine
+                    </a>
+
+                    <a href="reports.html">
+                        Reports
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        Company
+                    </h4>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        System
+                    </h4>
+
+                    <span>
+                        AI Build 2026
+                    </span>
+
+                    <span>
+                        System Online
+                    </span>
+
+                    <span>
+                        Version 1.0.0
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Cart Rescue AI. All Rights Reserved.
+            </p>
+
+            <p>
+                Built with HTML, CSS, JavaScript & AI Analytics.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="js/main.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    <script src="js/intro-3d.js"></script>
+
+
+</body>
+
+</html>
