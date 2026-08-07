@@ -1851,13 +1851,13 @@ select:focus {
     height: 28px;
     border-radius: 8px;
     color: #04101b;
-    background: linear-gradient(135deg, #00e5ff, #8b77ff);
+    background: var(--gradient-primary);
     font-size: 10px;
     letter-spacing: 0;
 }
 
 .intro-3d-brand em {
-    color: #00e5ff;
+    color: var(--primary);
     font-style: normal;
 }
 
@@ -1899,7 +1899,7 @@ select:focus {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    color: #00e5ff;
+    color: var(--primary);
     font-family: var(--font-secondary);
     font-size: 10px;
     font-weight: 800;
@@ -1922,7 +1922,7 @@ select:focus {
 }
 
 .intro-3d-copy strong em {
-    color: #00e5ff;
+    color: var(--primary);
     font-style: normal;
 }
 
@@ -1976,8 +1976,8 @@ select:focus {
     display: block;
     width: 0;
     height: 100%;
-    background: linear-gradient(90deg, #00e5ff, #8b77ff);
-    box-shadow: 0 0 12px #00e5ff;
+    background: var(--gradient-primary);
+    box-shadow: 0 0 12px var(--primary);
     animation: introProgress 10s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
@@ -1997,7 +1997,7 @@ select:focus {
 }
 
 .intro-3d-skip:hover {
-    color: #00e5ff;
+    color: var(--primary);
     border-color: rgba(0, 229, 255, 0.45);
 }
 

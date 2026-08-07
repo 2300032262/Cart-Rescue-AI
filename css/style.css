@@ -13,20 +13,20 @@
 
     /* ---------- Colors ---------- */
 
-    --primary: #00e5ff;
-    --primary-dark: #00b8d4;
+    --primary: #65fbd2;
+    --primary-dark: #2cc7a0;
 
-    --secondary: #7b61ff;
-    --accent: #00ffc6;
+    --secondary: #ffb86b;
+    --accent: #f6e58d;
 
     --success: #00d68f;
     --warning: #ffb547;
     --danger: #ff5577;
     --info: #5da9ff;
 
-    --bg-main: #050816;
-    --bg-secondary: #080d20;
-    --bg-tertiary: #0d1329;
+    --bg-main: #081312;
+    --bg-secondary: #0d1e1a;
+    --bg-tertiary: #132a25;
 
     --card-bg: rgba(255, 255, 255, 0.055);
     --card-bg-hover: rgba(255, 255, 255, 0.085);
@@ -43,22 +43,22 @@
     --gradient-primary:
         linear-gradient(
             135deg,
-            #00e5ff 0%,
-            #7b61ff 100%
+            #65fbd2 0%,
+            #ffb86b 100%
         );
 
     --gradient-accent:
         linear-gradient(
             135deg,
-            #00ffc6 0%,
-            #00e5ff 100%
+            #f6e58d 0%,
+            #65fbd2 100%
         );
 
     --gradient-dark:
         linear-gradient(
             135deg,
-            #0b1024 0%,
-            #111936 100%
+            #10231f 0%,
+            #19352e 100%
         );
 
     /* ---------- Shadows ---------- */
@@ -73,7 +73,7 @@
         0 25px 80px rgba(0, 0, 0, 0.42);
 
     --shadow-primary:
-        0 15px 45px rgba(0, 229, 255, 0.16);
+        0 15px 45px rgba(101, 251, 210, 0.16);
 
     /* ---------- Layout ---------- */
 
