@@ -1,4 +1,3 @@
-```javascript
 /* =========================================================
    CART RESCUE AI
    ARTIFICIAL INTELLIGENCE ENGINE
@@ -787,6 +786,52 @@ function registerSampleCustomers() {
 
 function bindAIControls() {
 
+    const predictionForm =
+        document.getElementById(
+            "predictionForm"
+        );
+
+
+    if (predictionForm) {
+
+        predictionForm.addEventListener(
+            "submit",
+            event => {
+
+                event.preventDefault();
+
+                const customer = {
+
+                    id: document.getElementById("customerId").value.trim() || "CUS-DEMO",
+                    cartValue: Number(document.getElementById("cartValue").value) || 0,
+                    cartAge: Number(document.getElementById("sessionTime").value) || 0,
+                    sessionDuration: (Number(document.getElementById("sessionTime").value) || 0) * 60,
+                    inactivity: Number(document.getElementById("sessionTime").value) || 0,
+                    pageViews: (Number(document.getElementById("cartItems").value) || 0) + 4,
+                    productViews: (Number(document.getElementById("cartItems").value) || 0) + 6,
+                    checkoutStarted: true,
+                    paymentFailure: document.getElementById("paymentStatus").value === "failed",
+                    shippingCostConcern: false,
+                    repeatedProductViews: (Number(document.getElementById("previousAbandonments").value) || 0) > 1,
+                    discountInteraction: false,
+                    exitIntent: false,
+                    mobileCheckout: false,
+                    slowPageLoad: false,
+                    stockConcern: false,
+                    deliveryConcern: false
+
+                };
+
+                renderFormPrediction(
+                    predictCustomerRisk(customer),
+                    customer
+                );
+
+            }
+        );
+
+    }
+
     const predictButton =
         document.getElementById(
             "runPrediction"
@@ -905,6 +950,51 @@ function bindAIControls() {
             }
         );
 
+    }
+
+}
+
+
+function renderFormPrediction(
+    prediction,
+    customer
+) {
+
+    const values = {
+        riskScore: `${Math.round(prediction.riskScore)}%`,
+        riskLevel: `${prediction.riskLevel} RISK`,
+        riskConfidence: `Confidence: ${prediction.confidence}%`,
+        riskProgressValue: `${Math.round(prediction.riskScore)} / 100`,
+        predictedReason: prediction.reason.label,
+        recoveryProbability: `${prediction.recoveryProbability}%`,
+        resultCartValue: formatCurrency(customer.cartValue),
+        predictionPriority: prediction.recommendation.priority,
+        recommendedAction: prediction.recommendation.title,
+        recommendationDescription: prediction.recommendation.description
+    };
+
+    Object.entries(values).forEach(
+        ([id, value]) => {
+
+            const element = document.getElementById(id);
+
+            if (element) {
+                element.textContent = value;
+            }
+
+        }
+    );
+
+    const progress = document.getElementById("riskProgress");
+
+    if (progress) {
+        progress.style.width = `${prediction.riskScore}%`;
+    }
+
+    const status = document.getElementById("predictionStatus");
+
+    if (status) {
+        status.textContent = "UPDATED";
     }
 
 }
@@ -4231,4 +4321,3 @@ window.addEventListener(
 /* =========================================================
    END OF AI-ENGINE.JS
 ========================================================= */
-```

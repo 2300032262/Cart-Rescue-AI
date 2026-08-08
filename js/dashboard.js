@@ -630,8 +630,9 @@ function filterCustomers(
         customers =
             customers.filter(
                 customer =>
-                    customer.riskLevel ===
-                    state.currentFilter
+                    state.currentFilter === "critical"
+                        ? customer.risk >= CartRescueDashboard.settings.highRiskThreshold
+                        : customer.riskLevel === state.currentFilter
             );
 
     }
@@ -796,7 +797,7 @@ function renderCustomerTable() {
 
     const tableBody =
         document.querySelector(
-            "#customerTableBody, #customersTableBody, [data-customer-table]"
+            "#customerTableBody, #customersTableBody, #riskTableBody, [data-customer-table]"
         );
 
 

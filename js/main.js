@@ -14,6 +14,8 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    initializeAuthGate();
+
     initializeNavigation();
 
     initializeMobileMenu();
@@ -40,6 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     initializeLazyLoading();
 
+    initializeContactForm();
+
+    initializeStorefront();
+
     console.log(
         "%cCart Rescue AI",
         "font-size: 20px; font-weight: 800;"
@@ -51,6 +57,211 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
 });
+
+
+function initializeAuthGate() {
+
+    const gate = document.getElementById("authGate");
+
+    if (!gate) {
+        return;
+    }
+
+    const intro = document.getElementById("authIntro");
+    const panel = document.getElementById("authPanel");
+    const form = document.getElementById("authForm");
+    const title = document.getElementById("authTitle");
+    const subtitle = document.getElementById("authSubtitle");
+    const nameField = document.getElementById("authName");
+    const emailField = document.getElementById("authEmail");
+    const passwordField = document.getElementById("authPassword");
+    const error = document.getElementById("authError");
+    const submit = document.getElementById("authSubmit");
+    const switchText = document.getElementById("authSwitchText");
+    let mode = "login";
+
+    const unlock = () => {
+        sessionStorage.setItem("cartRescueAuthenticated", "true");
+        gate.classList.add("is-unlocked");
+        document.body.classList.remove("auth-locked");
+    };
+
+    if (sessionStorage.getItem("cartRescueAuthenticated") === "true") {
+        unlock();
+        return;
+    }
+
+    document.body.classList.add("auth-locked");
+
+    window.setTimeout(() => {
+        intro.classList.add("is-hidden");
+        intro.setAttribute("aria-hidden", "true");
+        panel.classList.add("is-visible");
+        panel.setAttribute("aria-hidden", "false");
+        emailField.focus();
+    }, 2200);
+
+    const toggleMode = () => {
+        mode = mode === "login" ? "register" : "login";
+        panel.classList.toggle("is-register", mode === "register");
+        title.textContent = mode === "register" ? "Create your workspace" : "Welcome back";
+        subtitle.textContent = mode === "register"
+            ? "Register to start turning abandoned carts into revenue."
+            : "Sign in to continue to your recovery workspace.";
+        submit.innerHTML = mode === "register"
+            ? "Create workspace <i class=\"fa-solid fa-arrow-right\"></i>"
+            : "Sign in <i class=\"fa-solid fa-arrow-right\"></i>";
+        switchText.innerHTML = mode === "register"
+            ? "Already have access? <button type=\"button\" data-auth-mode=\"login\">Sign in</button>"
+            : "New to Cart Rescue? <button type=\"button\" data-auth-mode=\"register\">Create an account</button>";
+        switchText.querySelector("button").addEventListener("click", toggleMode);
+        error.textContent = "";
+    };
+
+    switchText.querySelector("button").addEventListener("click", toggleMode);
+
+    form.addEventListener("submit", event => {
+        event.preventDefault();
+        error.textContent = "";
+
+        if (mode === "register" && !nameField.value.trim()) {
+            error.textContent = "Enter your name to continue.";
+            nameField.focus();
+            return;
+        }
+
+        if (!emailField.checkValidity()) {
+            error.textContent = "Enter a valid work email.";
+            emailField.focus();
+            return;
+        }
+
+        if (passwordField.value.length < 6) {
+            error.textContent = "Use a password with at least 6 characters.";
+            passwordField.focus();
+            return;
+        }
+
+        submit.disabled = true;
+        submit.textContent = mode === "register" ? "Creating workspace..." : "Signing in...";
+
+        window.setTimeout(() => {
+            unlock();
+            submit.disabled = false;
+        }, 500);
+    });
+
+}
+
+
+function initializeStorefront() {
+
+    const grid = document.querySelector(".store-product-grid");
+    const drawer = document.getElementById("storeCartDrawer");
+
+    if (!grid || !drawer) {
+        return;
+    }
+
+    const items = new Map();
+    const count = document.getElementById("storeCartCount");
+    const total = document.getElementById("storeCartTotal");
+    const cartItems = document.getElementById("storeCartItems");
+    const backdrop = document.getElementById("storeCartBackdrop");
+
+    const formatPrice = value => `₹${new Intl.NumberFormat("en-IN").format(value)}`;
+
+    const renderCart = () => {
+        const products = [...items.values()];
+        const itemCount = products.reduce((sum, item) => sum + item.quantity, 0);
+        const cartTotal = products.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+        count.textContent = itemCount;
+        total.textContent = formatPrice(cartTotal);
+
+        if (!products.length) {
+            cartItems.innerHTML = '<p class="store-cart-empty">Your cart is waiting for a good idea.</p>';
+            return;
+        }
+
+        cartItems.innerHTML = products.map(item => `
+            <div class="store-cart-item" data-cart-item="${item.id}">
+                <div>
+                    <strong>${item.name}</strong>
+                    <span>${formatPrice(item.price)} each</span>
+                    <div class="store-cart-controls">
+                        <button type="button" data-cart-action="decrease" aria-label="Decrease ${item.name}">-</button>
+                        <span>${item.quantity}</span>
+                        <button type="button" data-cart-action="increase" aria-label="Increase ${item.name}">+</button>
+                    </div>
+                </div>
+                <strong>${formatPrice(item.price * item.quantity)}</strong>
+            </div>
+        `).join("");
+    };
+
+    const setDrawer = isOpen => {
+        drawer.classList.toggle("is-open", isOpen);
+        backdrop.classList.toggle("is-open", isOpen);
+        drawer.setAttribute("aria-hidden", String(!isOpen));
+        document.getElementById("storeCartTrigger").setAttribute("aria-expanded", String(isOpen));
+    };
+
+    grid.querySelectorAll(".store-add").forEach(button => {
+        button.addEventListener("click", () => {
+            const product = button.closest(".store-product");
+            const id = product.dataset.storeId;
+            const existing = items.get(id);
+
+            items.set(id, {
+                id,
+                name: product.dataset.storeName,
+                price: Number(product.dataset.storePrice),
+                quantity: existing ? existing.quantity + 1 : 1
+            });
+
+            renderCart();
+            setDrawer(true);
+        });
+    });
+
+    document.querySelectorAll(".store-filter").forEach(filter => {
+        filter.addEventListener("click", () => {
+            document.querySelectorAll(".store-filter").forEach(item => item.classList.remove("is-active"));
+            filter.classList.add("is-active");
+
+            grid.querySelectorAll(".store-product").forEach(product => {
+                const show = filter.dataset.storeFilter === "all" || product.dataset.storeCategory === filter.dataset.storeFilter;
+                product.classList.toggle("is-hidden", !show);
+            });
+        });
+    });
+
+    cartItems.addEventListener("click", event => {
+        const button = event.target.closest("[data-cart-action]");
+
+        if (!button) {
+            return;
+        }
+
+        const item = button.closest("[data-cart-item]");
+        const product = items.get(item.dataset.cartItem);
+
+        product.quantity += button.dataset.cartAction === "increase" ? 1 : -1;
+
+        if (product.quantity <= 0) {
+            items.delete(product.id);
+        }
+
+        renderCart();
+    });
+
+    document.getElementById("storeCartTrigger").addEventListener("click", () => setDrawer(true));
+    document.getElementById("storeCartClose").addEventListener("click", () => setDrawer(false));
+    backdrop.addEventListener("click", () => setDrawer(false));
+    renderCart();
+
+}
 
 
 /* =========================================================
@@ -229,6 +440,86 @@ function initializeMobileMenu() {
 
         }
     );
+
+}
+
+
+function initializeContactForm() {
+
+    const form = document.getElementById("contactForm");
+
+    if (!form) {
+        return;
+    }
+
+    const message = document.getElementById("contactMessage");
+    const counter = document.getElementById("messageCounter");
+
+    if (message && counter) {
+        const updateCounter = () => {
+            counter.textContent = `${message.value.length} / ${message.maxLength}`;
+        };
+
+        message.addEventListener("input", updateCounter);
+        updateCounter();
+    }
+
+    form.addEventListener("submit", event => {
+        event.preventDefault();
+
+        const fields = [
+            ["contactName", "nameError", "Please enter your name."],
+            ["contactEmail", "emailError", "Please enter a valid email address."],
+            ["contactSubject", "subjectError", "Please select a subject."],
+            ["contactMessage", "messageError", "Please enter a message."]
+        ];
+        let valid = true;
+
+        fields.forEach(([fieldId, errorId, text]) => {
+            const field = document.getElementById(fieldId);
+            const error = document.getElementById(errorId);
+            const invalid = !field.value.trim() || (field.type === "email" && !field.checkValidity());
+
+            if (error) {
+                error.textContent = invalid ? text : "";
+            }
+
+            field.classList.toggle("invalid", invalid);
+            valid = valid && !invalid;
+        });
+
+        const consent = document.getElementById("contactConsent");
+
+        if (!consent.checked) {
+            valid = false;
+        }
+
+        if (!valid) {
+            return;
+        }
+
+        const submit = document.getElementById("contactSubmit");
+        const success = document.getElementById("formSuccess");
+
+        if (submit) {
+            submit.disabled = true;
+            submit.textContent = "Sending...";
+        }
+
+        window.setTimeout(() => {
+            form.reset();
+            if (counter) {
+                counter.textContent = `0 / ${message.maxLength}`;
+            }
+            if (submit) {
+                submit.disabled = false;
+                submit.textContent = "Send Message";
+            }
+            if (success) {
+                success.style.display = "flex";
+            }
+        }, 600);
+    });
 
 }
 
