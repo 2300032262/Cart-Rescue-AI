@@ -4,10 +4,14 @@
   "version": "1.0.0",
   "type": "commonjs",
   "scripts": {
-    "dev": "vercel dev"
+    "start": "node server.js",
+    "dev": "node server.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.8",
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.2",
     "stripe": "^18.4.0"
   },
   "devDependencies": {

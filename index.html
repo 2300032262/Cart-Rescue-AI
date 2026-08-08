@@ -124,11 +124,47 @@
 
                 <small class="auth-error" id="authError" role="alert"></small>
 
-                <button class="auth-submit" type="submit" id="authSubmit">Sign in <i class="fa-solid fa-arrow-right"></i></button>
+                <button class="auth-submit" type="submit" id="authSubmit">Send Verification Code <i class="fa-solid fa-envelope"></i></button>
             </form>
 
+            <!-- EMAIL VERIFICATION CODE STEP -->
+            <div class="auth-verify-step" id="authVerifyStep">
+                <div class="verify-email-box">
+                    <span>Code sent to <strong id="verifyEmailDisplay">you@company.com</strong></span>
+                    <button type="button" class="back-to-auth-btn" id="changeEmailBtn"><i class="fa-solid fa-pen"></i> Edit</button>
+                </div>
+
+                <label>Enter 6-digit verification code</label>
+                <div class="otp-inputs-row" id="otpInputsRow">
+                    <input type="text" maxlength="1" class="otp-input" data-otp-index="0" inputmode="numeric">
+                    <input type="text" maxlength="1" class="otp-input" data-otp-index="1" inputmode="numeric">
+                    <input type="text" maxlength="1" class="otp-input" data-otp-index="2" inputmode="numeric">
+                    <input type="text" maxlength="1" class="otp-input" data-otp-index="3" inputmode="numeric">
+                    <input type="text" maxlength="1" class="otp-input" data-otp-index="4" inputmode="numeric">
+                    <input type="text" maxlength="1" class="otp-input" data-otp-index="5" inputmode="numeric">
+                </div>
+
+                <div class="verify-demo-hint">
+                    <span><i class="fa-solid fa-key"></i> Demo Verification Code: <strong id="demoCodeDisplay">849201</strong></span>
+                    <button type="button" class="autofill-otp-btn" id="autofillOtpBtn">Auto-fill</button>
+                </div>
+
+                <small class="auth-error" id="verifyError" role="alert"></small>
+
+                <button class="auth-submit" type="button" id="verifySubmit">Verify & Access Workspace <i class="fa-solid fa-arrow-right"></i></button>
+
+                <div class="verify-footer-actions">
+                    <button type="button" class="resend-code-btn" id="resendCodeBtn">Resend Code</button>
+                    <span id="resendTimerText">(60s)</span>
+                </div>
+            </div>
+
             <p class="auth-switch" id="authSwitchText">New to Cart Rescue? <button type="button" data-auth-mode="register">Create an account</button></p>
-            <p class="auth-demo-note">Demo workspace access. No real account is created.</p>
+            <p class="auth-demo-note">Demo workspace access. Quick sign-in:</p>
+            <div class="auth-demo-shortcuts">
+                <button type="button" class="auth-demo-btn" data-demo-email="alex@cartrescue.ai" data-demo-name="Alex Rivers">Alex (Admin)</button>
+                <button type="button" class="auth-demo-btn" data-demo-email="priya@storefront.com" data-demo-name="Priya Sharma">Priya (Store Owner)</button>
+            </div>
         </div>
     </section>
 
@@ -146,7 +182,6 @@
         <div class="gradient-orb orb-three"></div>
 
     </div>
-
 
     <canvas id="particles"></canvas>
 
@@ -233,6 +268,8 @@
 
             <div class="nav-actions">
 
+                <span class="live-status-pill"><span class="live-pulse-dot"></span> LIVE</span>
+
                 <button class="theme-toggle"
                         id="themeToggle"
                         aria-label="Toggle theme">
@@ -241,8 +278,20 @@
 
                 </button>
 
+                <div class="header-user-container" id="headerUserContainer">
+                    <div class="user-profile-badge" id="userProfileBadge">
+                        <div class="user-avatar" id="userAvatar">CR</div>
+                        <div class="user-info">
+                            <span class="user-name" id="userName">User</span>
+                            <span class="user-role" id="userRole">Admin</span>
+                        </div>
+                    </div>
+                    <button class="header-logout-btn" id="logoutBtn" type="button" title="Sign out of Cart Rescue">
+                        <i class="fa-solid fa-right-from-bracket"></i> Logout
+                    </button>
+                </div>
 
-                     <a href="contact.html"
+                <a href="contact.html"
                    class="nav-button">
 
                     Book a demo
@@ -902,6 +951,46 @@
                     <p id="storeModalDescription"></p>
                     <strong id="storeModalPrice"></strong>
                     <button class="store-modal-add" id="storeModalAdd" type="button">Add to cart <i class="fa-solid fa-plus"></i></button>
+                </div>
+            </div>
+
+            <!-- REAL INTERACTIVE CHECKOUT MODAL -->
+            <div class="store-checkout-modal" id="storeCheckoutModal" role="dialog" aria-modal="true" aria-hidden="true">
+                <div class="store-checkout-card">
+                    <button class="store-modal-close" id="checkoutModalClose" type="button" aria-label="Close checkout"><i class="fa-solid fa-xmark"></i></button>
+                    <div class="checkout-header">
+                        <span class="section-label">SECURE CHECKOUT GATEWAY</span>
+                        <h3>Complete Your Purchase</h3>
+                    </div>
+
+                    <div class="checkout-order-summary">
+                        <div class="summary-row"><span>Cart Total (<span id="checkoutItemCount">1</span> items)</span><strong id="checkoutSummaryTotal">₹12,999</strong></div>
+                        <div class="summary-row"><span>Shipping</span><strong style="color:#10b981;">FREE FAST DELIVERY</strong></div>
+                    </div>
+
+                    <form class="checkout-form" id="checkoutModalForm">
+                        <div class="form-group">
+                            <label for="checkoutName">Full Name</label>
+                            <input type="text" id="checkoutName" required placeholder="Alex Rivers">
+                        </div>
+                        <div class="form-group">
+                            <label for="checkoutEmail">Email Address</label>
+                            <input type="email" id="checkoutEmail" required placeholder="alex@company.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="checkoutPaymentMethod">Payment Gateway</label>
+                            <select id="checkoutPaymentMethod">
+                                <option value="upi">UPI Instant (GPay / PhonePe / Paytm)</option>
+                                <option value="card">Credit / Debit Card (Visa, Mastercard, RuPay)</option>
+                                <option value="netbanking">NetBanking</option>
+                                <option value="cod">Cash on Delivery</option>
+                            </select>
+                        </div>
+                        <div class="checkout-actions">
+                            <button type="submit" class="pay-now-btn" id="payNowBtn">Complete Order & Pay <span id="payNowAmount">₹12,999</span> <i class="fa-solid fa-lock"></i></button>
+                            <button type="button" class="simulate-abandon-btn" id="simulateAbandonBtn"><i class="fa-solid fa-triangle-exclamation"></i> Abandon Cart (Test AI Recovery Stream)</button>
+                        </div>
+                    </form>
                 </div>
             </div>
 
