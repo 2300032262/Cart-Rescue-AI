@@ -174,6 +174,9 @@ function initializeStorefront() {
     const modalDescription = document.getElementById("storeModalDescription");
     const modalPrice = document.getElementById("storeModalPrice");
     const modalAdd = document.getElementById("storeModalAdd");
+    const checkoutButton = document.getElementById("storeCheckout");
+    const checkoutEmail = document.getElementById("storeCheckoutEmail");
+    const checkoutStatus = document.getElementById("storeCheckoutStatus");
     let modalProduct = null;
         let selectedCategory = "all";
 
@@ -217,6 +220,42 @@ function initializeStorefront() {
         backdrop.classList.toggle("is-open", isOpen);
         drawer.setAttribute("aria-hidden", String(!isOpen));
         document.getElementById("storeCartTrigger").setAttribute("aria-expanded", String(isOpen));
+    };
+
+    const startCheckout = async () => {
+        const cart = [...items.values()];
+
+        if (!cart.length) {
+            checkoutStatus.textContent = "Add a product before checkout.";
+            return;
+        }
+
+        if (checkoutEmail.value && !checkoutEmail.checkValidity()) {
+            checkoutStatus.textContent = "Enter a valid receipt email.";
+            checkoutEmail.focus();
+            return;
+        }
+
+        checkoutButton.disabled = true;
+        checkoutStatus.textContent = "Preparing secure checkout...";
+
+        try {
+            const response = await fetch("/api/create-checkout-session", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ cart, email: checkoutEmail.value.trim() })
+            });
+            const result = await response.json();
+
+            if (!response.ok || !result.url) {
+                throw new Error(result.error || "Checkout could not start.");
+            }
+
+            window.location.href = result.url;
+        } catch (error) {
+            checkoutStatus.textContent = error.message;
+            checkoutButton.disabled = false;
+        }
     };
 
     grid.querySelectorAll(".store-add").forEach(button => {
@@ -336,6 +375,7 @@ function initializeStorefront() {
     document.getElementById("storeCartTrigger").addEventListener("click", () => setDrawer(true));
     document.getElementById("storeCartClose").addEventListener("click", () => setDrawer(false));
     backdrop.addEventListener("click", () => setDrawer(false));
+    checkoutButton.addEventListener("click", startCheckout);
     renderCart();
 
 }

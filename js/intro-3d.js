@@ -3,13 +3,9 @@
 /* Lightweight Three.js opening sequence for the Cart Rescue product shell. */
 (function initialize3DOpening() {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const replayRequested = new URLSearchParams(window.location.search).has("intro");
-
-    if (!replayRequested && sessionStorage.getItem("cart-rescue-intro-seen")) {
+    if (sessionStorage.getItem("cartRescueAuthenticated") === "true") {
         return;
     }
-
-    sessionStorage.setItem("cart-rescue-intro-seen", "true");
 
     const intro = document.createElement("div");
     intro.className = "intro-3d";
@@ -43,7 +39,7 @@
     intro.querySelector(".intro-3d-skip").addEventListener("click", finish);
 
     if (reduceMotion || typeof THREE === "undefined") {
-        window.setTimeout(finish, reduceMotion ? 350 : 900);
+        window.setTimeout(finish, reduceMotion ? 350 : 2200);
         return;
     }
 
@@ -150,5 +146,5 @@
         window.cancelAnimationFrame(animationFrame);
         window.removeEventListener("resize", resize);
         finish();
-    }, 10000);
+    }, 2200);
 })();

@@ -1,0 +1,16 @@
+{
+  "name": "cart-rescue-store",
+  "private": true,
+  "version": "1.0.0",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.8",
+    "stripe": "^18.4.0"
+  },
+  "devDependencies": {
+    "vercel": "^43.2.0"
+  }
+}

@@ -518,6 +518,28 @@ Global application functionality.
 
 Background particle effects and visual AI environment.
 
+---
+
+# 🛒 Production Checkout
+
+The storefront supports real Stripe Checkout sessions through Vercel serverless functions and stores pending/paid orders in Supabase.
+
+## Setup
+
+1. Create a Supabase project and run `supabase-schema.sql` in the SQL editor.
+2. Install dependencies with `npm install`.
+3. Copy `.env.example` to `.env` for local development.
+4. Add the same variables to the Vercel project settings:
+        * `STRIPE_SECRET_KEY`
+        * `STRIPE_WEBHOOK_SECRET`
+        * `SUPABASE_URL`
+        * `SUPABASE_SERVICE_ROLE_KEY`
+        * `PUBLIC_SITE_URL`
+5. In Stripe, create a webhook for `/api/stripe-webhook` and subscribe to `checkout.session.completed`.
+6. Deploy with `vercel --prod`.
+
+Never expose `STRIPE_SECRET_KEY` or `SUPABASE_SERVICE_ROLE_KEY` in frontend code.
+
 ### `js/charts.js`
 
 Reusable Chart.js configuration and chart rendering.
