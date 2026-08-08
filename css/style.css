@@ -5397,29 +5397,6 @@ canvas {
 .store-cart-footer > div span { color: var(--text-muted); font-family: var(--font-secondary); font-size: 12px; }
 .store-cart-footer strong { font-size: 22px; }
 
-.store-checkout-email {
-    display: grid;
-    gap: 6px;
-    margin-bottom: 12px;
-    color: var(--text-muted);
-    font-family: var(--font-secondary);
-    font-size: 10px;
-    font-weight: 700;
-}
-
-.store-checkout-email input {
-    width: 100%;
-    padding: 10px 11px;
-    border: 1px solid var(--border);
-    border-radius: 7px;
-    outline: none;
-    color: var(--text-primary);
-    background: #ffffff;
-    font-size: 12px;
-}
-
-.store-checkout-email input:focus { border-color: var(--primary); }
-
 .store-checkout {
     display: flex;
     align-items: center;

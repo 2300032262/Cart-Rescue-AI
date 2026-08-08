@@ -175,7 +175,6 @@ function initializeStorefront() {
     const modalPrice = document.getElementById("storeModalPrice");
     const modalAdd = document.getElementById("storeModalAdd");
     const checkoutButton = document.getElementById("storeCheckout");
-    const checkoutEmail = document.getElementById("storeCheckoutEmail");
     const checkoutStatus = document.getElementById("storeCheckoutStatus");
     let modalProduct = null;
         let selectedCategory = "all";
@@ -230,20 +229,17 @@ function initializeStorefront() {
             return;
         }
 
-        if (checkoutEmail.value && !checkoutEmail.checkValidity()) {
-            checkoutStatus.textContent = "Enter a valid receipt email.";
-            checkoutEmail.focus();
-            return;
-        }
-
         checkoutButton.disabled = true;
         checkoutStatus.textContent = "Preparing secure checkout...";
 
         try {
-            const response = await fetch("/api/create-checkout-session", {
+            const checkoutApiUrl = window.location.protocol === "file:"
+                ? "https://cart-rescue-ai.vercel.app/api/create-checkout-session"
+                : "/api/create-checkout-session";
+            const response = await fetch(checkoutApiUrl, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ cart, email: checkoutEmail.value.trim() })
+                body: JSON.stringify({ cart })
             });
             const result = await response.json();
 
@@ -253,7 +249,9 @@ function initializeStorefront() {
 
             window.location.href = result.url;
         } catch (error) {
-            checkoutStatus.textContent = error.message;
+            checkoutStatus.textContent = error.message === "Failed to fetch"
+                ? "Checkout service is unavailable. Confirm the Vercel API and environment variables are configured."
+                : error.message;
             checkoutButton.disabled = false;
         }
     };
