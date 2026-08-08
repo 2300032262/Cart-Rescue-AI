@@ -168,8 +168,19 @@ function initializeStorefront() {
     const total = document.getElementById("storeCartTotal");
     const cartItems = document.getElementById("storeCartItems");
     const backdrop = document.getElementById("storeCartBackdrop");
+    const search = document.getElementById("storeSearch");
+    const modal = document.getElementById("storeProductModal");
+    const modalTitle = document.getElementById("storeModalTitle");
+    const modalDescription = document.getElementById("storeModalDescription");
+    const modalPrice = document.getElementById("storeModalPrice");
+    const modalAdd = document.getElementById("storeModalAdd");
+    let modalProduct = null;
+        let selectedCategory = "all";
 
     const formatPrice = value => `₹${new Intl.NumberFormat("en-IN").format(value)}`;
+
+    const savedCart = JSON.parse(localStorage.getItem("cartRescueStoreCart") || "[]");
+    savedCart.forEach(item => items.set(item.id, item));
 
     const renderCart = () => {
         const products = [...items.values()];
@@ -178,6 +189,7 @@ function initializeStorefront() {
 
         count.textContent = itemCount;
         total.textContent = formatPrice(cartTotal);
+        localStorage.setItem("cartRescueStoreCart", JSON.stringify(products));
 
         if (!products.length) {
             cartItems.innerHTML = '<p class="store-cart-empty">Your cart is waiting for a good idea.</p>';
@@ -225,15 +237,80 @@ function initializeStorefront() {
         });
     });
 
+    grid.querySelectorAll(".store-wishlist").forEach(button => {
+        const product = button.closest(".store-product");
+        const saved = JSON.parse(localStorage.getItem("cartRescueWishlist") || "[]");
+
+        if (saved.includes(product.dataset.storeId)) {
+            button.classList.add("is-saved");
+            button.innerHTML = '<i class="fa-solid fa-heart"></i>';
+        }
+
+        button.addEventListener("click", () => {
+            const current = JSON.parse(localStorage.getItem("cartRescueWishlist") || "[]");
+            const index = current.indexOf(product.dataset.storeId);
+
+            if (index >= 0) {
+                current.splice(index, 1);
+                button.classList.remove("is-saved");
+                button.innerHTML = '<i class="fa-regular fa-heart"></i>';
+            } else {
+                current.push(product.dataset.storeId);
+                button.classList.add("is-saved");
+                button.innerHTML = '<i class="fa-solid fa-heart"></i>';
+            }
+
+            localStorage.setItem("cartRescueWishlist", JSON.stringify(current));
+        });
+    });
+
+    grid.querySelectorAll(".store-details").forEach(button => {
+        button.addEventListener("click", () => {
+            modalProduct = button.closest(".store-product");
+            modalTitle.textContent = modalProduct.dataset.storeName;
+            modalDescription.textContent = modalProduct.querySelector(".store-product-copy p").textContent;
+            modalPrice.textContent = formatPrice(Number(modalProduct.dataset.storePrice));
+            modal.classList.add("is-open");
+            modal.setAttribute("aria-hidden", "false");
+        });
+    });
+
+    const closeModal = () => {
+        modal.classList.remove("is-open");
+        modal.setAttribute("aria-hidden", "true");
+        modalProduct = null;
+    };
+
+    modalAdd.addEventListener("click", () => {
+        if (!modalProduct) return;
+        modalProduct.querySelector(".store-add").click();
+        closeModal();
+    });
+
+    document.getElementById("storeModalClose").addEventListener("click", closeModal);
+    modal.addEventListener("click", event => {
+        if (event.target === modal) closeModal();
+    });
+
+    const applyStoreFilters = () => {
+        const term = search.value.trim().toLowerCase();
+
+        grid.querySelectorAll(".store-product").forEach(product => {
+            const matchesCategory = selectedCategory === "all" || product.dataset.storeCategory === selectedCategory;
+            const matchesSearch = !term || product.textContent.toLowerCase().includes(term);
+            product.classList.toggle("is-hidden", !(matchesCategory && matchesSearch));
+        });
+    };
+
+    search.addEventListener("input", applyStoreFilters);
+
     document.querySelectorAll(".store-filter").forEach(filter => {
         filter.addEventListener("click", () => {
             document.querySelectorAll(".store-filter").forEach(item => item.classList.remove("is-active"));
             filter.classList.add("is-active");
 
-            grid.querySelectorAll(".store-product").forEach(product => {
-                const show = filter.dataset.storeFilter === "all" || product.dataset.storeCategory === filter.dataset.storeFilter;
-                product.classList.toggle("is-hidden", !show);
-            });
+                selectedCategory = filter.dataset.storeFilter;
+                applyStoreFilters();
         });
     });
 
